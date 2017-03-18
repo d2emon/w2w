@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect
 from web import app
-from web.forms import LoginForm
+from .forms import LoginForm
 
 
 @app.route("/")
@@ -32,4 +32,5 @@ def login():
         return redirect('/index')
     return render_template('login.html',
                            title='Sign In',
-                           form=form)
+                           form=form,
+                           providers=app.config['OPENID_PROVIDERS'])
