@@ -4,9 +4,9 @@ Software that helps you to select movie to watch
 flask/bin/pip install flask-login
 flask/bin/pip install flask-openid
 flask/bin/pip install flask-mail
-flask/bin/pip install sqlalchemy==0.7.9
-flask/bin/pip install flask-sqlalchemy==0.16
-flask/bin/pip install sqlalchemy-migrate
+-- flask/bin/pip install sqlalchemy==0.7.9
+-- flask/bin/pip install flask-sqlalchemy==0.16
+-- flask/bin/pip install sqlalchemy-migrate
 flask/bin/pip install flask-whooshalchemy==0.54a
 -- flask/bin/pip install flask-wtf==0.8.4
 flask/bin/pip install pytz==2013b

@@ -1,3 +1,7 @@
+import os
+basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+
 CSRF_ENABLED = True
 SECRET_KEY = 'ThereIsNoSpoon'
 OPENID_PROVIDERS = [
@@ -7,3 +11,5 @@ OPENID_PROVIDERS = [
                     {'name': "Flickr", 'url': "https://www.flickr.com/<username>"},
                     {'name': "MyOpenID", 'url': "https://www.myopenid.com"},
                     ]
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "w2w.db")
+SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, "migrations")
