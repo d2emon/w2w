@@ -1,4 +1,4 @@
 Flask==0.12
 Flask-WTF==0.14.2
-Flask-SQLAalchemy==2.2
-sqlalchemy-migrate==0.11.0
+Flask-SQLAlchemy==2.2
+Flask-Migrate==2.0.3

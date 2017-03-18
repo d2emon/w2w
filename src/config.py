@@ -11,5 +11,6 @@ OPENID_PROVIDERS = [
                     {'name': "Flickr", 'url': "https://www.flickr.com/<username>"},
                     {'name': "MyOpenID", 'url': "https://www.myopenid.com"},
                     ]
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "w2w.db")
-SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, "migrations")
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "db", "w2w.db")
+# SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, "migrations")
+SQLALCHEMY_TRACK_MODIFICATIONS = True
