@@ -5,13 +5,13 @@ from .forms import LoginForm, EditForm
 from .models import User, ROLE_USER
 
 
-@app.error_handling(404)
-def error404():
+@app.errorhandler(404)
+def error404(error):
     return render_template('404.html'), 404
 
 
-@app.error_handling(500)
-def error500():
+@app.errorhandler(500)
+def error500(error):
     return render_template('500.html'), 500
 
 
@@ -82,7 +82,7 @@ def user(nickname):
 @app.route('/edit', methods=['POST', 'GET', ])
 @login_required
 def edit():
-    form = EditForm()
+    form = EditForm(g.user.nickname)
     if form.validate_on_submit():
         g.user.nickname = form.nickname.data
         g.user.about_me = form.about_me.data
@@ -118,7 +118,9 @@ def after_login(resp):
         nickname = resp.nickname
         if nickname is None or nickname == "":
             nickname = resp.email.split('@')[0]
+        nickname = User.make_unique_nickname(nickname)
         user = User(nickname=nickname, email=resp.email, role=ROLE_USER)
+
         db.session.add(user)
         db.session.commit()
     remember_me = False
