@@ -5,6 +5,16 @@ from .forms import LoginForm, EditForm
 from .models import User, ROLE_USER
 
 
+@app.error_handling(404)
+def error404():
+    return render_template('404.html'), 404
+
+
+@app.error_handling(500)
+def error500():
+    return render_template('500.html'), 500
+
+
 @app.route("/")
 @app.route("/index")
 @login_required
