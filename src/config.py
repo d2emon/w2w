@@ -15,3 +15,10 @@ OPENID_PROVIDERS = [
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "db", "w2w.db")
 # SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, "migrations")
 SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+MAIL_SERVER = 'localhost'
+MAIL_PORT = 25
+MAIL_USERNAME = None
+MAIL_PASSWORD = None
+
+ADMINS = ['admin@example.com', ]
