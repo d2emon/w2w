@@ -71,7 +71,12 @@ def user(nickname):
 
 @app.before_request
 def before_request():
+    from datetime import datetime
     g.user = current_user
+    if g.user.is_authenticated:
+        g.user.last_seen = datetime.utcnow()
+        db.session.add(g.user)
+        db.session.commit()
 
 
 @oid.after_login
