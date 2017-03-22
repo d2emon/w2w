@@ -29,3 +29,7 @@ class EditForm(FlaskForm):
             self.nickname.errors.append("This nickname is allready in use. Please choose another one.")
             return False
         return True
+
+
+class PostForm(FlaskForm):
+    post = TextField('post', validators=[Required(), ])

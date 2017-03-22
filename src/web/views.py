@@ -1,8 +1,9 @@
+from datetime import datetime
 from flask import g, session, request, url_for, render_template, redirect, flash
 from flask_login import current_user, login_user, login_required, logout_user
 from web import app, db, oid, lm
-from .forms import LoginForm, EditForm
-from .models import User, ROLE_USER
+from .forms import LoginForm, EditForm, PostForm
+from .models import User, ROLE_USER, Post
 
 
 @app.errorhandler(404)
@@ -16,24 +17,23 @@ def error500(error):
 
 
 @app.route("/")
-@app.route("/index")
+@app.route("/index", methods=["GET", "POST", ])
 @login_required
 def index():
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, timestamp=datetime.utcnow(), author=g.user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('index'))
     user = g.user
-    posts = [
-        {
-            'author': {'nickname': "John"},
-            'body': "Beautyfull day in Portland!",
-        },
-        {
-            'author': {'nickname': "Susan"},
-            'body': "The Avengers movie was so cool!",
-        },
-    ]
+    posts = g.user.followed_posts().all()
     return render_template("index.html",
                            title="Home",
                            user=user,
                            posts=posts,
+                           form=form,
                            )
 
 
