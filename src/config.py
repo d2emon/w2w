@@ -18,11 +18,13 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 WHOOSH_BASE = os.path.join(basedir, "db", "search.db")
 MAX_SEARCH_RESULTS = 50
 
-MAIL_SERVER = 'localhost'
-MAIL_PORT = 25
-MAIL_USERNAME = None
-MAIL_PASSWORD = None
+MAIL_SERVER = 'smtp.googlemail.com'
+MAIL_PORT = 465
+MAIL_USE_TLS = False
+MAIL_USE_SSL = True
+MAIL_USERNAME = 'd2emonium'
+MAIL_PASSWORD = 'E1kCH6BP'
 
-ADMINS = ['admin@example.com', ]
+ADMINS = ['d2emonium@gmail.com', ]
 
 POSTS_PER_PAGE = 3

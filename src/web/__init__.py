@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_openid import OpenID
+from flask_mail import Mail
 import os
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 
@@ -28,6 +29,7 @@ if log:
 app.config.from_object('config')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+mail = Mail(app)
 lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'
