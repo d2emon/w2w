@@ -33,3 +33,7 @@ class EditForm(FlaskForm):
 
 class PostForm(FlaskForm):
     post = TextField('post', validators=[Required(), ])
+
+
+class SearchForm(FlaskForm):
+    search = TextField('search', validators=[Required(), ])

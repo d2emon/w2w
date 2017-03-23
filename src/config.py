@@ -13,8 +13,10 @@ OPENID_PROVIDERS = [
 ]
 # OIDC_CLIENT_SECRETS = os.path.join(basedir, "secrets")
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "db", "w2w.db")
-# SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, "migrations")
 SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+WHOOSH_BASE = os.path.join(basedir, "db", "search.db")
+MAX_SEARCH_RESULTS = 50
 
 MAIL_SERVER = 'localhost'
 MAIL_PORT = 25
