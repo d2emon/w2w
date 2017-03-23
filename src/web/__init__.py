@@ -6,6 +6,7 @@ from flask_openid import OpenID
 from flask_mail import Mail
 import os
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+from web.momentjs import momentjs
 
 
 app = Flask(__name__)
@@ -34,6 +35,7 @@ lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
+app.jinja_env.globals['momentjs'] = momentjs
 
 
 from web import views, models
