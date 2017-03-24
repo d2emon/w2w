@@ -1,0 +1,216 @@
+# Russian translations for .
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the  project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  W2W\n"
+"Report-Msgid-Bugs-To: d2emonium@gmail.com\n"
+"POT-Creation-Date: 2017-03-24 12:03+0300\n"
+"PO-Revision-Date: 2017-03-24 09:27+0300\n"
+"Last-Translator: FULL NAME <d2emonium@gmail.com>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: web/views.py:32
+msgid "Your post is now live!"
+msgstr "Ваше сообщение опубликовано!"
+
+#: web/views.py:75 web/views.py:108 web/views.py:129
+#, python-format
+msgid "User %(nickname)s not found."
+msgstr "Пользователь %(nickname)s не найден."
+
+#: web/views.py:93
+msgid "Your changes have been saved."
+msgstr "Ваши изменения сохранены."
+
+#: web/views.py:111
+msgid "Cannot follow yourself!"
+msgstr "Не могу добавить себя в отслеживаемые!"
+
+#: web/views.py:115
+#, python-format
+msgid "Cannot follow %(nickname)s!"
+msgstr "Не могу добавить %(nickname)s в отслежииваемые!"
+
+#: web/views.py:119
+#, python-format
+msgid "You are now following %(nickname)s!"
+msgstr "Вы теперь отслеживаете %(nickname)s!"
+
+#: web/views.py:132
+msgid "Cannot unfollow yourself!"
+msgstr "Не могу перестать отслеживать себя!"
+
+#: web/views.py:136
+#, python-format
+msgid "Cannot unfollow %(nickname)s!"
+msgstr "Не могу перестать отслеживать %(nickname)s!"
+
+#: web/views.py:140
+#, python-format
+msgid "You have stopped following %(nickname)s!"
+msgstr "Вы перестали отслеживать %(nickname)s!"
+
+#: web/views.py:176
+msgid "Invalid login. Please try again."
+msgstr "Неправильный логин. Пожалуйста повторите попытку."
+
+#: web/templates/404.html:3
+msgid "File Not Found"
+msgstr "Файл Не Найден"
+
+#: web/templates/404.html:4 web/templates/500.html:5
+msgid "Back"
+msgstr "Назад"
+
+#: web/templates/500.html:3
+msgid "An unexpected error has occured"
+msgstr "Произошла непредвиденная ошибка"
+
+#: web/templates/500.html:4
+msgid "The administrator has been notified. Sorry for the inconvinience!"
+msgstr "Администратор получит сообщение об ошибке. Просим прощения за неудобства!"
+
+#: web/templates/base.html:21
+msgid "Toggle navigation"
+msgstr "Включить навигацию"
+
+#: web/templates/base.html:30
+msgid "Home"
+msgstr "Главная"
+
+#: web/templates/base.html:32
+msgid "Your Profile"
+msgstr "Ваш Профиль"
+
+#: web/templates/base.html:33
+msgid "Logout"
+msgstr "Выход"
+
+#: web/templates/base.html:37
+msgid "Search"
+msgstr "Искать"
+
+#: web/templates/edit.html:3
+msgid "Edit Your Profile"
+msgstr "Редактировать Ваш Профиль"
+
+#: web/templates/edit.html:8
+msgid "Your nickname:"
+msgstr "Ваш псевдоним:"
+
+#: web/templates/edit.html:17
+msgid "About yourself:"
+msgstr "О себе:"
+
+#: web/templates/edit.html:27
+msgid "Save Changes"
+msgstr "Сохранить Изменения"
+
+#: web/templates/index.html:3
+#, python-format
+msgid "Hi, %(user)s!"
+msgstr "Привет, %(user)s!"
+
+#: web/templates/index.html:8
+msgid "Say something:"
+msgstr "Скажите что-нибудь:"
+
+#: web/templates/index.html:11
+msgid "Post!"
+msgstr "Опубликовать!"
+
+#: web/templates/index.html:24 web/templates/index.html:26
+#: web/templates/user.html:29 web/templates/user.html:31
+msgid "Newer posts"
+msgstr "К новым"
+
+#: web/templates/index.html:29 web/templates/index.html:31
+#: web/templates/user.html:34 web/templates/user.html:36
+msgid "Older posts"
+msgstr "К старым"
+
+#: web/templates/login.html:19
+msgid "Please Sign In"
+msgstr "Пожалуйста Войдите"
+
+#: web/templates/login.html:22
+msgid "Click on your OpenID provider below:"
+msgstr "Выберите свой провайдер OpenID"
+
+#: web/templates/login.html:29
+msgid "Or enter your OpenID here:"
+msgstr "Или введите свой OpenID"
+
+#: web/templates/login.html:40
+msgid "Remember Me"
+msgstr "Запомнить Меня"
+
+#: web/templates/login.html:46
+msgid "Sign In"
+msgstr "Войти"
+
+#: web/templates/post.html:6
+#, python-format
+msgid "%(nickname)s said %(when)s:"
+msgstr "%(nickname)s сказал %(when)s:"
+
+#: web/templates/search_results.html:3
+#, python-format
+msgid "Search results for \"%(query)s\""
+msgstr "Результаты поиска \"%(query)s\""
+
+#: web/templates/user.html:10
+#, python-format
+msgid "Last seen: %(seen)s"
+msgstr "Был на сайте: %(seen)s"
+
+#: web/templates/user.html:12
+#, python-format
+msgid "Followers: %(followers)s"
+msgstr "Последователи: %(followers)s"
+
+#: web/templates/user.html:12
+#, python-format
+msgid "Following: %(following)s"
+msgstr "Следит за: %(following)s"
+
+#: web/templates/user.html:14
+msgid "Edit your profile"
+msgstr "Редактировать Ваш Профиль"
+
+#: web/templates/user.html:16
+msgid "Follow"
+msgstr "Отслеживать"
+
+#: web/templates/user.html:18
+msgid "Unfollow"
+msgstr "Не Отслеживать"
+
+#~ msgid "User  not found."
+#~ msgstr "Пользователь  не найден."
+
+#~ msgid "User  not found"
+#~ msgstr "Пользователь не найден."
+
+#~ msgid "Cannot follow !"
+#~ msgstr "Не могу отслеживать  !"
+
+#~ msgid "You are now following !"
+#~ msgstr "Вы теперь следите за  !"
+
+#~ msgid "Cannot unfollow !"
+#~ msgstr "Не могу перестать отслеживать!"
+
+#~ msgid "You have stopped following !"
+#~ msgstr "Вы прекратили отслеживать !"
+
