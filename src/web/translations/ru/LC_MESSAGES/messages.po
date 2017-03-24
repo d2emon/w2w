@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  W2W\n"
 "Report-Msgid-Bugs-To: d2emonium@gmail.com\n"
-"POT-Creation-Date: 2017-03-24 12:03+0300\n"
+"POT-Creation-Date: 2017-03-24 12:42+0300\n"
 "PO-Revision-Date: 2017-03-24 09:27+0300\n"
 "Last-Translator: FULL NAME <d2emonium@gmail.com>\n"
 "Language: ru\n"
@@ -18,6 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+
+#: web/forms.py:29
+msgid ""
+"This nickname has invalid characters. Please use letters, numbers and "
+"underscores only."
+msgstr "Это имя содержит недопустимые символы. Пожалуйста используйте "
+"только буквы, цифры и знак подчеркивания."
+
+#: web/forms.py:34
+msgid "This nickname is allready in use. Please choose another one."
+msgstr "К сожалению, это имя занято. Выберите другое имя."
 
 #: web/views.py:32
 msgid "Your post is now live!"
