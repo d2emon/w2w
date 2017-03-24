@@ -10,7 +10,13 @@
     <!-- link href="/static/bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet" -->
     <script src="{{ url_for('static', filename='js/jquery-3.2.0.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower/moment/moment.js') }}"></script>
+    {% if g.locale != 'en' %}
+    <script src="{{ url_for('static', filename='bower/moment/locale/' + g.locale + '.js') }}"></script>
+    <script>
+    moment.locale('{{g.locale}}');
+    </script>
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
