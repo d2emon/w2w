@@ -56,6 +56,11 @@ class User(db.Model):
         return "http://www.gravatar.com/avatar/" + md5(self.email.encode('utf-8')).hexdigest() + "?d=retro&s=" + str(size)
 
     @staticmethod
+    def make_valid_nickname(nickname):
+        import re
+        return re.sub('[^\w]', '', nickname)
+
+    @staticmethod
     def make_unique_nickname(nickname):
         if User.query.filter_by(nickname=nickname).first() is None:
             return nickname
