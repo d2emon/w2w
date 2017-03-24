@@ -6,3 +6,4 @@ Flask-Login==0.4.0
 Flask-OpenID==1.2.5
 git+git://github.com/miguelgrinberg/flask-whooshalchemy.git
 Flask-Mail==0.9.1
+Flask-Babel
