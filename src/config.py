@@ -28,3 +28,8 @@ MAIL_PASSWORD = 'E1kCH6BP'
 ADMINS = ['d2emonium@gmail.com', ]
 
 POSTS_PER_PAGE = 3
+
+LANGUAGES = {
+    'en': 'English',
+    'ru': 'Русский',
+}
