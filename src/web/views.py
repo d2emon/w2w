@@ -111,6 +111,22 @@ def edit():
                            )
 
 
+@app.route('/del/<int:id>')
+@login_required
+def delete(id):
+    post = Post.query.get(id)
+    if post is None:
+        flash(gettext('Post not found'))
+        return redirect(url_for('index'))
+    if post.author.id != g.user.id:
+        flash(gettext('You cannot delete this post.'))
+        return redirect(url_for('index'))
+    db.session.delete(post)
+    db.session.commit()
+    flash(gettext("Your post has been deleted."))
+    return redirect(url_for('index'))
+
+
 @app.route('/follow/<nickname>')
 @login_required
 def follow(nickname):

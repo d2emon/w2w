@@ -116,6 +116,20 @@ class TestCase(unittest.TestCase):
         assert f2 == [p3, p2, ]
         assert f3 == [p4, p3, ]
         assert f4 == [p4, ]
+        
+    def test_delete_post(self):
+        u = User(nickname='John', email='john@example.com')      
+        p = Post(body='Test Post', author=u, timestamp=datetime.now())  
+        db.session.add(u)
+        db.session.add(p)
+        db.session.commit()
+        
+        p = Post.query.get(1)
+        db.session.remove()
+        
+        db.session = db.create_scoped_session()
+        db.session.delete(p)
+        db.session.commit()
 
 
 if __name__ == '__main__':
