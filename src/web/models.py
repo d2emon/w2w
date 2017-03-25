@@ -31,7 +31,7 @@ class User(db.Model):
         lazy='dynamic',
     )
 
-    def __repr__(self):
+    def __repr__(self):  # pragma: no cover
         return "<User {}>".format(self.nickname)
 
     @property

@@ -1,6 +1,7 @@
 #! /usr/bin/env python
-import os
 import unittest
+from coverage import coverage
+import os
 
 
 from config import basedir
@@ -130,7 +131,34 @@ class TestCase(unittest.TestCase):
         db.session = db.create_scoped_session()
         db.session.delete(p)
         db.session.commit()
+        
+    def test_user(self):
+        n = User.make_valid_nickname('John_123')
+        assert n == 'John_123'
+
+        n = User.make_valid_nickname('John_[123]\n')
+        assert n == 'John_123'
+        
+        u = User(nickname='john', email='john@example.com')
+        db.session.add(u)
+        db.session.commit()
+        assert u.is_authenticated == True
+        assert u.is_active == True
+        assert u.is_anonimous== False
+        assert u.id == int(u.get_id())
 
 
-if __name__ == '__main__':
-    unittest.main()
+if __name__ == '__main__':  # pragma: no cover
+    cov = coverage(branch=True, omit=['flask/*', 'tests.py'])
+    cov.start()
+    try:
+        unittest.main()
+    except:
+        pass
+    cov.stop()
+    cov.save()
+    print("\n\nCoverage Report:\n")
+    cov.report()
+    print("HTML version: " + os.path.join(basedir, "coverage/index.html"))
+    cov.html_report(directory='../coverage')
+    cov.erase()
