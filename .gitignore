@@ -89,6 +89,7 @@ ENV/
 .ropeproject
 /.project
 /.pydevproject
+/.settings
 
 /db/*.db
 /tmp
