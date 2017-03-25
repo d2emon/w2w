@@ -7,5 +7,4 @@ Flask-OpenID==1.2.5
 git+git://github.com/miguelgrinberg/flask-whooshalchemy.git
 Flask-Mail==0.9.1
 Flask-Babel==0.11.1
-guess-language==0.2
-py-translate==1.0.3
+guess_language-spirit==0.5.3

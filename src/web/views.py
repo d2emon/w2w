@@ -1,11 +1,13 @@
 from datetime import datetime
-from flask import g, session, request, url_for, render_template, redirect, flash
+from flask import g, session, request, url_for, render_template, redirect, flash, jsonify
 from flask_login import current_user, login_user, login_required, logout_user
 from flask_babel import gettext
+from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from .forms import LoginForm, EditForm, PostForm, SearchForm
 from .models import User, ROLE_USER, Post
 from .emails import follower_notification
+from .translate import translate
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 
 
@@ -26,7 +28,16 @@ def error500(error):
 def index(page=1):
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, timestamp=datetime.utcnow(), author=g.user)
+        language = guessLanguage(form.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
+        post = Post(
+            body=form.post.data, 
+            timestamp=datetime.utcnow(), 
+            author=g.user,
+            language=language,
+        )
+        print(language)
         db.session.add(post)
         db.session.commit()
         flash(gettext('Your post is now live!'))
@@ -157,6 +168,17 @@ def search_results(query):
                            query=query,
                            posts=results,
                            )
+
+
+@app.route('/translate', methods=['POST', ])
+@login_required
+def translatePost():
+    t = translate(
+        request.form['sourceLang'], 
+        request.form['destLang'],
+        request.form['text'], 
+    )    
+    return jsonify(t)
 
 
 @app.before_request
