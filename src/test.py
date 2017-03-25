@@ -146,6 +146,17 @@ class TestCase(unittest.TestCase):
         assert u.is_active == True
         assert u.is_anonimous== False
         assert u.id == int(u.get_id())
+        
+    def test_make_unique_nickname(self):
+        u = User(nickname='John', email='john@example.com')
+        db.session.add(u)
+        db.session.commit()
+        
+        nickname = User.make_unique_nickname('susan')
+        assert nickname == 'susan'
+        
+        nickname = User.make_unique_nickname('john')
+        assert nickname == 'john'
 
 
 if __name__ == '__main__':  # pragma: no cover
