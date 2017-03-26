@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{ _('Edit Movie') }}</h1>
+    <div class="well">
+        {% from "formhelper.html" import render_field %}
+        <form class="form-horizontal" action="" method="post" name="edit">
+            {{ form.hidden_tag() }}
+            {{ render_field(form.title, class="span4") }}
+            {{ render_field(form.slug, class="span4", maxlength=64) }}
+            {{ render_field(form.description, class="span4", cols=64, rows=4) }}
+            <div class="control-group{% if form.title.errors %} error{% endif %}">
+              <label class="control-label" for="title">{{ form.title.label }}:</label>
+                <div class="controls">
+                    {{ form.title(maxlength=64, class="span4") }}
+                    {% for error in form.title.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.slug.errors %} error{% endif %}">
+              <label class="control-label" for="slug">{{ form.slug.label }}:</label>
+                <div class="controls">
+                    {{ form.slug(maxlength=64, class="span4") }}
+                    {% for error in form.slug.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.description.errors %} error{% endif %}">
+              <label class="control-label" for="description">{{ form.description.label }}:</label>
+                <div class="controls">
+                    {{ form.description(cols=64, rows=4, class="span4") }}
+                    {% for error in form.description.errors %}
+                        <span class="help-inline">[{{ error }}]</span><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                  <input class="btn btn-primary" type="submit" value="{{ _('Save') }}">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from flask_babel import gettext
 from wtforms import TextField, BooleanField, TextAreaField
-from wtforms.validators import Required, Length
+from wtforms.validators import Required, Length, Regexp
 from web.models import User
 
 
@@ -42,3 +42,13 @@ class PostForm(FlaskForm):
 
 class SearchForm(FlaskForm):
     search = TextField('search', validators=[Required(), ])
+
+
+class MovieForm(FlaskForm):
+    title = TextField(gettext('Title'), validators=[Required(), ])
+    slug = TextField(gettext('URL'), validators=[
+        Required(),
+        Length(min=1, max=64),
+        Regexp("[a-zA-Z0-9_\-]*"),
+    ])
+    description = TextAreaField(gettext('Description'))

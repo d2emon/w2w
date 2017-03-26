@@ -5,8 +5,8 @@ from flask_babel import gettext
 from flask_sqlalchemy import get_debug_queries
 from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
-from .forms import LoginForm, EditForm, PostForm, SearchForm
-from .models import User, ROLE_USER, Post
+from .forms import LoginForm, EditForm, PostForm, SearchForm, MovieForm
+from .models import User, ROLE_USER, Post, Movie
 from .emails import follower_notification
 from .translate import translate
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES, DATABASE_QUERY_TIMEOUT
@@ -44,10 +44,15 @@ def index(page=1):
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
     user = g.user
+    q = Movie.query.order_by(Movie.title)
+    print(q)
+    print(q.count())
+    movies = q.all()  # paginate(1, POSTS_PER_PAGE, False)
     posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
     return render_template("index.html",
                            title="Home",
                            user=user,
+                           movies=movies,
                            posts=posts,
                            form=form,
                            )
@@ -108,6 +113,23 @@ def edit():
         form.nickname.data = g.user.nickname
         form.about_me.data = g.user.about_me
     return render_template('edit.html',
+                           form=form,
+                           )
+
+
+@app.route('/movie/add', methods=['POST', 'GET', ])
+@login_required
+def add_movie():
+    form = MovieForm()
+    if form.validate_on_submit():
+        movie = Movie()
+        form.populate_obj(movie)
+        db.session.add(movie)
+        db.session.commit()
+        flash(gettext("Your changes have been saved."))
+        return redirect(url_for('index'))
+        # movie = Movie()
+    return render_template('movie/edit.html',
                            form=form,
                            )
 
