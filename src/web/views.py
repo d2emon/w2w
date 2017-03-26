@@ -2,13 +2,14 @@ from datetime import datetime
 from flask import g, session, request, url_for, render_template, redirect, flash, jsonify
 from flask_login import current_user, login_user, login_required, logout_user
 from flask_babel import gettext
+from flask_sqlalchemy import get_debug_queries
 from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from .forms import LoginForm, EditForm, PostForm, SearchForm
 from .models import User, ROLE_USER, Post
 from .emails import follower_notification
 from .translate import translate
-from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
+from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES, DATABASE_QUERY_TIMEOUT
 
 
 @app.errorhandler(404)
@@ -21,7 +22,7 @@ def error500(error):
     return render_template('500.html'), 500
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST", ])
 @app.route("/index", methods=["GET", "POST", ])
 @app.route("/index/<int:page>", methods=["GET", "POST", ])
 @login_required
@@ -32,8 +33,8 @@ def index(page=1):
         if language == 'UNKNOWN' or len(language) > 5:
             language = ''
         post = Post(
-            body=form.post.data, 
-            timestamp=datetime.utcnow(), 
+            body=form.post.data,
+            timestamp=datetime.utcnow(),
             author=g.user,
             language=language,
         )
@@ -190,10 +191,10 @@ def search_results(query):
 @login_required
 def translatePost():
     t = translate(
-        request.form['sourceLang'], 
+        request.form['sourceLang'],
         request.form['destLang'],
-        request.form['text'], 
-    )    
+        request.form['text'],
+    )
     return jsonify(t)
 
 
@@ -207,6 +208,14 @@ def before_request():
         db.session.commit()
         g.search_form = SearchForm()
     g.locale = get_locale()
+
+
+@app.after_request
+def after_request(response):
+    for query in get_debug_queries():
+        if query.duration >= DATABASE_QUERY_TIMEOUT:
+            app.logger.warning("SLOW QUERY: {}\nParameters: {}\nDuration: {}s\nContext: {}\n".format(query.statement, query.parameters, query.duration, query.context()))
+    return response
 
 
 @oid.after_login

@@ -14,6 +14,8 @@ OPENID_PROVIDERS = [
 # OIDC_CLIENT_SECRETS = os.path.join(basedir, "secrets")
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "db", "w2w.db")
 SQLALCHEMY_TRACK_MODIFICATIONS = True
+SQLALCHEMY_RECORD_QUERIES = True
+DATABASE_QUERY_TIMEOUT = 0.5
 
 WHOOSH_BASE = os.path.join(basedir, "db", "search.db")
 MAX_SEARCH_RESULTS = 50
