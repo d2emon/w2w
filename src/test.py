@@ -117,50 +117,39 @@ class TestCase(unittest.TestCase):
         assert f2 == [p3, p2, ]
         assert f3 == [p4, p3, ]
         assert f4 == [p4, ]
-        
+
     def test_delete_post(self):
-        u = User(nickname='John', email='john@example.com')      
-        p = Post(body='Test Post', author=u, timestamp=datetime.now())  
+        u = User(nickname='John', email='john@example.com')
+        p = Post(body='Test Post', author=u, timestamp=datetime.now())
         db.session.add(u)
         db.session.add(p)
         db.session.commit()
-        
+
         p = Post.query.get(1)
         db.session.remove()
-        
+
         db.session = db.create_scoped_session()
         db.session.delete(p)
         db.session.commit()
-        
+
     def test_user(self):
         n = User.make_valid_nickname('John_123')
         assert n == 'John_123'
 
         n = User.make_valid_nickname('John_[123]\n')
         assert n == 'John_123'
-        
+
         u = User(nickname='john', email='john@example.com')
         db.session.add(u)
         db.session.commit()
-        assert u.is_authenticated == True
-        assert u.is_active == True
-        assert u.is_anonimous== False
+        assert u.is_authenticated is True
+        assert u.is_active is True
+        assert u.is_anonimous is False
         assert u.id == int(u.get_id())
-        
-    def test_make_unique_nickname(self):
-        u = User(nickname='John', email='john@example.com')
-        db.session.add(u)
-        db.session.commit()
-        
-        nickname = User.make_unique_nickname('susan')
-        assert nickname == 'susan'
-        
-        nickname = User.make_unique_nickname('john')
-        assert nickname == 'john'
 
 
 if __name__ == '__main__':  # pragma: no cover
-    cov = coverage(branch=True, omit=['flask/*', 'tests.py'])
+    cov = coverage(branch=True, omit=['../.env/*', 'tests.py'])
     cov.start()
     try:
         unittest.main()
@@ -170,6 +159,6 @@ if __name__ == '__main__':  # pragma: no cover
     cov.save()
     print("\n\nCoverage Report:\n")
     cov.report()
-    print("HTML version: " + os.path.join(basedir, "coverage/index.html"))
-    cov.html_report(directory='../coverage')
+    print("HTML version: " + os.path.join(basedir, ".coverage/index.html"))
+    cov.html_report(directory='../.coverage')
     cov.erase()
