@@ -102,4 +102,18 @@ class Post(db.Model):
         return "<Post {}>".format(self.body)
 
 
+class Movie(db.Model):
+    __searchable__ = ['description', ]
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(140), nullable=False)
+    slug = db.Column(db.String(64), nullable=False, unique=True)
+    description = db.Column(db.UnicodeText)
+    timestamp = db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return "<Movie {}>".format(self.title)
+
+
 whooshalchemy.whoosh_index(app, Post)
