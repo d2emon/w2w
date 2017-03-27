@@ -16,7 +16,7 @@
             </div>
         </form>
     </div>
-    {% for movie in movies %}
+    {% for movie in movies.items %}
       {% include 'movie/brief.html' %}
     {% endfor %}      
     {% for post in posts.items %}

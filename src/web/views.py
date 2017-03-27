@@ -38,16 +38,13 @@ def index(page=1):
             author=g.user,
             language=language,
         )
-        print(language)
         db.session.add(post)
         db.session.commit()
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
     user = g.user
     q = Movie.query.order_by(Movie.title)
-    print(q)
-    print(q.count())
-    movies = q.all()  # paginate(1, POSTS_PER_PAGE, False)
+    movies = q.paginate(1, POSTS_PER_PAGE, False)
     posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
     return render_template("index.html",
                            title="Home",
