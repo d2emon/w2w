@@ -3,6 +3,10 @@ import yaml
 
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+config_files = [
+    'config.yml',
+    'local.yml',
+]
 
 
 def from_yaml(filename):
@@ -36,3 +40,4 @@ class Config():
     ADMINS = ['admin@example.com', ]
 
     POSTS_PER_PAGE = 3
+    LOGGING = False

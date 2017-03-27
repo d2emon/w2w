@@ -23,9 +23,9 @@ OPENID_PROVIDERS:
   url: https://www.myopenid.com
 POSTS_PER_PAGE: 3
 SECRET_KEY: ThereIsNoSpoon
-SQLALCHEMY_DATABASE_URI: sqlite:///../db/w2w.db
+# SQLALCHEMY_DATABASE_URI: "sqlite:////home/d2emon/projects/python/w2w/db/w2w.db"
 SQLALCHEMY_RECORD_QUERIES: true
 SQLALCHEMY_TRACK_MODIFICATIONS: true
-WHOOSH_BASE: ../db/search.db
+# WHOOSH_BASE: ../db/search.db
 LOGGING: true
 DEBUG: true
