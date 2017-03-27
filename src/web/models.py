@@ -115,5 +115,7 @@ class Movie(db.Model):
     def __repr__(self):
         return "<Movie {}>".format(self.title)
 
+    def avatar(self, size=128):
+        return gravatar(self.slug, size)
 
 whooshalchemy.whoosh_index(app, Post)
