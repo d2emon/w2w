@@ -1,5 +1,5 @@
 from web import app, db
-from hashlib import md5
+from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
 
 
@@ -53,7 +53,7 @@ class User(db.Model):
             return str(self.id)
 
     def avatar(self, size):
-        return "http://www.gravatar.com/avatar/" + md5(self.email.encode('utf-8')).hexdigest() + "?d=retro&s=" + str(size)
+        return gravatar(self.email, size)
 
     @staticmethod
     def make_valid_nickname(nickname):
