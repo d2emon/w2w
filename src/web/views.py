@@ -131,6 +131,22 @@ def add_movie():
                            )
 
 
+@app.route('/movie/<slug>/edit', methods=['POST', 'GET', ])
+@login_required
+def edit_movie(slug):
+    movie = Movie.query.filter_by(slug=slug).first()
+    form = MovieForm(obj=movie)
+    if form.validate_on_submit():
+        form.populate_obj(movie)
+        db.session.add(movie)
+        db.session.commit()
+        flash(gettext("Your changes have been saved."))
+        return redirect(url_for('index'))
+    return render_template('movie/edit.html',
+                           form=form,
+                           )
+
+
 @app.route('/del/<int:id>')
 @login_required
 def delete(id):
