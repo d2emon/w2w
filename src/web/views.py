@@ -243,6 +243,8 @@ def before_request():
         db.session.commit()
         g.search_form = SearchForm()
     g.locale = get_locale()
+    g.movies = Movie.query.paginate(1, POSTS_PER_PAGE, False)
+    g.genres = [ gettext('Anime') * 36 ]
 
 
 @app.after_request

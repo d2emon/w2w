@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>{{ _('Hi, %(user)s!', user=user.nickname) }}</h1>
+
+    <h1>{{ _('Hi, %(user)s!', user=user.nickname) }}</h1>
     <div class="well">
         <form class="form-horizontal" action="" method="post" name="post">
             {{ form.hidden_tag() }}
@@ -35,111 +36,8 @@
         {% endif %}
     </ul>
 
-{AJAX}
-<div class="bLayout">
-  
-  <div class="bWidthWrap">
-    {BASE-ESAB}
-    <div class="eProfile">
-      {login}
-      <div style="margin-left: 270px;margin-top: -24px; ">
-        <div class="yashare-auto-init" data-yashareL10n="ru"data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,gplus" data-yashareTheme="counter"></div>
-      </div> 
-    </div> 
-  </div> 
-                             
-  <div class="bTags">
-           
-  <!-- Ñëàéäåð -->
-    <div id="sliderwrap">
-      <ul id="center_dm_ru_carousel" class="transparency_i">{custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"}</ul> 
-    </div>
-
-  </div>
-
-  <section>
-    <div class="downbar">
-      <div class="downcontent">
-        <div class="d-menu">
-        <ul>
-          <li><a href="/">Ãëàâíàÿ ñòðàíèöà</a></li>
-          <li><a href="/index.php?do=rules">Ïðàâèëà</a></li>
-          <li><a href="/copyright.html">Ïðàâîîáëàäàòåëÿì</a></li>
-          <li><a href="/ozhidaemye-filmy/">Cêîðî íà ýêðàíàõ</a></li>
-          <li><a href="/multfilms/">Ìóëüòôèëüìû</a></li>
-          <li><a href="/serialy/">Ñåðèàëû</a></li>
-          <li><a href="/tvshow/">ÒÂ ïåðåäà÷è</a></li>
-				  <li><a href="/tags/2013/">Ôèëüìû 2013</a></li>
-				  <li><a href="/tags/2014/">Ôèëüìû 2014</a></li>
-        </ul>
-        </div><!--hmenu-->
-      </div>
-    </div>
-  </section>
-
-	<div class="films-category">
-	  <a href="/biography/">Áèîãðàôèÿ</a>
-		<a href="/action/">Áîåâèê</a>					
-		<a href="/western/">Âåñòåðí</a>
-		<a href="/military/">Âîåííûé</a>
-		<a href="/detective/">Äåòåêòèâ</a>
-		<a href="/documentary/">Äîêóìåíòàëüíûé</a>
-		<a href="/drama/">Äðàìà</a>	
-		<a href="/history/">Èñòîðè÷åñêèé</a>
-		<a href="/comedi/">Êîìåäèÿ</a>					
-		<a href="/crime/">Êðèìèíàë</a>
-		<a href="/melodrama/">Ìåëîäðàìà</a>
-		<a href="/musical/">Ìþçèêë</a>	
-		<a href="/adventures/">Ïðèêëþ÷åíèÿ</a>	
-    <a href="/russkie/">Ðóññêèå</a>					
-		<a href="/family/">Ñåìåéíûé</a>
-		<a href="/sssr/">Ñîâåòñêèå</a>					
-		<a href="/sport/">Ñïîðò</a>
-		<a href="/triller/">Òðèëëåð</a>
-		<a href="/horror/">Óæàñû</a>
-		<a href="/fantasy/">Ôåíòåçè</a>
-    <a href="/fantastika/">Ôàíòàñòèêà</a>    
-		<div style="clear: both;">
-    </div>
-  </div>
-<!--
-{include file="catalog-nav.tpl"}
--->
-
-  <div class="content">
-<!--
-[aviable=main]
-  <div class="reklama">
-    <div class="reklama2"><img src="{THEME}/images/468x60.png" alt="ñ÷åò÷èê"/></div>
-    <div class="reklama2"><img src="{THEME}/images/468x60.png" alt="ñ÷åò÷èê"/></div>
-  </div>
-[/aviable]
--->
-
 {info}
 {content}
 {k_links}   
-  <div class="reklama">
- <!--
 
-    <div class="reklama2"><img src="{THEME}/images/468x60.png" alt="ñ÷åò÷èê"/></div>
-    <div class="reklama2"><img src="{THEME}/images/468x60.png" alt="ñ÷åò÷èê"/></div>
--->
-  </div>
-   
-</div>
-[aviable=cat|main]
-<div class="blok2">
-  <div class="blok3">
-{include file="engine/modules/catface.php"}
-  </div>    
-</div>
-[/aviable]
-<div style="clear: both;"></div>
-<hr>
-<p style="padding-left: 50px;">Zvest â ñîöñåòÿõ: <a rel="nofollow" href="/autohelp100" target="_blank">Òâèòåð</a> <a rel="nofollow" href="/public57171483" target="_blank">Âêîíòàêòå</a> <a rel="nofollow" href="/interesariy" target="_blank">Îäíîêëàññíèêè</a>
- 
-  <p style="padding-left: 75%; margin-top: -40px;">   
-  </p>   
-</p>
 {% endblock %}

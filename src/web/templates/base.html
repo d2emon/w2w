@@ -54,33 +54,75 @@
             <form class="navbar-form navbar-left" action="{{ url_for('search') }}" method="post" name="search">
               {{ g.search_form.hidden_tag() }}
               <div class="form-group has-feedback has-feedback-left">
-                {{ g.search_form.search(size=40, placeholder=_("Enter search text and press Enter"), class="form-control search-query")}}
+                {{ g.search_form.search(size=40, placeholder=_("Search"), class="form-control search-query")}}
                 <span class="glyphicon glyphicon-search form-control-feedback"></span>
               </div>
             </form>
-            <ul class="nav navbar-nav">
-              <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
               {% if g.user.is_authenticated %}
-                <li class="dropdown">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{ g.user.nickname }} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
                   <li><a href="{{ url_for('add_movie') }}">{{ _('Add Movie') }}</a></li>
                   <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
                 </ul>
-                </li>
-              {% endif %}
+              </li>
             </ul>
+              {% endif %}
             <ul class="nav navbar-nav navbar-right">
               {% if g.user.is_authenticated %}
-                <li><a class="eMyMovies" href="/index.php?do=feedback"><span class="eMyMoviesLink"><i class="eMyMoviesLinkIcon"></i>Îáðàòíàÿ ñâÿçü</span></a></li>
-                <li><a class="eMyMovies" href="/rss.xml"><span class="eMyMoviesLink"><i class="eMyMoviesLinkIcon2"></i>RSS ëåíòà</span></a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">RSS feed</a></li>
               {% endif %}
             </ul>
           </div>
         </div>
       </div>
 
+    <div id="sliderwrap">
+      {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"}
+      {% if g.movies.items %}
+      <ul id="center_dm_ru_carousel" class="transparency_i">
+      {% for movie in g.movies.items %}
+      {% include 'movie/slider.html' %}
+      {% endfor %}      
+      </ul> 
+      {% endif %}
+    </div>
+    
+  <section>
+    <div class="downbar">
+      <div class="downcontent">
+        <div class="d-menu">
+          <ul>
+            <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('About Us') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Rules') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Copyright') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Site News') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Order Movie') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Movie News') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Actors') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Movies') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Online') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Movies 2016') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Movies 2017') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<div class="films-category">
+      {% for genre in g.genres %}
+        <a href="#">{{genre}}</a>
+      {% endfor %}      
+		<div style="clear: both;">
+    </div>
+  </div>
+
+{include file="catalog-nav.tpl"}
 
     <div class="container">
       <div class="row">
@@ -99,5 +141,25 @@
         </div>
       </div>
     </div>   
+
+[aviable=cat|main]
+<div class="blok2">
+  <div class="blok3">
+{include file="engine/modules/catface.php"}
+  </div>    
+</div>
+[/aviable]
+<div style="clear: both;"></div>
+
+<hr>
+
+<p style="padding-left: 50px;">
+  {{ _('Social networks: ')}}
+  <a rel="nofollow" href="/autohelp100" target="_blank">Twitter</a> 
+  <a rel="nofollow" href="/public57171483" target="_blank">Vkontakte</a> 
+  <a rel="nofollow" href="/interesariy" target="_blank">Odnoklassniki</a>
+  <p style="padding-left: 75%; margin-top: -40px;"></p>   
+</p>
+    
   </body>
 </html>
