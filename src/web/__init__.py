@@ -6,19 +6,28 @@ from flask_openid import OpenID
 from flask_mail import Mail
 from flask_babel import Babel, lazy_gettext
 import os
-from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
+from config import basedir, from_yaml
+# , ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 from web.momentjs import momentjs
 
 
 app = Flask(__name__)
-log = True  # not app.debug
+app.config.from_object('config.Config')
+app.config.update(from_yaml('config.yml'))
+print(app.config)
+
+
+log = app.config["LOGGING"]  # not app.debug
 if log:
     import logging
     from logging.handlers import SMTPHandler, RotatingFileHandler
     credentials = None
-    if MAIL_USERNAME or MAIL_PASSWORD:
-        credentials = (MAIL_USERNAME, MAIL_PASSWORD)
-    mail_handler = SMTPHandler((MAIL_SERVER, MAIL_PORT), 'no-reply@' + MAIL_SERVER, ADMINS, 'microblog failure', credentials)
+
+    username = app.config.get('MAIL_USERNAME')
+    password = app.config.get('MAIL_PASSWORD')
+    if username or password:
+        credentials = (username, password)
+    mail_handler = SMTPHandler((app.config.get('MAIL_SERVER'), app.config.get('MAIL_PORT')), 'no-reply@' + app.config.get('MAIL_SERVER'), app.config.get('ADMINS'), 'microblog failure', credentials)
     mail_handler.setLevel(logging.ERROR)
     app.logger.addHandler(mail_handler)
 
@@ -28,7 +37,6 @@ if log:
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
     app.logger.info('w2w startup')
-app.config.from_object('config')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 mail = Mail(app)

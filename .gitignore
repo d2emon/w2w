@@ -91,5 +91,6 @@ ENV/
 /.pydevproject
 /.settings
 
+config/
 /db/*.db
 /tmp

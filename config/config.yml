@@ -1,0 +1,31 @@
+ADMINS:
+- d2emonium@gmail.com
+CSRF_ENABLED: true
+DATABASE_QUERY_TIMEOUT: 0.5
+LANGUAGES:
+  en: English
+  ru: Русский
+MAIL_PASSWORD: E1kCH6BP
+MAIL_PORT: 465
+MAIL_SERVER: smtp.googlemail.com
+MAIL_USERNAME: d2emonium
+MAIL_USE_SSL: true
+MAIL_USE_TLS: false
+MAX_SEARCH_RESULTS: 50
+OPENID_PROVIDERS:
+- name: Yahoo
+  url: https://me.yahoo.com
+- name: AOL
+  url: https://openid.aol.com/<username>
+- name: Flickr
+  url: https://www.flickr.com/<username>
+- name: MyOpenID
+  url: https://www.myopenid.com
+POSTS_PER_PAGE: 3
+SECRET_KEY: ThereIsNoSpoon
+SQLALCHEMY_DATABASE_URI: sqlite:///../db/w2w.db
+SQLALCHEMY_RECORD_QUERIES: true
+SQLALCHEMY_TRACK_MODIFICATIONS: true
+WHOOSH_BASE: ../db/search.db
+LOGGING: true
+DEBUG: true

@@ -3,7 +3,6 @@ from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
 from web.models import Post
-from config import MAX_SEARCH_RESULTS
 
 
 @app.route('/del/<int:id>')
@@ -33,7 +32,7 @@ def search():
 @app.route('/search_results/<query>')
 @login_required
 def search_results(query):
-    results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
+    results = Post.query.whoosh_search(query, app.config.get('MAX_SEARCH_RESULTS', 100)).all()
     return render_template('search_results.html',
                            query=query,
                            posts=results,

@@ -1,7 +1,6 @@
 from flask import render_template
 from flask_mail import Message
-from web import mail
-from config import ADMINS
+from web import app, mail
 from web.decorators import async
 
 
@@ -20,7 +19,7 @@ def send_mail(subject, sender, recipients, text_body, html_body):
 def follower_notification(followed, follower):
     send_mail(
         "[microblog] {} is now following you!".format(follower.nickname),
-        ADMINS[0],
+        app.config.get('ADMINS', ['', ])[0],
         [followed.email],
         render_template(
             "follower_email.txt",

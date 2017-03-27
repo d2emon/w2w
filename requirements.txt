@@ -10,3 +10,4 @@ Flask-Babel==0.11.1
 guess_language-spirit==0.5.3
 coverage<4.0.0
 pstat==0.0.1
+PyYAML

@@ -4,7 +4,6 @@ from flask_babel import gettext
 from web import app, db, oid
 from web.forms import LoginForm, EditForm
 from web.models import User
-from config import POSTS_PER_PAGE
 
 
 @app.route('/login', methods=['GET', 'POST', ])
@@ -41,7 +40,7 @@ def user(nickname, page=1):
     if user is None:
         flash(gettext('User %(nickname)s not found.', nickname=nickname))
         return redirect(url_for('index'))
-    posts = user.posts.paginate(page, POSTS_PER_PAGE, False)
+    posts = user.posts.paginate(page, app.config.get('POSTS_PER_PAGE', 3), False)
     return render_template('user.html',
                            user=user,
                            posts=posts,

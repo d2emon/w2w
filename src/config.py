@@ -1,37 +1,38 @@
 import os
+import yaml
+
+
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 
-CSRF_ENABLED = True
-SECRET_KEY = 'ThereIsNoSpoon'
-OPENID_PROVIDERS = [
-    # {'name': "Google", 'url': "https://www.google.com/accounts/o8/id"},
-    {'name': "Yahoo", 'url': "https://me.yahoo.com"},
-    {'name': "AOL", 'url': "https://openid.aol.com/<username>"},
-    {'name': "Flickr", 'url': "https://www.flickr.com/<username>"},
-    {'name': "MyOpenID", 'url': "https://www.myopenid.com"},
-]
-# OIDC_CLIENT_SECRETS = os.path.join(basedir, "secrets")
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, "db", "w2w.db")
-SQLALCHEMY_TRACK_MODIFICATIONS = True
-SQLALCHEMY_RECORD_QUERIES = True
-DATABASE_QUERY_TIMEOUT = 0.5
+def from_yaml(filename):
+    config_file = os.path.join(basedir, 'config', filename)
+    data = dict()
+    with open(config_file) as f:
+        data = yaml.load(f)
+    return data
 
-WHOOSH_BASE = os.path.join(basedir, "db", "search.db")
-MAX_SEARCH_RESULTS = 50
 
-MAIL_SERVER = 'smtp.googlemail.com'
-MAIL_PORT = 465
-MAIL_USE_TLS = False
-MAIL_USE_SSL = True
-MAIL_USERNAME = 'd2emonium'
-MAIL_PASSWORD = 'E1kCH6BP'
+class Config():
+    CSRF_ENABLED = True
+    SECRET_KEY = 'ThereIsNoSpoon'
 
-ADMINS = ['d2emonium@gmail.com', ]
+    OPENID_PROVIDERS = []
+    LANGUAGES = {}
 
-POSTS_PER_PAGE = 3
+    SQLALCHEMY_DATABASE_URI = 'sqlite://:memory:'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_RECORD_QUERIES = True
+    DATABASE_QUERY_TIMEOUT = 0.5
 
-LANGUAGES = {
-    'en': 'English',
-    'ru': 'Русский',
-}
+    WHOOSH_BASE = os.path.join(basedir, "db", "search.db")
+    MAX_SEARCH_RESULTS = 50
+
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 25
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
+
+    ADMINS = ['admin@example.com', ]
+
+    POSTS_PER_PAGE = 3

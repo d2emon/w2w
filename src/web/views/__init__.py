@@ -8,7 +8,6 @@ from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
 from web.models import User, ROLE_USER, Post, Movie
 from web.translate import translate
-from config import POSTS_PER_PAGE, LANGUAGES, DATABASE_QUERY_TIMEOUT
 
 
 @app.errorhandler(404)
@@ -41,9 +40,8 @@ def index(page=1):
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
     user = g.user
-    q = Movie.query.order_by(Movie.title)
-    movies = q.paginate(1, POSTS_PER_PAGE, False)
-    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+    movies = Movie.query.paginate(1, app.config.get('POSTS_PER_PAGE', 4), False)
+    posts = g.user.followed_posts().paginate(page, app.config.get('POSTS_PER_PAGE', 3), False)
     return render_template("index.html",
                            title="Home",
                            user=user,
@@ -75,14 +73,14 @@ def before_request():
 
     g.search_form = SearchForm()
     g.locale = get_locale()
-    g.movies = Movie.query.paginate(1, POSTS_PER_PAGE, False)
+    g.movies = Movie.query.paginate(1, app.config.get('POSTS_PER_PAGE', 3), False)
     g.genres = [gettext('Anime') * 36]
 
 
 @app.after_request
 def after_request(response):
     for query in get_debug_queries():
-        if query.duration >= DATABASE_QUERY_TIMEOUT:
+        if query.duration >= app.config.get('TABASE_QUERY_TIMEOUT', 10):
             app.logger.warning("SLOW QUERY: {}\nParameters: {}\nDuration: {}s\nContext: {}\n".format(query.statement, query.parameters, query.duration, query.context()))
     return response
 
@@ -121,7 +119,7 @@ def load_user(id):
 
 @babel.localeselector
 def get_locale():
-    return request.accept_languages.best_match(LANGUAGES.keys())
+    return request.accept_languages.best_match(app.config.get('LANGUAGES', dict()).keys())
 
 
 from web.views.user import *
