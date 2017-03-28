@@ -1,13 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="well well-large">
-        <div class="pull-right">
-            <img src="{{ movie.avatar(128) }}" class="img-polaroid">
-        </div>
         <h1>{{ movie.title }}</h1>
-        <p>{{ movie.description }}</p>
+        <h2>{caption}</h2>
+        <div class="pull-right">
+          <p><a href="{{ url_for('edit_movie', slug=movie.slug) }}">{{_('Edit movie')}}</a></p>
+          <img src="{{ movie.avatar(128) }}" class="img-polaroid">
+        </div>
+        <div>
+          <ul>
+            <li>{{_('Directed by')}} {directors}</li>
+            <li>{{_('Produced by')}} {producers}</li>
+            <li>{{_('Written by')}} {writers} </li>
+            <li>{{_('Screenplay by')}} {screenplay}</li>
+            <li>{{_('Story by')}} {story}</li>
+            <li>{{_('Based on')}} {based on}</li>
+            <li>{{_('Starring')}} {starring}</li>
+            <li>{{_('Narrated by')}} {narrators}</li>
+            <li>{{_('Music by')}} {music}</li>
+            <li>{{_('Cinematography')}} {cinematography}</li>
+            <li>{{_('Edited    by')}} {editing}</li>
+            <li>{{_('Production company')}} {production companies}</li>
+            <li>{{_('Distributed by')}} {distributor}</li>
+            <li>{{_('Release date')}} {released}</li>
+            <li>{{_('Running time')}} {runtime}</li>
+            <li>{{_('Country')}} {country}</li>
+            <li>{{_('Language')}} {language}</li>
+            <li>{{_('Budget')}} {budget}</li>
+            <li>{{_('Box office')}} {gross}</li>   
+        </ul>
         <p><em>{{_('Added %(added)s by %(user)s', added=momentjs(movie.timestamp).calendar(), user=movie.posted_by.nickname)}}</em></p>
-        <a href="{{ url_for('edit_movie', slug=movie.slug) }}">{{_('Edit movie')}}</a>
+        </div>
+        <div>
+          {{ movie.description }}
+        </div>
         </p>
     </div>
 {% endblock %}
