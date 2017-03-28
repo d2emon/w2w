@@ -28,7 +28,7 @@ class Gravatar:
         return md5(self.email.encode('utf-8')).hexdigest()
 
     def url(self, size=128):
-        return "http://www.gravatar.com/avatar/{}.jpg?d={}&r={}&s={}".format(
+        return "https://www.gravatar.com/avatar/{}.jpg?d={}&r={}&s={}".format(
             self.hash(),
             self.default,
             self.rating,

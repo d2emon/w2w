@@ -1,9 +1,5 @@
-#! /usr/bin/env python
 import unittest
-from coverage import coverage
 import os
-
-
 from config import basedir
 from web import app, db
 from web.models import User, Post
@@ -25,8 +21,8 @@ class TestCase(unittest.TestCase):
     def test_avatar(self):
         u = User(nickname='john', email='john@example.com')
         avatar = u.avatar(128)
-        expected = 'http://www.gravatar.com/avatar/d4c74594d841139328695756648b6bd6'
-        assert avatar[0:len(expected)] == expected
+        expected = 'https://www.gravatar.com/avatar/d4c74594d841139328695756648b6bd6'
+        self.assertEqual(avatar[0:len(expected)], expected)
 
     def test_make_unique_nickname(self):
         u = User(nickname='john', email='john@example.com')
@@ -146,19 +142,3 @@ class TestCase(unittest.TestCase):
         assert u.is_active is True
         assert u.is_anonimous is False
         assert u.id == int(u.get_id())
-
-
-if __name__ == '__main__':  # pragma: no cover
-    cov = coverage(branch=True, omit=['../.env/*', 'tests.py'])
-    cov.start()
-    try:
-        unittest.main()
-    except:
-        pass
-    cov.stop()
-    cov.save()
-    print("\n\nCoverage Report:\n")
-    cov.report()
-    print("HTML version: " + os.path.join(basedir, ".coverage/index.html"))
-    cov.html_report(directory='../.coverage')
-    cov.erase()
