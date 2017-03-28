@@ -104,7 +104,7 @@ class Post(db.Model):
 
 
 class Movie(db.Model):
-    __searchable__ = ['title', 'description', ]
+    __searchable__ = ['description', ]
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140), nullable=False)
@@ -118,6 +118,14 @@ class Movie(db.Model):
 
     def avatar(self, size=128):
         return gravatar(self.slug, size)
+
+    def as_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
+    def from_dict(self, data):
+        for k, v in data.items():
+            if k in self.__table__.columns:
+                setattr(self, k, v)
 
 
 class Person(db.Model):

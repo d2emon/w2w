@@ -1,8 +1,9 @@
-from flask import g, url_for, render_template, redirect, flash, request, jsonify
+from flask import g, url_for, render_template, redirect, flash, request, jsonify, make_response
 from flask_login import login_required
 from flask_babel import gettext
 from slugify import slugify
 from datetime import datetime
+import yaml
 from web import app, db
 from web.forms import MovieForm
 from web.models import Movie
@@ -60,7 +61,7 @@ def edit_movie(slug):
                            )
 
 
-@app.route('/slug', methods=['POST', ])
+@app.route('/slug/movie', methods=['POST', ])
 def get_slug():
     title = request.form.get('title')
     slug = slugify(title)
@@ -78,3 +79,14 @@ def get_slug():
         version += 1
     resp["slug"] = new_slug
     return jsonify(resp)
+
+
+@app.route('/export/movies.yml')
+def export_movies():
+    movies = Movie.query.all()
+    values = [m.as_dict() for m in movies]
+    response = make_response(yaml.dump(values, default_flow_style=False))
+    response.headers['Content-Type'] = 'text/yaml'
+    response.headers['Content-Disposition'] = 'attachment; filename=movies.yml'
+    # return jsonify(values)
+    return response
