@@ -74,7 +74,7 @@ def before_request():
     g.search_form = SearchForm()
     g.locale = get_locale()
     g.movies = Movie.query.limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
-    g.genres = [gettext('Anime')] * 36
+    g.genres = [{'title': 'Фантастика', 'url': 'fantasy'}] * 36
 
 
 @app.after_request

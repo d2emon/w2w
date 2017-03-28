@@ -90,31 +90,35 @@
     {% endif %}
     
   <section>
-    <div class="downbar">
-      <div class="downcontent">
-        <div class="d-menu">
+    <div class="menubar downbar">
+      <!-- div class="downcontent" -->
+        <!-- div class="d-menu" -->
           <ul>
             <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('About Us') }}</a></li>
+            <!-- li><a href="{{ url_for('index') }}">{{ _('About Us') }}</a></li -->
             <li><a href="{{ url_for('index') }}">{{ _('Rules') }}</a></li>
             <li><a href="{{ url_for('index') }}">{{ _('Copyright') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Site News') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Order Movie') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Movie News') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Actors') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Movies') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Online') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Movies 2016') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Movies 2017') }}</a></li>
+            <li><a href="{{ url_for('index') }}">{{ _('Soon') }}</a></li>
+            <!-- li><a href="{{ url_for('index') }}">{{ _('Site News') }}</a></li -->
+            <!-- li><a href="{{ url_for('index') }}">{{ _('Order Movie') }}</a></li -->
+            <!-- li><a href="{{ url_for('index') }}">{{ _('Movie News') }}</a></li -->
+            <!-- li><a href="{{ url_for('index') }}">{{ _('Actors') }}</a></li -->
+            <!-- li><a href="{{ url_for('index', type='movies') }}">{{ _('Movies') }}</a></li -->
+            <li><a href="{{ url_for('index', type='cartoon') }}">{{ _('Cartoons') }}</a></li>
+            <li><a href="{{ url_for('index', type='series') }}">{{ _('Series') }}</a></li>
+            <li><a href="{{ url_for('index', type='tv') }}">{{ _('TV Issues') }}</a></li>
+            <!-- li><a href="{{ url_for('index') }}">{{ _('Online') }}</a></li -->
+            <li><a href="{{ url_for('index', year=2016) }}">{{ _('Movies 2016') }}</a></li>
+            <li><a href="{{ url_for('index', year=2017) }}">{{ _('Movies 2017') }}</a></li>
           </ul>
-        </div>
-      </div>
+        <!-- /div -->
+      <!-- /div -->
     </div>
   </section>
 
-	<div class="films-category">
+	<div class="genres films-category">
       {% for genre in g.genres %}
-        <a href="#">{{genre}}</a>&nbsp; 
+        <a href="{{ url_for('index', genre=genre['url']) }}">{{ genre['title'] }}</a>&nbsp; 
       {% endfor %}      
 		<div style="clear: both;">
     </div>
