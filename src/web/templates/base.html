@@ -10,10 +10,7 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
     <script src="{{ url_for('static', filename='bower/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-
-    <script src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jcarousel.settings.js') }}"></script>
-
+    <script src="{{ url_for('static', filename='bower/jcarousel/dist/jquery.jcarousel.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/moment/moment.js') }}"></script>
     {% if g.locale != 'en' %}
     <script src="{{ url_for('static', filename='bower/moment/locale/' + g.locale + '.js') }}"></script>
@@ -21,6 +18,7 @@
     moment.locale('{{g.locale}}');
     </script>
     {% endif %}
+    <script src="{{ url_for('static', filename='js/jcarousel.settings.js') }}"></script>
     <script>
     function translate(sourceLang, destLang, sourceId, destId, loadingId) {
     	$(destId).hide();
@@ -84,12 +82,6 @@
 
     {% if g.movies %}
     <div id="sliderbox" class="carousel">
-      <!-- {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"} -->
-      <!-- ul class="carousel0">
-      {% for movie in g.movies %}
-      {% include 'movie/slider.html' %}
-      {% endfor %}      
-      </ul --> 
       <div class="jcarousel" data-jcarousel="true">
         <ul style="left: 0px; top: 0px;">
         {% for movie in g.movies %}
