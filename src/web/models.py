@@ -143,4 +143,22 @@ class Person(db.Model):
         return gravatar(self.get_name(), size)
 
 
+class Genre(db.Model):
+    __searchable__ = ['title', 'description', ]
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(64))
+    slug = db.Column(db.String(64), nullable=False, unique=True)
+    description = db.Column(db.UnicodeText)
+
+    def __repr__(self):
+        return "<Genre {}>".format(self.title)
+
+    def avatar(self, size=128):
+        return gravatar(self.get_name(), size)
+
+
 whooshalchemy.whoosh_index(app, Post)
+whooshalchemy.whoosh_index(app, Movie)
+whooshalchemy.whoosh_index(app, Person)
+whooshalchemy.whoosh_index(app, Genre)
