@@ -40,7 +40,7 @@ def index(page=1):
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
     user = g.user
-    movies = Movie.query.paginate(1, app.config.get('POSTS_PER_PAGE', 4), False)
+    movies = Movie.query.paginate(1, app.config.get('MOVIES_PER_PAGE', 15), False)
     posts = g.user.followed_posts().paginate(page, app.config.get('POSTS_PER_PAGE', 3), False)
     return render_template("index.html",
                            title="Home",
@@ -73,7 +73,7 @@ def before_request():
 
     g.search_form = SearchForm()
     g.locale = get_locale()
-    g.movies = Movie.query.paginate(1, app.config.get('POSTS_PER_PAGE', 3), False)
+    g.movies = Movie.query.limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
     g.genres = [gettext('Anime')] * 36
 
 

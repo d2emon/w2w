@@ -7,7 +7,7 @@ class momentjs:
 
     def render(self, format):
         if self.timestamp is None:
-            return "Wrong Time"
+            return ""
         return Markup("<script>\ndocument.write(moment(\"{}\").{});\n</script>".format(self.timestamp.strftime("%Y-%m-%dT%H:%M:%S Z"), format))
 
     def format(self, fmt):

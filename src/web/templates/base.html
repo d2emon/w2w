@@ -78,11 +78,11 @@
         </div>
       </div>
 
-    {% if g.movies.items %}
+    {% if g.movies %}
     <div id="sliderbox">
       <!-- {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"} -->
       <ul id="center_dm_ru_carousel" class="transparency_i">
-      {% for movie in g.movies.items %}
+      {% for movie in g.movies %}
       {% include 'movie/slider.html' %}
       {% endfor %}      
       </ul> 

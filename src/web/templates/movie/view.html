@@ -6,7 +6,7 @@
         </div>
         <h1>{{ movie.title }}</h1>
         <p>{{ movie.description }}</p>
-        <p><em>{{_('Added: %(added)s', added=momentjs(movie.timestamp).calendar())}}</em></p>
+        <p><em>{{_('Added %(added)s by %(user)s', added=momentjs(movie.timestamp).calendar(), user=movie.posted_by.nickname)}}</em></p>
         <a href="{{ url_for('edit_movie', slug=movie.slug) }}">{{_('Edit movie')}}</a>
         </p>
     </div>
