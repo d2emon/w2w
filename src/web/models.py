@@ -104,7 +104,7 @@ class Post(db.Model):
 
 
 class Movie(db.Model):
-    __searchable__ = ['description', ]
+    __searchable__ = ['title', 'description', ]
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140), nullable=False)
@@ -118,5 +118,29 @@ class Movie(db.Model):
 
     def avatar(self, size=128):
         return gravatar(self.slug, size)
+
+
+class Person(db.Model):
+    __searchable__ = ['firstname', 'lastname', 'fullname', 'description', ]
+
+    id = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(64))
+    lastname = db.Column(db.String(64))
+    fullname = db.Column(db.String(140))
+    slug = db.Column(db.String(64), nullable=False, unique=True)
+    description = db.Column(db.UnicodeText)
+
+    def __repr__(self):
+        return "<Person {}>".format(self.get_name())
+
+    def get_name(self):
+        if self.fullname:
+            return self.fullname
+        else:
+            return "{} {}".format(self.firstname, self.lastname)
+
+    def avatar(self, size=128):
+        return gravatar(self.get_name(), size)
+
 
 whooshalchemy.whoosh_index(app, Post)
