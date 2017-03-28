@@ -5,9 +5,9 @@
     {% else %}
     <title>microblog</title>
     {% endif %}
-    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
     <link href="{{ url_for('static', filename='bower/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
     <!-- link href="/static/bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet" -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
     <script src="{{ url_for('static', filename='bower/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/moment/moment.js') }}"></script>
@@ -71,25 +71,23 @@
             </ul>
               {% endif %}
             <ul class="nav navbar-nav navbar-right">
-              {% if g.user.is_authenticated %}
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">RSS feed</a></li>
-              {% endif %}
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">RSS feed</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-    <div id="sliderwrap">
-      {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"}
-      {% if g.movies.items %}
+    {% if g.movies.items %}
+    <div id="sliderbox">
+      <!-- {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"} -->
       <ul id="center_dm_ru_carousel" class="transparency_i">
       {% for movie in g.movies.items %}
       {% include 'movie/slider.html' %}
       {% endfor %}      
       </ul> 
-      {% endif %}
     </div>
+    {% endif %}
     
   <section>
     <div class="downbar">
@@ -116,7 +114,7 @@
 
 	<div class="films-category">
       {% for genre in g.genres %}
-        <a href="#">{{genre}}</a>
+        <a href="#">{{genre}}</a>&nbsp; 
       {% endfor %}      
 		<div style="clear: both;">
     </div>

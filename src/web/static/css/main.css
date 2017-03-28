@@ -1,3 +1,29 @@
 body {
     padding-top: 60px;
+    background: #041427;
+    color: #ffffff;
+}
+
+#sliderbox {
+    min-height: 175px;
+    margin: 8px 24px;
+}
+
+.movieframe {
+    display: block;
+    float: left;
+    height: 136px;
+    width: 123px;
+    background: url('../images/kadr.png');
+    margin: 8px;
+    padding: 4px 14px;
+}
+
+.movie-title {
+    display: block;
+    bottom: 0;
+    padding: 0px 5px;
+    font-size: 13px;
+    width: 85px;
+    text-decoration: none;
 }

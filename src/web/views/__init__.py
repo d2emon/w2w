@@ -74,7 +74,7 @@ def before_request():
     g.search_form = SearchForm()
     g.locale = get_locale()
     g.movies = Movie.query.paginate(1, app.config.get('POSTS_PER_PAGE', 3), False)
-    g.genres = [gettext('Anime') * 36]
+    g.genres = [gettext('Anime')] * 36
 
 
 @app.after_request
