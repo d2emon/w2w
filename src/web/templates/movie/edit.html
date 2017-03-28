@@ -16,9 +16,9 @@ function slugify()
         {% from "formhelper.html" import render_field %}
         <form class="form-horizontal" action="" method="post" name="edit">
             {{ form.hidden_tag() }}
-            {{ render_field(form.title, class="span4", onchange="javascript:slugify()") }}
-            {{ render_field(form.slug, class="span4", maxlength=64) }}
-            {{ render_field(form.description, class="span4", cols=64, rows=4) }}
+            {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
+            {{ render_field(form.slug, size="42", maxlength=64) }}
+            {{ render_field(form.description, class="span4", cols=42, rows=4) }}
             <div class="control-group">
                 <div class="controls">
                   <input class="btn btn-primary" type="submit" value="{{ _('Save') }}">

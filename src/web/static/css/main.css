@@ -32,6 +32,6 @@ body {
     background: #22374a;
 }
 
-input {
+input, textarea {
     color: #000000;
 }
