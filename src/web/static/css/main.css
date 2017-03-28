@@ -31,3 +31,7 @@ body {
 .well {
     background: #22374a;
 }
+
+input {
+    color: #000000;
+}

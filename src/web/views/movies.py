@@ -1,6 +1,7 @@
-from flask import url_for, render_template, redirect, flash
+from flask import url_for, render_template, redirect, flash, request, jsonify
 from flask_login import login_required
 from flask_babel import gettext
+from slugify import slugify
 from web import app, db
 from web.forms import MovieForm
 from web.models import Movie
@@ -48,3 +49,23 @@ def edit_movie(slug):
     return render_template('movie/edit.html',
                            form=form,
                            )
+
+
+@app.route('/slug', methods=['POST', ])
+def get_slug():
+    title = request.form.get('title')
+    slug = slugify(title)
+    resp = {
+        "title": title,
+        "slug": slug,
+    }
+    if Movie.query.filter_by(slug=slug).first() is None:
+        return jsonify(resp)
+    version = 2
+    while True:
+        new_slug = slug + str(version)
+        if Movie.query.filter_by(slug=new_slug).first() is None:
+            break
+        version += 1
+    resp["slug"] = new_slug
+    return jsonify(resp)

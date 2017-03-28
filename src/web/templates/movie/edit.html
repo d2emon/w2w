@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+<script type="text/javascript">
+function slugify()
+{
+  f = $("#title").val();
+  $.post('{{ url_for("get_slug") }}', {
+    title: f
+  }).done(function(slugified) {
+    $("#slug").val(slugified['slug']);
+  });
+}
+</script>
   <h1>{{ _('Edit Movie') }}</h1>
     <div class="well">
         {% from "formhelper.html" import render_field %}
         <form class="form-horizontal" action="" method="post" name="edit">
             {{ form.hidden_tag() }}
-            {{ render_field(form.title, class="span4") }}
+            {{ render_field(form.title, class="span4", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, class="span4", maxlength=64) }}
             {{ render_field(form.description, class="span4", cols=64, rows=4) }}
             <div class="control-group">
