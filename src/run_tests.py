@@ -7,11 +7,11 @@ from coverage import coverage
 
 
 if __name__ == '__main__':  # pragma: no cover
-    cov = coverage(branch=True, omit=['../.env/*', 'test/*'])
+    cov = coverage(branch=True, omit=['../.env/*', '*/test/*'])
     cov.start()
 
     # from web.test.test_gravatar import *
-    from test.test_gravatar import TestGravatar
+    from gravatar.test.test_gravatar import TestGravatar
     from test.test_case import TestCase
 
     try:
