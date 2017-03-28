@@ -2,7 +2,7 @@
     <div class="well movie-brief">
       <div class="pull-left movie-avatar"><img src="{{ movie.avatar(64) }}"></div>
       <h4><a href="{{ url_for('view_movie', slug=movie.slug) }}">{{ movie.title }}</a></h4>
-      {% if movie.user_id == False or movie.user_id == g.user.id %}
+      {% if not movie.user_id or movie.user_id == g.user.id %}
       <div>
         <a href="{{ url_for('edit_movie', slug = movie.slug) }}">{{ _('Edit') }}</a>
         | <a href="{{ url_for('delete', id = movie.id) }}">{{ _('Delete') }}</a>

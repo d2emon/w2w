@@ -10,6 +10,10 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
     <script src="{{ url_for('static', filename='bower/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jcarousel.settings.js') }}"></script>
+
     <script src="{{ url_for('static', filename='bower/moment/moment.js') }}"></script>
     {% if g.locale != 'en' %}
     <script src="{{ url_for('static', filename='bower/moment/locale/' + g.locale + '.js') }}"></script>
@@ -79,13 +83,24 @@
       </div>
 
     {% if g.movies %}
-    <div id="sliderbox">
+    <div id="sliderbox" class="carousel">
       <!-- {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"} -->
-      <ul class="carousel1 transparency_i">
+      <!-- ul class="carousel0">
       {% for movie in g.movies %}
       {% include 'movie/slider.html' %}
       {% endfor %}      
-      </ul> 
+      </ul --> 
+      <div class="jcarousel" data-jcarousel="true">
+        <ul style="left: 0px; top: 0px;">
+        {% for movie in g.movies %}
+        {% include 'movie/slider.html' %}
+        {% endfor %}      
+        </ul>
+      </div>
+
+
+      <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">‹</a>
+      <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
     </div>
     {% endif %}
     

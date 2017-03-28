@@ -43,6 +43,9 @@ def add_movie():
 @login_required
 def edit_movie(slug):
     movie = Movie.query.filter_by(slug=slug).first()
+    if not movie:
+        flash(gettext("This movie doesn't exist."))
+        return redirect(url_for('index'))
     if movie.user_id and g.user.id != movie.user_id:
         flash(gettext("Your can edit only your movies."))
         return redirect(url_for('index'))
