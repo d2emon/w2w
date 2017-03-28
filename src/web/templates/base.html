@@ -116,15 +116,15 @@
     </div>
   </section>
 
+  {% if g.genres %}
 	<div class="genres films-category">
       {% for genre in g.genres %}
-        <a href="{{ url_for('index', genre=genre['url']) }}">{{ genre['title'] }}</a>&nbsp; 
+        <a href="{{ url_for('index', genre=genre.slug) }}">{{ genre.title }}</a>&nbsp; 
       {% endfor %}      
 		<div style="clear: both;">
     </div>
   </div>
-
-{include file="catalog-nav.tpl"}
+{% endif %}
 
     <div class="container">
       <div class="row">

@@ -6,7 +6,7 @@ from flask_sqlalchemy import get_debug_queries
 from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
-from web.models import User, ROLE_USER, Post, Movie
+from web.models import User, ROLE_USER, Post, Movie, Genre
 from web.translate import translate
 
 
@@ -74,7 +74,8 @@ def before_request():
     g.search_form = SearchForm()
     g.locale = get_locale()
     g.movies = Movie.query.limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
-    g.genres = [{'title': 'Фантастика', 'url': 'fantasy'}] * 36
+    g.genres = Genre.query.all()
+    # g.genres = [{'title': 'Фантастика', 'url': 'fantasy'}] * 36
 
 
 @app.after_request
