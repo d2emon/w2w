@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="well well-large">
+        <div class="pull-right">
+            <img src="{{ movie.avatar(128) }}" class="img-polaroid">
+        </div>
+        <h1>{{ movie.title }}</h1>
+        <p>{{ movie.description }}</p>
+        <p><em>{{_('Added: %(added)s', added=momentjs(movie.timestamp).calendar())}}</em></p>
+        <a href="{{ url_for('edit_movie', slug=movie.slug) }}">{{_('Edit movie')}}</a>
+        </p>
+    </div>
+{% endblock %}
+

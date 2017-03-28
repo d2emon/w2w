@@ -6,6 +6,17 @@ from web.forms import MovieForm
 from web.models import Movie
 
 
+@app.route('/movie/<slug>', methods=['POST', 'GET', ])
+def view_movie(slug):
+    movie = Movie.query.filter_by(slug=slug).first()
+    if movie is None:
+        flash(gettext('%(title)s not found.', title=slug))
+        return redirect(url_for('index'))
+    return render_template('movie/view.html',
+                           movie=movie,
+                           )
+
+
 @app.route('/movie/add', methods=['POST', 'GET', ])
 @login_required
 def add_movie():
