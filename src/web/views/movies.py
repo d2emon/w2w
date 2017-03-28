@@ -1,7 +1,8 @@
-from flask import url_for, render_template, redirect, flash, request, jsonify
+from flask import g, url_for, render_template, redirect, flash, request, jsonify
 from flask_login import login_required
 from flask_babel import gettext
 from slugify import slugify
+from datetime import datetime
 from web import app, db
 from web.forms import MovieForm
 from web.models import Movie
@@ -25,6 +26,8 @@ def add_movie():
     if form.validate_on_submit():
         movie = Movie()
         form.populate_obj(movie)
+        movie.timestamp = datetime.utcnow()
+        movie.user_id = g.user.id
         db.session.add(movie)
         db.session.commit()
         flash(gettext("Your changes have been saved."))
@@ -39,6 +42,9 @@ def add_movie():
 @login_required
 def edit_movie(slug):
     movie = Movie.query.filter_by(slug=slug).first()
+    if g.user.id != movie.user_id:
+        flash(gettext("Your can edit only your movies."))
+        return redirect(url_for('index'))
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)

@@ -20,6 +20,7 @@ class User(db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     role = db.Column(db.SmallInteger, default=ROLE_USER)
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    movies = db.relationship('Movie', backref='posted_by', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime)
     followed = db.relationship(
