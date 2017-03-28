@@ -1,25 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h1>{{ _('Hi, %(user)s!', user=user.nickname) }}</h1>
-    <div class="well">
-        <form class="form-horizontal" action="" method="post" name="post">
-            {{ form.hidden_tag() }}
-            <div class="control-group{% if form.post.errors %} error{% endif %}">
-              <label class="control-label" for="post">{{ _('Say something:') }}</label>
-                <div class="controls">
-                    {{ form.post(size=30, maxlength=140) }}
-                    <input class="btn btn-primary" type="submit" value="{{ _('Post!') }}">
-                    {% for error in form.post.errors %}
-                        <span class="help-inline">[{{ error }}]</span><br>
-                    {% endfor %}
-                </div>
-            </div>
-        </form>
-    </div>
+    {% if movies %}
+    <div class="row">
     {% for movie in movies.items %}
       {% include 'movie/brief.html' %}
-    {% endfor %}      
+    {% endfor %}     
+    </div>
+    {% endif %}  
+
+    {% if g.user %}
+    <div class="well">
+      <h1>{{ _('Hi, %(user)s!', user=g.user.nickname) }}</h1>
+      <form class="form-horizontal" action="" method="post" name="post">
+        {{ form.hidden_tag() }}
+        <div class="control-group{% if form.post.errors %} error{% endif %}">
+          <label class="control-label" for="post">{{ _('Say something:') }}</label>
+          <div class="controls">
+            {{ form.post(size=30, maxlength=140) }}
+            <input class="btn btn-primary" type="submit" value="{{ _('Post!') }}">
+            {% for error in form.post.errors %}
+              <span class="help-inline">[{{ error }}]</span><br>
+            {% endfor %}
+          </div>
+        </div>
+      </form>
+    </div>
+    {% endif %}
     {% for post in posts.items %}
       {% include 'post.html' %}
     {% endfor %}      
