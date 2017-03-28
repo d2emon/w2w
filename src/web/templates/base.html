@@ -1,9 +1,9 @@
 <html>
   <head>
     {% if title %}
-    <title>{{title}} - microblog</title>
+    <title>{{title}} - w2w</title>
     {% else %}
-    <title>microblog</title>
+    <title>What2Watch</title>
     {% endif %}
     <link href="{{ url_for('static', filename='bower/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
     <!-- link href="/static/bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet" -->
@@ -81,7 +81,7 @@
     {% if g.movies %}
     <div id="sliderbox">
       <!-- {custom category="1" template="slider" aviable="global" from="0" limit="20" order="rand" cache="no"} -->
-      <ul id="center_dm_ru_carousel" class="transparency_i">
+      <ul class="carousel1 transparency_i">
       {% for movie in g.movies %}
       {% include 'movie/slider.html' %}
       {% endfor %}      
