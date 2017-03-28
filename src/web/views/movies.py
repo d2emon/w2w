@@ -42,12 +42,15 @@ def add_movie():
 @login_required
 def edit_movie(slug):
     movie = Movie.query.filter_by(slug=slug).first()
-    if g.user.id != movie.user_id:
+    if movie.user_id and g.user.id != movie.user_id:
         flash(gettext("Your can edit only your movies."))
         return redirect(url_for('index'))
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)
+        if not movie.user_id:
+            movie.user_id = g.user.id
+        movie.timestamp = datetime.utcnow()
         db.session.add(movie)
         db.session.commit()
         flash(gettext("Your changes have been saved."))
