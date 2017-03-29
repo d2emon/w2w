@@ -5,7 +5,6 @@ from flask_babel import gettext
 from flask_sqlalchemy import get_debug_queries
 from sqlalchemy.sql.expression import func
 from werkzeug.utils import secure_filename
-from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
 from web.models import User, ROLE_USER, Post, Movie, Genre
@@ -29,14 +28,11 @@ def error500(error):
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        language = guessLanguage(form.post.data)
-        if language == 'UNKNOWN' or len(language) > 5:
-            language = ''
         post = Post(
             body=form.post.data,
             timestamp=datetime.utcnow(),
             author=g.user,
-            language=language,
+            language=form.language(),
         )
         db.session.add(post)
         db.session.commit()
@@ -44,14 +40,11 @@ def index():
         return redirect(url_for('index'))
 
     q = Movie.query
-    sort_by = request.args.get('sort_by')
-    if sort_by:
-        session['sort_by'] = sort_by
 
     if session['sort_by'] == 'alpha':
         q = q.order_by(Movie.title)
     else:
-        q =q.order_by(Movie.timestamp.desc())
+        q = q.order_by(Movie.timestamp.desc())
 
     try:
         moviepage = int(request.args.get('movies', 1))
@@ -140,6 +133,10 @@ def before_request():
     g.movies = Movie.query.order_by(func.random()).limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
     g.genres = Genre.query.all()
     # g.genres = [{'title': 'Фантастика', 'url': 'fantasy'}] * 36
+
+    sort_by = request.args.get('sort_by')
+    if sort_by:
+        session['sort_by'] = sort_by
 
 
 @app.after_request

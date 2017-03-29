@@ -3,6 +3,7 @@ from flask_babel import gettext
 from wtforms import TextField, BooleanField, TextAreaField
 from wtforms.validators import Required, Length, Regexp
 from web.models import User
+from guess_language import guessLanguage
 
 
 class LoginForm(FlaskForm):
@@ -38,6 +39,12 @@ class EditForm(FlaskForm):
 
 class PostForm(FlaskForm):
     post = TextField('post', validators=[Required(), ])
+
+    def language(self):
+        language = guessLanguage(self.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
+        return language
 
 
 class SearchForm(FlaskForm):
