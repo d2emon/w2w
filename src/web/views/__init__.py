@@ -41,7 +41,7 @@ def index():
         moviepage = int(request.args.get('movies', 1))
     except ValueError:
         moviepage = 1
-    movies = Movie.ordered(session['sort_by']).paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    movies = Movie.ordered(session.get('sort_by')).paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
 
     try:
         postpage = int(request.args.get('page', 1))
@@ -79,7 +79,7 @@ def translatePost():
 def import_yml(filename, user_id=None):
     import yaml
     data = dict()
-    with open(filename) as f:
+    with open(filename, encoding="utf-8") as f:
         data = yaml.load(f)
 
     movies = Movie.from_yml(data.get("movies", []), user_id)

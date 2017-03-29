@@ -67,6 +67,8 @@ def edit_movie(slug):
 @app.route('/random/movie')
 def random_movie():
     movie = Movie.by_random().first()
+    if movie is None:
+        return redirect(url_for('index'))
     return redirect(url_for('view_movie', slug=movie.slug))
 
 
