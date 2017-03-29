@@ -42,11 +42,21 @@ def index():
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
 
+    q = Movie.query
+    sort_by = request.args.get('sort_by')
+    if sort_by:
+        session['sort_by'] = sort_by
+
+    if session['sort_by'] == 'alpha':
+        q = q.order_by(Movie.title)
+    else:
+        q =q.order_by(Movie.timestamp.desc())
+
     try:
         moviepage = int(request.args.get('movies', 1))
     except ValueError:
         moviepage = 1
-    movies = Movie.query.paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    movies = q.paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
 
     try:
         postpage = int(request.args.get('page', 1))

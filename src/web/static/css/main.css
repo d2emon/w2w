@@ -150,7 +150,16 @@ input, textarea {
 }
 
 .movie-avatar {
-    padding: 2px;
+    margin: 6px;
+}
+
+.movie-block {
+    padding: 10px 15px;
+}
+
+.movie-block .movie-brief {
+    height: 100px;
+    overflow: hidden;
 }
 
 .btn-file {
