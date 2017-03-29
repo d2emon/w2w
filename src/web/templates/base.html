@@ -75,6 +75,12 @@
               {% else %}
               <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
               {% endif %}
+              {% if session['wld'] %}
+                <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">{{session['wld']}}</span></a></li>
+              {% endif %}
+              {% if session['nsfw'] %}
+                <li><a href="{{ url_for('index', nsfw="") }}"><span class="label label-danger">NSFW</span></a></li>
+              {% endif %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Feedback</a></li>

@@ -138,6 +138,12 @@ def before_request():
     sort_by = request.args.get('sort_by')
     if sort_by:
         session['sort_by'] = sort_by
+    wld = request.args.get('wld')
+    if wld is not None:
+        session['wld'] = wld
+    nsfw = request.args.get('nsfw')
+    if nsfw is not None:
+        session['nsfw'] = not (not nsfw)
 
 
 @app.after_request
