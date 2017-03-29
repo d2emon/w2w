@@ -66,6 +66,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{ g.user.nickname }} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+                  <li><a href="{{ url_for('add_genre') }}">{{ _('Add Genre') }}</a></li>
                   <li><a href="{{ url_for('add_movie') }}">{{ _('Add Movie') }}</a></li>
                   <li><a href="{{ url_for('export_movies') }}">{{ _('Export Movies') }}</a></li>
                   <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
@@ -137,7 +138,7 @@
   {% if g.genres %}
 	<div class="genres films-category">
       {% for genre in g.genres %}
-        <a href="{{ url_for('index', genre=genre.slug) }}">{{ genre.title }}</a>&nbsp; 
+        <a href="{{ url_for('view_genre', slug=genre.slug) }}">{{ genre.title }}</a>&nbsp; 
       {% endfor %}      
 		<div style="clear: both;">
     </div>

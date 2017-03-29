@@ -6,7 +6,7 @@ from datetime import datetime
 import yaml
 from web import app, db
 from web.forms import MovieForm
-from web.models import Movie
+from web.models import Movie, Genre
 
 
 @app.route('/movie/<slug>', methods=['POST', 'GET', ])
@@ -92,11 +92,13 @@ def get_slug():
     return jsonify(resp)
 
 
-@app.route('/export/movies.yml')
+@app.route('/export/w2w.yml')
 def export_movies():
     movies = Movie.query.all()
+    genres = Genre.query.all()
     values = {
         'movies': [m.as_dict() for m in movies],
+        'genres': [g.as_dict() for g in genres],
     }
     response = make_response(yaml.dump(values, default_flow_style=False, encoding='utf-8', allow_unicode=True))
     response.headers['Content-Type'] = 'text/yaml'

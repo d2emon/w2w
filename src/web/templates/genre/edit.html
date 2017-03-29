@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+function slugify()
+{
+  v = $("#title").val();
+  $.post('{{ url_for("genre_slug") }}', {
+    title: v
+  }).done(function(slugified) {
+    $("#slug").val(slugified['slug']);
+  });
+}
+</script>
+  <h1>{{ _('Edit Genre') }}</h1>
+    <div class="well">
+        {% from "formhelper.html" import render_field %}
+        <form class="form-horizontal" action="" method="post" name="edit">
+            {{ form.hidden_tag() }}
+            {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
+            {{ render_field(form.slug, size="42", maxlength=64) }}
+            {{ render_field(form.description, class="span4", cols=42, rows=4) }}
+            <div class="control-group">
+                <div class="controls">
+                  <input class="btn btn-primary" type="submit" value="{{ _('Save') }}">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

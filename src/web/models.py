@@ -3,6 +3,7 @@ from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
 from sqlalchemy.sql.expression import func
 from datetime import datetime
+from slugify import slugify
 
 
 ROLE_USER = 0
@@ -214,8 +215,21 @@ class Genre(db.Model):
     def __repr__(self):
         return "<Genre {}>".format(self.title)
 
-    def avatar(self, size=128):
-        return gravatar(self.get_name(), size)
+    @staticmethod
+    def make_slug(title):
+        slug = slugify(title)
+        if Genre.query.filter_by(slug=slug).first() is None:
+            return slug
+        version = 2
+        while True:
+            new_slug = slug + str(version)
+            if Genre.query.filter_by(slug=new_slug).first() is None:
+                break
+            version += 1
+        return new_slug
+
+    def as_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
 whooshalchemy.whoosh_index(app, Post)

@@ -59,3 +59,13 @@ class MovieForm(FlaskForm):
         Regexp("[a-zA-Z0-9_\-]*"),
     ])
     description = TextAreaField(gettext('Description'))
+
+
+class GenreForm(FlaskForm):
+    title = TextField(gettext('Title'), validators=[Required(), ])
+    slug = TextField(gettext('URL'), validators=[
+        Required(),
+        Length(min=1, max=64),
+        Regexp("[a-zA-Z0-9_\-]*"),
+    ])
+    description = TextAreaField(gettext('Description'))

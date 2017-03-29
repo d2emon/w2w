@@ -82,9 +82,14 @@ def import_yml(filename, user_id=None):
     with open(filename, encoding="utf-8") as f:
         data = yaml.load(f)
 
+    genres = Genre.from_yml(data.get("genres", []), user_id)
+    for m in genres:
+        db.session.add(m)
+
     movies = Movie.from_yml(data.get("movies", []), user_id)
     for m in movies:
         db.session.add(m)
+        
     db.session.commit()
 
 
@@ -149,7 +154,7 @@ def before_request():
 def after_request(response):
     for query in get_debug_queries():
         if query.duration >= app.config.get('DATABASE_QUERY_TIMEOUT', 10):
-            app.logger.warning("SLOW QUERY: {}\nParameters: {}\nDuration: {}s\nContext: {}\n".format(query.statement, query.parameters, query.duration, query.context()))
+            app.logger.warning("SLOW QUERY: {}\nParameters: {}\nDuration: {}s\nContext: {}\n".format(query.statement, query.parameters, query.duration, query.context))
     return response
 
 
@@ -194,3 +199,4 @@ from web.views.user import *
 from web.views.follow import *
 from web.views.post import *
 from web.views.movies import *
+from web.views.genres import *
