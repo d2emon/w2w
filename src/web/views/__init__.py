@@ -25,8 +25,7 @@ def error500(error):
 
 @app.route("/", methods=["GET", "POST", ])
 @app.route("/index", methods=["GET", "POST", ])
-@app.route("/index/<int:page>", methods=["GET", "POST", ])
-def index(page=1):
+def index():
     form = PostForm()
     if form.validate_on_submit():
         language = guessLanguage(form.post.data)
@@ -42,11 +41,23 @@ def index(page=1):
         db.session.commit()
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
-    movies = Movie.query.paginate(1, 6, False)
-    print(movies)
 
-    # movies = Movie.query.paginate(1, app.config.get('MOVIES_PER_PAGE', 15), False)
-    posts = g.user.followed_posts().paginate(page, app.config.get('POSTS_PER_PAGE', 3), False)
+    try:
+        moviepage = int(request.args.get('movies', 1))
+    except ValueError:
+        moviepage = 1
+    movies = Movie.query.paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+
+    try:
+        postpage = int(request.args.get('page', 1))
+    except ValueError:
+        postpage = 1
+    if g.user:
+        q = g.user.followed_posts()
+    else:
+        q = Post.query
+    posts = q.paginate(postpage, app.config.get('POSTS_PER_PAGE', 3), False)
+
     return render_template("index.html",
                            title="Home",
                            movies=movies,

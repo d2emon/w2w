@@ -2,6 +2,31 @@
 {% block content %}
     {% if movies %}
     <div class="row">
+      <div class="text-center">
+        <ul class="pagination">
+        {% if movies.has_prev %}
+        <li><a href="{{ url_for('index', movies=movies.prev_num) }}">{{ _('Newer movies') }}</a></li>
+        {% else %}
+        <li class="disabled"><a href="#">{{ _('Newer movies') }}</a></li>
+        {% endif %}
+{% for page in movies.iter_pages() %}
+    {% if page %}
+      {% if page != movies.page %}
+        <li><a href="{{ url_for('index', movies=page) }}">{{ page }}</a></li>
+      {% else %}
+        <li><span><strong>{{ page }}</strong></span></li>
+      {% endif %}
+    {% else %}
+      <li><span class="ellipsis">…</span></li>
+    {% endif %}
+{% endfor %}
+        {% if movies.has_next %}
+        <li class=""><a href="{{ url_for('index', movies=movies.next_num) }}">{{ _('Older movies') }}</a></li>
+        {% else %}
+        <li class="disabled"><a href="#">{{ _('Older movies') }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
     {% for movie in movies.items %}
       {% include 'movie/brief.html' %}
     {% endfor %}     
