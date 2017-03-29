@@ -64,6 +64,12 @@ def edit_movie(slug):
                            )
 
 
+@app.route('/random/movie')
+def random_movie():
+    movie = Movie.by_random().first()
+    return redirect(url_for('view_movie', slug=movie.slug))
+
+
 @app.route('/slug/movie', methods=['POST', ])
 def get_slug():
     title = request.form.get('title')

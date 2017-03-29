@@ -3,7 +3,6 @@ from flask import g, session, request, url_for, render_template, redirect, flash
 from flask_login import current_user, login_user, login_required
 from flask_babel import gettext
 from flask_sqlalchemy import get_debug_queries
-from sqlalchemy.sql.expression import func
 from werkzeug.utils import secure_filename
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
@@ -132,7 +131,7 @@ def before_request():
 
     g.search_form = SearchForm()
     g.locale = get_locale()
-    g.movies = Movie.query.order_by(func.random()).limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
+    g.movies = Movie.by_random().limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
     g.genres = Genre.query.all()
 
     sort_by = request.args.get('sort_by')

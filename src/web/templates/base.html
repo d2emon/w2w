@@ -75,6 +75,7 @@
               {% else %}
               <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
               {% endif %}
+              <li><a href="{{ url_for('random_movie') }}">{{ _('Random Movie') }}</a></li>
               {% if session['wld'] %}
                 <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">{{session['wld']}}</span></a></li>
               {% endif %}

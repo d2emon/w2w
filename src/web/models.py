@@ -1,6 +1,7 @@
 from web import app, db
 from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
+from sqlalchemy.sql.expression import func
 from datetime import datetime
 
 
@@ -125,6 +126,10 @@ class Movie(db.Model):
         else:
             q = q.order_by(Movie.timestamp.desc())
         return q
+
+    @staticmethod
+    def by_random():
+        return Movie.query.order_by(func.random())
 
     def avatar(self, size=128):
         return gravatar(self.slug, size)
