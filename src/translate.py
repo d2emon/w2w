@@ -1,7 +1,6 @@
 from http import client
 from urllib import parse
 import json
-from flask_babel import gettext
 
 
 API_KEY = "trnsl.1.1.20170325T133003Z.195935bd46ed78fe.cf328997346a519b7688bff809c0075e2cdbc579"
@@ -15,15 +14,12 @@ def makeURL(lang, text):
 
 
 def translate(src, dest, text):
-    try:
-        conn = client.HTTPSConnection(API_SERVER)
-        conn.request("GET", makeURL(dest, text))
-        response = conn.getresponse().read().decode('utf-8-sig')
-        decoded = json.loads(response)
-    except ValueError:
-        return gettext("Error: Unexpected error.")
+    conn = client.HTTPSConnection(API_SERVER)
+    conn.request("GET", makeURL(dest, text))
+    response = conn.getresponse().read().decode('utf-8-sig')
+    decoded = json.loads(response)
 
-    txt = decoded.get('text', [''])    
+    txt = decoded.get('text', [''])
     return {
         'text': txt[0],
     }

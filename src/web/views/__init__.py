@@ -9,7 +9,7 @@ from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
 from web.models import User, ROLE_USER, Post, Movie, Genre
-from web.translate import translate
+from translate import translate
 import os
 from config import basedir
 
@@ -80,11 +80,14 @@ def index():
 @app.route('/translate', methods=['POST', ])
 @login_required
 def translatePost():
-    t = translate(
-        request.form['sourceLang'],
-        request.form['destLang'],
-        request.form['text'],
-    )
+    try:
+        t = translate(
+            request.form['sourceLang'],
+            request.form['destLang'],
+            request.form['text'],
+        )
+    except ValueError:
+        t = gettext("Error: Unexpected error.")
     return jsonify(t)
 
 
