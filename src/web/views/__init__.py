@@ -3,11 +3,14 @@ from flask import g, session, request, url_for, render_template, redirect, flash
 from flask_login import current_user, login_user, login_required
 from flask_babel import gettext
 from flask_sqlalchemy import get_debug_queries
+from werkzeug.utils import secure_filename
 from guess_language import guessLanguage
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
 from web.models import User, ROLE_USER, Post, Movie, Genre
 from web.translate import translate
+import os
+from config import basedir
 
 
 @app.errorhandler(404)
@@ -61,6 +64,41 @@ def translatePost():
         request.form['text'],
     )
     return jsonify(t)
+
+
+@app.route('/import', methods=['GET', 'POST'])
+@login_required
+def import_file():
+    if request.method == 'POST':
+        if 'importfile' not in request.files:
+            flash(gettext('No file uploaded.'))
+            return redirect(request.url)
+        f = request.files['importfile']
+        if not f.filename:
+            flash(gettext('No file uploaded.'))
+            return redirect(request.url)
+        if f and allowed_file(f.filename):
+            filename = secure_filename(f.filename)
+            full_filename = os.path.join(basedir, 'tmp', filename)
+            f.save(full_filename)
+
+            movies = Movie.from_yml(full_filename)
+            for m in movies:
+                db.session.add(m)
+                print(m)
+            db.session.commit()
+
+            return redirect(url_for('index'))
+        else:
+            flash(gettext('File %(filename)s is not allowed.', filename=f.filename))
+            return redirect(request.url)
+    return render_template("upload.html")
+
+
+def allowed_file(filename):
+    if filename == 'movies.yml':
+        return True
+    return False
 
 
 @app.before_request

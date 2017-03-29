@@ -1,6 +1,8 @@
 from web import app, db
 from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
+import yaml
+from datetime import datetime
 
 
 ROLE_USER = 0
@@ -119,6 +121,18 @@ class Movie(db.Model):
     def avatar(self, size=128):
         return gravatar(self.slug, size)
 
+    @staticmethod
+    def make_unique_slug(slug):
+        if Movie.query.filter_by(slug=slug).first() is None:
+            return slug
+        version = 2
+        while True:
+            new_slug = slug + str(version)
+            if Movie.query.filter_by(slug=new_slug).first() is None:
+                break
+            version += 1
+        return new_slug
+
     def as_dict(self):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
@@ -126,6 +140,34 @@ class Movie(db.Model):
         for k, v in data.items():
             if k in self.__table__.columns:
                 setattr(self, k, v)
+
+    @staticmethod
+    def from_yml(filename, user_id=None):
+        data = []
+        with open(filename) as f:
+            data = yaml.load(f)
+
+        movies = []
+        for d in data:
+            m = Movie()
+            # {'slug': 'sekretnye-materialy'}
+
+            slug = d.get('slug')
+            slug = Movie.make_unique_slug(slug)
+
+            m.from_dict({
+                "title": d.get('title', 'UNTITLED'),
+                "slug": slug,
+                "description": d.get('description'),
+                "user_id": user_id,
+                "timestamp": d.get('timestamp', datetime.utcnow())
+            })
+            movies.append(m)
+        return movies
+
+    @property
+    def wikipedia(self):
+        return "https://ru.wikipedia.org/wiki/{}".format(self.title)
 
 
 class Person(db.Model):
