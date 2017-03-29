@@ -1,4 +1,5 @@
-    <div class="col-md-6 movie-block well">
+<div class="col-md-6">
+  <div class=" movie-block well">
     <div class="movie-brief">
       <div class="pull-left movie-avatar"><img src="{{ movie.avatar(64) }}"></div>
       <h4><a href="{{ url_for('view_movie', slug=movie.slug) }}">{{ movie.title }}</a></h4>
@@ -10,5 +11,6 @@
 		  {% endif %}
       <p><strong><span id="movie{{ movie.id }}">{{ movie.description }}</span></strong></p>
     </div>
-    </div>
+  </div>
+</div>
 
