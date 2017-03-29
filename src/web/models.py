@@ -118,6 +118,15 @@ class Movie(db.Model):
     def __repr__(self):
         return "<Movie {}>".format(self.title)
 
+    @staticmethod
+    def ordered(order_by=''):
+        q = Movie.query
+        if order_by == 'alpha':
+            q = q.order_by(Movie.title)
+        else:
+            q = q.order_by(Movie.timestamp.desc())
+        return q
+
     def avatar(self, size=128):
         return gravatar(self.slug, size)
 

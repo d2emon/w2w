@@ -8,7 +8,6 @@ from werkzeug.utils import secure_filename
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
 from web.models import User, ROLE_USER, Post, Movie, Genre
-from translate import translate
 import os
 from config import basedir
 
@@ -39,18 +38,11 @@ def index():
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
 
-    q = Movie.query
-
-    if session['sort_by'] == 'alpha':
-        q = q.order_by(Movie.title)
-    else:
-        q = q.order_by(Movie.timestamp.desc())
-
     try:
         moviepage = int(request.args.get('movies', 1))
     except ValueError:
         moviepage = 1
-    movies = q.paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    movies = Movie.ordered(session['sort_by']).paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
 
     try:
         postpage = int(request.args.get('page', 1))
@@ -71,8 +63,9 @@ def index():
 
 
 @app.route('/translate', methods=['POST', ])
-@login_required
 def translatePost():
+    from translate import translate
+
     try:
         t = translate(
             request.form['sourceLang'],
@@ -91,10 +84,12 @@ def import_file():
         if 'importfile' not in request.files:
             flash(gettext('No file uploaded.'))
             return redirect(request.url)
+
         f = request.files['importfile']
         if not f.filename:
             flash(gettext('No file uploaded.'))
             return redirect(request.url)
+
         if f and allowed_file(f.filename):
             filename = secure_filename(f.filename)
             full_filename = os.path.join(basedir, 'tmp', filename)
@@ -103,7 +98,6 @@ def import_file():
             movies = Movie.from_yml(full_filename)
             for m in movies:
                 db.session.add(m)
-                print(m)
             db.session.commit()
 
             return redirect(url_for('index'))
@@ -132,7 +126,6 @@ def before_request():
     g.locale = get_locale()
     g.movies = Movie.query.order_by(func.random()).limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
     g.genres = Genre.query.all()
-    # g.genres = [{'title': 'Фантастика', 'url': 'fantasy'}] * 36
 
     sort_by = request.args.get('sort_by')
     if sort_by:
@@ -142,7 +135,7 @@ def before_request():
 @app.after_request
 def after_request(response):
     for query in get_debug_queries():
-        if query.duration >= app.config.get('TABASE_QUERY_TIMEOUT', 10):
+        if query.duration >= app.config.get('DATABASE_QUERY_TIMEOUT', 10):
             app.logger.warning("SLOW QUERY: {}\nParameters: {}\nDuration: {}s\nContext: {}\n".format(query.statement, query.parameters, query.duration, query.context()))
     return response
 
