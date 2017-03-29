@@ -87,9 +87,11 @@ def get_slug():
 @app.route('/export/movies.yml')
 def export_movies():
     movies = Movie.query.all()
-    values = [m.as_dict() for m in movies]
+    values = {
+        'movies': [m.as_dict() for m in movies],
+    }
     response = make_response(yaml.dump(values, default_flow_style=False, encoding='utf-8', allow_unicode=True))
     response.headers['Content-Type'] = 'text/yaml'
-    response.headers['Content-Disposition'] = 'attachment; filename=movies.yml'
+    response.headers['Content-Disposition'] = 'attachment; filename=w2w.yml'
     # return jsonify(values)
     return response

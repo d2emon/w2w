@@ -77,6 +77,18 @@ def translatePost():
     return jsonify(t)
 
 
+def import_yml(filename, user_id=None):
+    import yaml
+    data = dict()
+    with open(filename) as f:
+        data = yaml.load(f)
+
+    movies = Movie.from_yml(data.get("movies", []), user_id)
+    for m in movies:
+        db.session.add(m)
+    db.session.commit()
+
+
 @app.route('/import', methods=['GET', 'POST'])
 @login_required
 def import_file():
@@ -95,11 +107,7 @@ def import_file():
             full_filename = os.path.join(basedir, 'tmp', filename)
             f.save(full_filename)
 
-            movies = Movie.from_yml(full_filename)
-            for m in movies:
-                db.session.add(m)
-            db.session.commit()
-
+            import_yml(full_filename, g.user.id)
             return redirect(url_for('index'))
         else:
             flash(gettext('File %(filename)s is not allowed.', filename=f.filename))
@@ -108,7 +116,7 @@ def import_file():
 
 
 def allowed_file(filename):
-    if filename == 'movies.yml':
+    if filename == 'w2w.yml':
         return True
     return False
 

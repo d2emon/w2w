@@ -1,7 +1,6 @@
 from web import app, db
 from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
-import yaml
 from datetime import datetime
 
 
@@ -151,10 +150,7 @@ class Movie(db.Model):
                 setattr(self, k, v)
 
     @staticmethod
-    def from_yml(filename, user_id=None):
-        data = []
-        with open(filename) as f:
-            data = yaml.load(f)
+    def from_yml(data, user_id=None):
 
         movies = []
         for d in data:
