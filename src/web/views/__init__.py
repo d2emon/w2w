@@ -52,7 +52,7 @@ def index():
         postpage = int(request.args.get('page', 1))
     except ValueError:
         postpage = 1
-    if g.user:
+    if g.user.is_authenticated:
         q = g.user.followed_posts()
     else:
         q = Post.query

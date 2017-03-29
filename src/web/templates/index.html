@@ -33,7 +33,7 @@
     </div>
     {% endif %}  
 
-    {% if g.user %}
+    {% if g.user.is_authenticated %}
     <div class="well">
       <h1>{{ _('Hi, %(user)s!', user=g.user.nickname) }}</h1>
       <form class="form-horizontal" action="" method="post" name="post">

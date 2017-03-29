@@ -4,15 +4,11 @@
     <div class="well">
         <form class="form-horizontal" action="" method="post" name="import" enctype="multipart/form-data">
             <div class="control-group">
-              <label class="control-label" for="importfile">{{ _('File to import:') }}</label>
-              <div class="controls">
+              <label class="btn btn-default btn-file" for="importfile">
+                {{ _('Browse') }}
                 <input type="file" name="importfile">
-              </div>
-            <!-- /div>
-            <div class="control-group" -->
-              <div class="controls">
-                <input class="btn btn-primary" type="submit" value="{{ _('Import') }}">
-              </div>
+              </label>
+              <input class="btn btn-primary" type="submit" value="{{ _('Import') }}">
             </div>
         </form>
     </div>
