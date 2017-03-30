@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>{{ genre.title }}</h1>
+  <h1>{{ genre.title }} <a href="{{ url_for('edit_genre', slug=genre.slug) }}"><span class="glyphicon glyphicon-pencil"></span></a></h1>
 
     {% if movies.items %}
     <div class="row">
