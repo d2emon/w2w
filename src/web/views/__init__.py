@@ -82,14 +82,14 @@ def import_yml(filename, user_id=None):
     with open(filename, encoding="utf-8") as f:
         data = yaml.load(f)
 
-    genres = Genre.from_yml(data.get("genres", []), user_id)
+    genres = Genre.from_yml(data.get("genres", []))
     for m in genres:
         db.session.add(m)
 
     movies = Movie.from_yml(data.get("movies", []), user_id)
     for m in movies:
         db.session.add(m)
-        
+
     db.session.commit()
 
 

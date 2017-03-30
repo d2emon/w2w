@@ -231,6 +231,29 @@ class Genre(db.Model):
     def as_dict(self):
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
+    def from_dict(self, data):
+        for k, v in data.items():
+            if k in self.__table__.columns:
+                setattr(self, k, v)
+
+    @staticmethod
+    def from_yml(data):
+        genres = []
+        for d in data:
+            g = Genre()
+            # {'slug': 'sekretnye-materialy'}
+
+            slug = d.get('slug')
+            slug = Genre.make_slug(slug)
+
+            g.from_dict({
+                "title": d.get('title', 'UNTITLED'),
+                "slug": slug,
+                "description": d.get('description'),
+            })
+            genres.append(g)
+        return genres
+
 
 whooshalchemy.whoosh_index(app, Post)
 whooshalchemy.whoosh_index(app, Movie)
