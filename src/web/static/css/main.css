@@ -1,5 +1,5 @@
 body {
-    padding-top: 50px;
+    padding-top: 40px;
     // background: #041427;
     background: #0a2136;
     color: #ffffff;
@@ -13,7 +13,7 @@ a {
 
 #sliderbox {
     min-height: 142px;
-    margin-bottom: 8px;
+    margin: 25px 0px 20px 0px;
     padding: 2px 24px;
     background: rgba(255, 255, 255, 0.1);
     // width: 500px;
@@ -72,6 +72,10 @@ a {
     padding: 4px 14px;
 }
 
+.movieframe .innerframe {
+    position: absolute;
+}
+
 .movieframe a {
     color: #ffffff;
 }
@@ -85,8 +89,16 @@ a {
     bottom: 0px;
     padding: 0px 5px;
     font-size: 10px;
-    width: 85px;
     text-decoration: none;
+}
+
+.movieframe .movie-title {
+    position: absolute;
+    top: 0px;
+    height: 136px;
+    width: 96px;
+    padding: 0px 5px;
+    text-align: center;
 }
 
 .well {
@@ -99,7 +111,7 @@ input, textarea {
 
 .menubar {
     background: #031325;
-    margin: 20px 0px;
+    margin-bottom: 20px;
     height: 32px;
 }
 

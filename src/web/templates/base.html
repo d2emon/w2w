@@ -92,11 +92,11 @@
         </div>
       </div>
 
-    {% if g.movies %}
+    {% if moviefeed %}
     <div id="sliderbox" class="carousel">
       <div class="jcarousel" data-jcarousel="true">
         <ul style="left: 0px; top: 0px;">
-        {% for movie in g.movies %}
+        {% for movie in moviefeed %}
         {% include 'movie/slider.html' %}
         {% endfor %}      
         </ul>

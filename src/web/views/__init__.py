@@ -37,6 +37,8 @@ def index():
         flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
 
+    moviefeed = Movie.by_random().limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
+
     try:
         moviepage = int(request.args.get('movies', 1))
     except ValueError:
@@ -58,6 +60,7 @@ def index():
                            movies=movies,
                            posts=posts,
                            form=form,
+                           moviefeed=moviefeed,
                            )
 
 
@@ -136,7 +139,6 @@ def before_request():
 
     g.search_form = SearchForm()
     g.locale = get_locale()
-    g.movies = Movie.by_random().limit(app.config.get('MOVIES_PER_PAGE', 0)).all()
     g.genres = Genre.query.all()
 
     sort_by = request.args.get('sort_by')
