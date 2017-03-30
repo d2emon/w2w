@@ -124,8 +124,6 @@ def upload_movie_image():
     from werkzeug.utils import secure_filename
     from config import basedir
     import os
-    print(request.files)
-    print(request.form)
     if 'file' not in request.files:
         return jsonify({
             'status': False,

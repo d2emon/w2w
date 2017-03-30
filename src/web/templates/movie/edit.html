@@ -102,6 +102,7 @@ Dropzone.options.movieDropzone = {
             {% if form.image.data %}<div class="dz-preview"><div class="dz-image"><img src="{{ url_for('static', filename='upload/' + form.image.data) }}" ></div></div>{% endif %}
             <div id="movie-dropzone" class="dropzone">
               <div class="dropzone-previews"></div>
+              <div class="dz-message" data-dz-message><span>{{_('Drop image here')}}</span></div>
             </div>
             {{ render_field(form.description, class="span4", cols=42, rows=4) }}
             <div class="control-group">
