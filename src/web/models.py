@@ -187,6 +187,7 @@ class Movie(db.Model):
             m.from_dict({
                 "title": d.get('title', 'UNTITLED'),
                 "slug": slug,
+                "image": d.get('image'),
                 "description": d.get('description'),
                 "user_id": user_id,
                 "timestamp": d.get('timestamp', datetime.utcnow())
