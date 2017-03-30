@@ -1,4 +1,4 @@
-from web import app, db
+from web import app, db, resize
 from gravatar import gravatar
 import flask_whooshalchemy as whooshalchemy
 from sqlalchemy.sql.expression import func
@@ -133,9 +133,24 @@ class Movie(db.Model):
     def by_random():
         return Movie.query.order_by(func.random())
 
-    def avatar(self, size=128):
+    def avatar(self, width=128, height=None):
         if self.image:
-            return "/static/upload/{}".format(self.image)
+            url = "static/upload/{}".format(self.image)
+            constraints = []
+            if width:
+                constraints.append(str(width))
+            else:
+                constraints.append('')
+            if height:
+                constraints.append(str(height))
+                
+            size = "x".join(constraints)
+            return resize(url, str(size))
+
+        if (height is None) or (width < height):
+            size = width
+        else:
+            size = height
         return gravatar(self.slug, size)
 
     @staticmethod

@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_openid import OpenID
 from flask_mail import Mail
 from flask_babel import Babel, lazy_gettext
+from flask_resize import Resize
 
 
 import os
@@ -63,6 +64,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 mail = Mail(app)
 babel = Babel(app)
+resize = Resize(app)
 
 lm = LoginManager()
 lm.init_app(app)

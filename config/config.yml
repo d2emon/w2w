@@ -30,3 +30,6 @@ SQLALCHEMY_TRACK_MODIFICATIONS: true
 # WHOOSH_BASE: ../db/search.db
 LOGGING: true
 DEBUG: true
+RESIZE_URL: /
+# RESIZE_ROOT: d:\work\eclipse\w2w\src\web
+RESIZE_TARGET_DIRECTORY: static/resized-images

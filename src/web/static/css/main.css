@@ -74,6 +74,8 @@ a {
 
 .movieframe .innerframe {
     position: absolute;
+    width: 95px;
+    text-align: center;
 }
 
 .movieframe a {
