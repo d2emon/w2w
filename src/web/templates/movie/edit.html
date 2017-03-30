@@ -10,18 +10,97 @@ function slugify()
     $("#slug").val(slugified['slug']);
   });
 }
+
+Dropzone.options.movieDropzone = { 
+  // The configuration we've talked about above
+  autoProcessQueue: true,
+  uploadMultiple: false,
+  parallelUploads: 100,
+  maxFiles: 1,
+  url: "/upload/image/movie",
+  acceptedFiles: "image/*",
+
+  // The setting up of the dropzone
+  init: function() {
+    var myDropzone = this;
+    // var submitButton = document.querySelector("#submit-all");
+
+    // submitButton.addEventListener("click", function (e) {
+      // e.preventDefault();
+      // e.stopPropagation();
+      // myDropzone.processQueue();
+    // });
+
+
+    this.on("addedfile", function (file) {
+      // Create the remove button
+      // var removeButton = Dropzone.createElement("<button class='btn btn-lg dark'>Remove File</button>");
+
+      // Listen to the click event
+      // removeButton.addEventListener("click", function (e) {
+        // Make sure the button click doesn't submit the form:
+        // e.preventDefault();
+        // e.stopPropagation();
+        // Remove the file preview.
+        // myDropzone.removeFile(file);
+        // If you want to the delete the file on the server as well,
+        // you can do the AJAX request here.
+      // });
+
+      // Add the button to the file preview element.
+      // file.previewElement.appendChild(removeButton);
+    });
+
+    // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+    // of the sending event because uploadMultiple is set to true.
+    this.on('sending', function (data, xhr, formData) {
+      $("#movie-form :input").each(function() {
+        name = $(this).attr("name");
+        if(name != 'undefined') {
+          formData.append(name, $(this).val());
+        }
+      })
+      formData.append("Username", $("#slug").val());
+    });
+
+    this.on('complete', function() {
+        //
+    });
+    this.on("sendingmultiple", function() {
+      // Gets triggered when the form is actually being sent.
+      // Hide the success button or the complete form.
+    });
+    this.on("successmultiple", function(files, response) {
+      // Gets triggered when the files have successfully been sent.
+      // Redirect user or notify of success.
+    });
+    this.on("errormultiple", function(files, response) {
+      // Gets triggered when there was an error sending the files.
+      // Maybe show form again, and notify user of error
+    });
+  },
+
+  success: function(file, response){
+    console.log(file);
+    console.log(response);
+    console.log(response.filename);
+  }
+}
 </script>
-  <h1>{{ _('Edit Movie') }}</h1>
-    <div class="well">
+<h1>{% if form.slug.data %}{{ form.title.data }}{% else %}{{ _('Add Movie') }}{% endif%}</h1>
+    <div class="well"->
         {% from "formhelper.html" import render_field %}
-        <form class="form-horizontal" action="" method="post" name="edit">
+        <form id="movie-form" class="form-horizontal" action="\movie\{{ form.slug.data }}\edit" method="post" name="edit">
             {{ form.hidden_tag() }}
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}
+            <div id="movie-dropzone" class="dropzone">
+              <div class="dropzone-previews"></div>
+            </div>
             {{ render_field(form.description, class="span4", cols=42, rows=4) }}
             <div class="control-group">
                 <div class="controls">
-                  <input class="btn btn-primary" type="submit" value="{{ _('Save') }}">
+                  <input id="submit-all" class="btn btn-primary" type="submit" value="{{ _('Save') }}">
                 </div>
             </div>
         </form>

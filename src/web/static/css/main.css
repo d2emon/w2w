@@ -194,3 +194,11 @@ input, textarea {
     cursor: inherit;
     display: block;
 }
+
+.dropzone {
+    background: none;
+}
+
+.dropzone .dz-preview.dz-image-preview {
+    background: none;
+}
