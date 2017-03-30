@@ -145,7 +145,13 @@ def upload_movie_image():
         if not name:
             name = 'untitled'
         filename = ''.join([name, ext])
-        full_filename = os.path.join(basedir, 'tmp', filename)
+        version = 1
+        while True:
+            full_filename = os.path.join(basedir, 'src', 'web', 'static', 'upload', filename)
+            if not os.path.isfile(full_filename):
+                break
+            version += 1
+            filename = ''.join([name, str(version), ext])
         f.save(full_filename)
 
         return jsonify({

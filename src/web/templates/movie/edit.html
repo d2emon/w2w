@@ -31,8 +31,12 @@ Dropzone.options.movieDropzone = {
       // myDropzone.processQueue();
     // });
 
+    this.hiddenFileInput.removeAttribute('multiple');
 
     this.on("addedfile", function (file) {
+        if(this.files.length > 1) {
+          this.removeFile(this.files[0]) 
+        }
       // Create the remove button
       // var removeButton = Dropzone.createElement("<button class='btn btn-lg dark'>Remove File</button>");
 
@@ -84,6 +88,7 @@ Dropzone.options.movieDropzone = {
     console.log(file);
     console.log(response);
     console.log(response.filename);
+    $('#image').val(response.filename);
   }
 }
 </script>
@@ -94,6 +99,7 @@ Dropzone.options.movieDropzone = {
             {{ form.hidden_tag() }}
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}
+            {% if form.image.data %}<div class="dz-preview"><div class="dz-image"><img src="{{ url_for('static', filename='upload/' + form.image.data) }}" ></div></div>{% endif %}
             <div id="movie-dropzone" class="dropzone">
               <div class="dropzone-previews"></div>
             </div>

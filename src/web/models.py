@@ -112,6 +112,7 @@ class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140), nullable=False)
     slug = db.Column(db.String(64), nullable=False, unique=True)
+    image = db.Column(db.String(64), nullable=True)
     description = db.Column(db.UnicodeText)
     timestamp = db.Column(db.DateTime)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
@@ -133,6 +134,8 @@ class Movie(db.Model):
         return Movie.query.order_by(func.random())
 
     def avatar(self, size=128):
+        if self.image:
+            return "/static/upload/{}".format(self.image)
         return gravatar(self.slug, size)
 
     @staticmethod
