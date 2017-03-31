@@ -31,5 +31,5 @@ SQLALCHEMY_TRACK_MODIFICATIONS: true
 LOGGING: true
 DEBUG: true
 RESIZE_URL: /
-# RESIZE_ROOT: d:\work\eclipse\w2w\src\web
+# RESIZE_ROOT: /home/d2emon/projects/python/w2w/src/web
 RESIZE_TARGET_DIRECTORY: static/resized-images
