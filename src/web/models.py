@@ -111,6 +111,7 @@ class Movie(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140), nullable=False)
+    original_title = db.Column(db.String(140), nullable=True)
     slug = db.Column(db.String(64), nullable=False, unique=True)
     image = db.Column(db.String(64), nullable=True)
     description = db.Column(db.UnicodeText)
@@ -143,7 +144,7 @@ class Movie(db.Model):
                 constraints.append('')
             if height:
                 constraints.append(str(height))
-                
+
             size = "x".join(constraints)
             return resize(url, str(size))
 

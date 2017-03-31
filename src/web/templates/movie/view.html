@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="well well-large">
+        <div class="pull-right">
+          <img src="{{ movie.avatar(256) }}" class="img-polaroid">
+        </div>
         <h1>
           {{ movie.title }}
 	      {% if not movie.user_id or movie.user_id == g.user.id %}
           <a href="{{ url_for('edit_movie', slug = movie.slug) }}"><span class="glyphicon glyphicon-edit"></span></a> 
           <a href="{{ url_for('delete', id = movie.id) }}"><span class="glyphicon glyphicon-trash"></span></a>
-		  {% endif %}
+		    {% endif %}
         </h1>
-        <h2>{caption}</h2>
-        <div class="pull-right">
-          <img src="{{ movie.avatar(256) }}" class="img-polaroid">
-        </div>
+        {% if movie.original_title %}
+        <h2>{{ movie.original_title }}</h2>
+		    {% endif %}
         <div>
           <p><a href="{{ movie.wikipedia }}" target="_blank">{{_('Wikipedia')}}</a></p>
           <ul>

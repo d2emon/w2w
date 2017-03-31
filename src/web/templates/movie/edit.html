@@ -99,6 +99,7 @@ Dropzone.options.movieDropzone = {
             {{ form.hidden_tag() }}
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}
+            {{ render_field(form.original_title, size="42") }}
             {% if form.image.data %}<div class="dz-preview"><div class="dz-image"><img src="{{ url_for('static', filename='upload/' + form.image.data) }}" ></div></div>{% endif %}
             <div id="movie-dropzone" class="dropzone">
               <div class="dropzone-previews"></div>

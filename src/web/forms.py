@@ -53,6 +53,7 @@ class SearchForm(FlaskForm):
 
 class MovieForm(FlaskForm):
     title = TextField(gettext('Title'), validators=[Required(), ])
+    original_title = TextField(gettext('Original title'))
     slug = TextField(gettext('URL'), validators=[
         Required(),
         Length(min=1, max=64),
