@@ -106,6 +106,13 @@ class Post(db.Model):
         return "<Post {}>".format(self.body)
 
 
+movie_genres = db.Table(
+    'movie_genres',
+    db.Column('movie_id', db.Integer, db.ForeignKey('movie.id')),
+    db.Column('genre_id', db.Integer, db.ForeignKey('genre.id')),
+)
+
+
 class Movie(db.Model):
     __searchable__ = ['description', ]
 
@@ -117,6 +124,14 @@ class Movie(db.Model):
     description = db.Column(db.UnicodeText)
     timestamp = db.Column(db.DateTime)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    genres = db.relationship(
+        'Genre',
+        secondary=movie_genres,
+        primaryjoin=(movie_genres.c.movie_id == id),
+        secondaryjoin=(movie_genres.c.genre_id == id),
+        backref=db.backref('movies', lazy='dynamic'),
+        lazy='dynamic',
+    )
 
     def __repr__(self):
         return "<Movie {}>".format(self.title)

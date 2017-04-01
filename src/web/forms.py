@@ -1,8 +1,8 @@
 from flask_wtf import FlaskForm
 from flask_babel import gettext
-from wtforms import TextField, BooleanField, TextAreaField, HiddenField
+from wtforms import TextField, BooleanField, TextAreaField, HiddenField, FieldList, SelectField
 from wtforms.validators import Required, Length, Regexp
-from web.models import User
+from web.models import User, Genre
 from guess_language import guessLanguage
 
 
@@ -59,6 +59,7 @@ class MovieForm(FlaskForm):
         Length(min=1, max=64),
         Regexp("[a-zA-Z0-9_\-]*"),
     ])
+    genres = FieldList(SelectField('Genre', choices=[[0, '']] + [[g.id, g.title] for g in Genre.query.order_by(Genre.title).all()]), min_entries=1)
     image = HiddenField()
     description = TextAreaField(gettext('Description'))
 

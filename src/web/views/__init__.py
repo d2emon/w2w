@@ -139,7 +139,7 @@ def before_request():
 
     g.search_form = SearchForm()
     g.locale = get_locale()
-    g.genres = Genre.query.all()
+    g.genres = Genre.query.order_by(Genre.title).all()
 
     sort_by = request.args.get('sort_by')
     if sort_by:
