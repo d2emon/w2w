@@ -15,6 +15,9 @@ def view_movie(slug):
     if movie is None:
         flash(gettext('%(title)s not found.', title=slug))
         return redirect(url_for('index'))
+    print("GENRES")
+    for genre in movie.genres:
+        print(genre)
     return render_template('movie/view.html',
                            movie=movie,
                            )
@@ -43,8 +46,8 @@ def add_movie():
 @app.route('/movie/<slug>/edit', methods=['POST', 'GET', ])
 @login_required
 def edit_movie(slug):
-    import os
-    from config import basedir
+    # import os
+    # from config import basedir
     movie = Movie.query.filter_by(slug=slug).first()
     if not movie:
         movie = Movie()
@@ -56,13 +59,9 @@ def edit_movie(slug):
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)
-        if 'file' in request.files:
-            f = request.files['file']
-            if f and f.filename:
-                filename = "{}.jpg".format(movie.slug)  # secure_filename(f.filename)
-                full_filename = os.path.join(basedir, 'tmp', filename)
-                f.save(full_filename)
-                print(full_filename)
+        for genre_id in form.genre_ids.data:
+            genre = Genre.query.get(genre_id)
+            movie.add_genre(genre)
         if not movie.user_id:
             movie.user_id = g.user.id
         movie.timestamp = datetime.utcnow()
@@ -70,6 +69,18 @@ def edit_movie(slug):
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
+    genres = [str(genre.id) for genre in movie.genres]
+    if genres:
+        print("GENRES", movie.genres)
+        while len(form.genre_ids) > 0:
+            form.genre_ids.pop_entry()
+    for genre in movie.genres:
+        form.genre_ids.append_entry(genre.id)
+    print("Genres", genres)
+    print("Ids", form.genre_ids.data)
+    print("Entries", form.genre_ids.entries)
+    print("Entries Data", [e.data for e in form.genre_ids.entries])
+    print(form.errors)
     return render_template('movie/edit.html',
                            form=form,
                            )

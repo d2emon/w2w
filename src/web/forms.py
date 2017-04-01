@@ -59,7 +59,7 @@ class MovieForm(FlaskForm):
         Length(min=1, max=64),
         Regexp("[a-zA-Z0-9_\-]*"),
     ])
-    genres = FieldList(SelectField('Genre', choices=[[0, '']] + [[g.id, g.title] for g in Genre.query.order_by(Genre.title).all()]), min_entries=1)
+    genre_ids = FieldList(SelectField('Genre', choices=[['0', '']] + [[str(g.id), g.title] for g in Genre.query.order_by(Genre.title).all()]), min_entries=1)
     image = HiddenField()
     description = TextAreaField(gettext('Description'))
 

@@ -127,14 +127,31 @@ class Movie(db.Model):
     genres = db.relationship(
         'Genre',
         secondary=movie_genres,
-        primaryjoin=(movie_genres.c.movie_id == id),
-        secondaryjoin=(movie_genres.c.genre_id == id),
+        # primaryjoin=(movie_genres.c.movie_id == id),
+        # secondaryjoin=(movie_genres.c.genre_id == id),
         backref=db.backref('movies', lazy='dynamic'),
         lazy='dynamic',
     )
 
     def __repr__(self):
         return "<Movie {}>".format(self.title)
+
+    def has_genre(self, genre):
+        return self.genres.filter(movie_genres.c.genre_id == genre.id).count() > 0
+
+    def add_genre(self, genre):
+        if not self.has_genre(genre):
+            self.genres.append(genre)
+        return self
+
+    def del_genre(self, genre):
+        if self.has_genre(genre):
+            self.genres.remove(genre)
+        return self
+
+    @property
+    def genre_names(self):
+        return ', '.join([genre.title.lower() for genre in self.genres]).capitalize()
 
     @staticmethod
     def ordered(order_by=''):

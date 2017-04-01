@@ -16,6 +16,9 @@
 		    {% endif %}
         <div>
           <p><a href="{{ movie.wikipedia }}" target="_blank">{{_('Wikipedia')}}</a></p>
+          {% if movie.genres %}
+          <p>{{ movie.genre_names }}</p>
+          {% endif %}
           <ul>
             <li>{{_('Directed by')}} {directors}</li>
             <li>{{_('Produced by')}} {producers}</li>
