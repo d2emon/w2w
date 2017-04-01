@@ -110,6 +110,27 @@ genres:
   id: 10
   slug: voennoe
   title: Военное
+- description: жанр произведений литературы и кино, нацеленный вызвать у зрителя или
+    читателя внезапный прилив эмоций, чувство тревоги, возбуждение. Жанр не имеет
+    чётких границ, элементы триллера присутствуют во многих произведениях разных жанров.
+    В кинематографе к триллерам зачастую относят детективные и шпионские фильмы, фильмы
+    ужасов, приключенческие фильмы, а также опасные фильмы, стрелялки [1].
+  id: 11
+  slug: triller
+  title: Триллер
+- description: ''
+  id: 12
+  slug: kriminal
+  title: Криминал
+- description: преимущественно литературный и кинематографический жанр, произведения
+    которого описывают процесс исследования загадочного происшествия с целью выяснения
+    его обстоятельств и раскрытия загадки. Обычно в качестве такого происшествия выступает
+    преступление, и детектив описывает его расследование и определение виновных, в
+    таком случае конфликт строится на столкновении справедливости с беззаконием, завершающемся
+    победой справедливости.
+  id: 13
+  slug: detektiv
+  title: Детектив
 movies:
 - description: ' американский научно-фантастический телесериал, созданный Крисом Картером.
     Показ стартовал 10 сентября 1993 года и завершился через 9 лет, 19 мая 2002 года.
@@ -123,6 +144,7 @@ movies:
     написаны Фрэнком Спотницом.'
   id: 1
   image: 250px-The_X-Files_logo.svg.png
+  original_title: null
   slug: sekretnye-materialy
   timestamp: 2017-03-31 07:12:48.199869
   title: Секретные материалы
@@ -133,6 +155,7 @@ movies:
     странах — $180 млн.
   id: 2
   image: Signs_dvd_cover.jpg
+  original_title: null
   slug: znaki
   timestamp: 2017-03-30 20:38:55.801047
   title: Знаки
@@ -143,6 +166,7 @@ movies:
     \ в 1-3 сезонах), Стивен Хоутон (Эд Рассел в 4 сезоне)"
   id: 3
   image: untitled9.jpg
+  original_title: null
   slug: elektronnye-zhuchki
   timestamp: 2017-03-31 07:24:32.373833
   title: Электронные жучки
@@ -155,6 +179,7 @@ movies:
     \ фильма состоялась 27 августа 2009 года."
   id: 4
   image: Triangle-m2009.jpg
+  original_title: null
   slug: treugolnik
   timestamp: 2017-03-31 07:16:03.065405
   title: Треугольник
@@ -167,6 +192,7 @@ movies:
     \ — «Нет времени объяснять»."
   id: 5
   image: untitled6.jpg
+  original_title: null
   slug: sokrovishcha-o-k
   timestamp: 2017-03-31 07:13:12.689411
   title: Сокровища О. К.
@@ -175,6 +201,7 @@ movies:
     Международного кинофестиваля фантастических фильмов в Авориазе.'
   id: 6
   image: Phantasm.jpg
+  original_title: null
   slug: fantazm
   timestamp: 2017-03-31 07:25:29.236629
   title: Фантазм
@@ -183,6 +210,7 @@ movies:
     Network/Adult swim.
   id: 7
   image: 12_oz._Mouse_title.jpg
+  original_title: null
   slug: pollitrovaia-mysh
   timestamp: 2017-03-31 07:07:46.205422
   title: Поллитровая мышь
@@ -190,6 +218,7 @@ movies:
 - description: ' французская комедия положений с Пьером Ришаром в главной роли.'
   id: 8
   image: Gauche_en_sortant_de_l_ascenseur.jpg
+  original_title: null
   slug: nalevo-ot-lifta
   timestamp: 2017-03-31 06:57:23.432005
   title: Налево от лифта
@@ -199,6 +228,7 @@ movies:
     одноголосом закадровом переводе Вартана Дохалова.
   id: 9
   image: ArachnophobiaPoster.jpg
+  original_title: null
   slug: arakhnofobiia
   timestamp: 2017-03-30 17:45:38.689366
   title: Арахнофобия
@@ -209,6 +239,7 @@ movies:
     \r\nСлоган фильма — «Здесь граблю только я!»"
   id: 10
   image: -2.jpg
+  original_title: null
   slug: solovei-razboinik
   timestamp: 2017-03-31 07:13:40.119606
   title: Соловей-разбойник
@@ -217,6 +248,7 @@ movies:
     Андрея Звягинцева (серии «Бусидо», «Obscure», «Выбор»).
   id: 11
   image: untitled11.jpg
+  original_title: null
   slug: chernaia-komnata
   timestamp: 2017-03-31 07:25:15.690972
   title: Черная комната
@@ -229,6 +261,7 @@ movies:
     \ устроить своей семье столь же незабываемые каникулы, что были у него в детстве."
   id: 12
   image: National_Lampoons_Vacation_1983.jpg
+  original_title: null
   slug: kanikuly
   timestamp: 2017-03-31 06:49:09.222634
   title: Каникулы
@@ -238,6 +271,7 @@ movies:
     а также был номинирован на кинопремию «Сатурн».'
   id: 13
   image: untitled5.jpg
+  original_title: null
   slug: muzei-voskovykh-figur
   timestamp: 2017-03-31 06:53:53.504160
   title: Музей восковых фигур
@@ -248,6 +282,7 @@ movies:
     Kids).
   id: 14
   image: untitled3.jpg
+  original_title: null
   slug: zhizn-s-lui
   timestamp: 2017-03-30 20:00:47.139143
   title: Жизнь с Луи
@@ -260,6 +295,7 @@ movies:
     каждой серии говорит: «Ну, Заяц, погоди!».'
   id: 15
   image: 1988_CPA_5918.jpg
+  original_title: null
   slug: nu-pogodi
   timestamp: 2017-03-31 06:57:49.909413
   title: Ну, погоди!
@@ -268,6 +304,7 @@ movies:
     французских и итальянских кинематографистов.'
   id: 16
   image: Barbarella.jpg
+  original_title: null
   slug: barbarella
   timestamp: 2017-03-30 18:09:36.303593
   title: Барбарелла
@@ -277,6 +314,7 @@ movies:
     350 место в списке 500 лучших фильмов по версии журнала Empire.[1]
   id: 17
   image: Planet_of_the_Apes_1.jpg
+  original_title: null
   slug: planeta-obezian
   timestamp: 2017-03-31 06:59:16.046535
   title: Планета обезьян
@@ -287,8 +325,9 @@ movies:
     в 1945 году. Сцена сна в фильме поставлена художником Сальвадором Дали.
   id: 18
   image: Spellbound_poster.jpg
+  original_title: Spellbound
   slug: zavorozhionnyi
-  timestamp: 2017-03-30 20:01:37.744037
+  timestamp: 2017-03-31 19:28:12.025536
   title: Заворожённый
   user_id: 1
 - description: 'научно-фантастический фильм, снятый режиссёром Доном Сигелом в 1956
@@ -297,6 +336,7 @@ movies:
     реестр фильмов при Библиотеке конгресса США.'
   id: 19
   image: Invasion_of_the_body_snatchers.jpg
+  original_title: null
   slug: vtorzhenie-pokhititelei-tel
   timestamp: 2017-03-30 18:36:30.192902
   title: Вторжение похитителей тел
@@ -307,6 +347,7 @@ movies:
     \ в реалии конца 1970-х годов мотивов «мушкетёрских» романов."
   id: 20
   image: 1978_kogda_ya_stanu_velikanom.jpg
+  original_title: null
   slug: kogda-ia-stanu-velikanom
   timestamp: 2017-03-31 06:50:52.816574
   title: Когда я стану великаном
@@ -315,6 +356,7 @@ movies:
     — Тарсем), вышедший в свет 9 сентября 2006 года.
   id: 21
   image: The_Fall_Poster.jpg
+  original_title: null
   slug: zapredele
   timestamp: 2017-03-30 20:29:32.150808
   title: Запределье
@@ -325,6 +367,7 @@ movies:
     года вышел сиквел фильма[4].
   id: 22
   image: Now_You_See_Me.jpg
+  original_title: null
   slug: illiuziia-obmana
   timestamp: 2017-03-30 20:37:47.040114
   title: Иллюзия обмана
@@ -334,6 +377,7 @@ movies:
     6 января 2017 года на телеканале NBC[1].
   id: 23
   image: untitled4.jpg
+  original_title: null
   slug: izumrudnyi-gorod
   timestamp: 2017-03-30 20:38:24.219240
   title: Изумрудный город
@@ -344,6 +388,7 @@ movies:
     «Ты опасен, если ты другой».'
   id: 24
   image: Divergent_poster.jpg
+  original_title: null
   slug: divergent
   timestamp: 2017-03-30 19:57:53.781227
   title: Дивергент
@@ -356,6 +401,7 @@ movies:
     различные персонажи фольклорных ужасов: вампиры, оборотни, ведьмы, живые мертвецы.'
   id: 25
   image: Penny_Dreadful.svg.png
+  original_title: null
   slug: strashnye-skazki
   timestamp: 2017-03-31 07:15:50.369176
   title: Страшные сказки
@@ -365,6 +411,7 @@ movies:
     Россия-1 в 2011 году незадолго до празднования Дня победы 9 мая.
   id: 26
   image: -__2011.jpg
+  original_title: null
   slug: zaiats-zharennyi-po-berlinski
   timestamp: 2017-03-30 20:33:45.320288
   title: Заяц, жаренный по-берлински
@@ -374,6 +421,7 @@ movies:
     города Ярославля. Создан в рамках подготовки к 1000-летию Ярославля.'
   id: 27
   image: untitled8.jpg
+  original_title: null
   slug: iaroslav-tysiachu-let-nazad
   timestamp: 2017-03-31 07:23:53.485003
   title: Ярослав. Тысячу лет назад
@@ -383,6 +431,7 @@ movies:
     \ в написании сценария фильма и сыграли в нём роли."
   id: 28
   image: Strana_chudes.jpg
+  original_title: null
   slug: strana-chudes
   timestamp: 2017-03-31 07:15:31.184736
   title: Страна чудес
@@ -391,6 +440,7 @@ movies:
     26 марта 2015 года'
   id: 29
   image: 2015.jpg
+  original_title: null
   slug: prizrak
   timestamp: 2017-03-31 07:10:05.727034
   title: Призрак
@@ -399,6 +449,7 @@ movies:
     Верна. Для любой зрительской аудитории.
   id: 30
   image: 1945.JPG
+  original_title: null
   slug: piatnadtsatiletnii-kapitan
   timestamp: 2017-03-31 07:10:44.361758
   title: Пятнадцатилетний капитан
@@ -535,6 +586,7 @@ movies:
     \ Foundation Powered by MediaWiki\r\n"
   id: 31
   image: -.jpg
+  original_title: null
   slug: zmeinyi-istochnik
   timestamp: 2017-03-30 20:33:16.701651
   title: Змеиный источник
@@ -548,6 +600,7 @@ movies:
     \ снять 12 сезон. [7][8]"
   id: 32
   image: Enanorojo.png
+  original_title: null
   slug: krasnyi-karlik
   timestamp: 2017-03-31 06:51:29.952166
   title: Красный карлик
@@ -558,6 +611,7 @@ movies:
     \ все жители села…"
   id: 33
   image: 5227.jpg
+  original_title: null
   slug: povod
   timestamp: 2017-03-31 07:02:40.084169
   title: Повод
@@ -571,6 +625,7 @@ movies:
     минут).'
   id: 34
   image: untitled2.jpg
+  original_title: null
   slug: viking
   timestamp: 2017-03-30 18:30:19.523701
   title: Викинг
@@ -580,6 +635,7 @@ movies:
     года[3].
   id: 35
   image: Vikings-logo.png
+  original_title: null
   slug: vikingi
   timestamp: 2017-03-30 18:32:03.765663
   title: Викинги
@@ -589,14 +645,16 @@ movies:
     of American horror author H. P. Lovecraft.
   id: 36
   image: Howard_Lovecraft_grande.jpg
+  original_title: Howard Lovecraft and the Frozen Kingdom
   slug: howard-lovecraft-and-the-frozen-kingdom
-  timestamp: 2017-03-30 15:35:41.127371
+  timestamp: 2017-03-31 19:26:40.626712
   title: Howard Lovecraft and the Frozen Kingdom
   user_id: 1
 - description: ' аниме режиссёра Сигэру Уэда с элементами эрогуро,[1] вышедшее в 2008
     году. В России с июня 2011 года транслировался по телеканалу «2x2».[2]'
   id: 37
   image: 230px-Mnemosyne_no_Musume-tachi.jpg
+  original_title: null
   slug: docheri-mnemoziny
   timestamp: 2017-03-30 19:59:50.183885
   title: Дочери Мнемозины
@@ -607,6 +665,7 @@ movies:
     фильмов ужасов, снятых британской студией Hammer.'
   id: 38
   image: untitled10.jpg
+  original_title: null
   slug: eksperiment-kuotermassa
   timestamp: 2017-03-31 07:24:50.084561
   title: Эксперимент Куотермасса
@@ -615,8 +674,9 @@ movies:
     Хьютон. Исполнительными продюсерами выступили братья Тони и Ридли Скотт.
   id: 39
   image: 250px-Numb3rs_logo.svg.png
+  original_title: Numb3rs
   slug: 4isla
-  timestamp: 2017-03-30 18:38:49.820888
+  timestamp: 2017-03-31 19:24:40.382413
   title: 4исла
   user_id: 1
 - description: американский фильм 1951 года, ставший вехой в истории кинофантастики.
@@ -625,8 +685,9 @@ movies:
     же названием.
   id: 40
   image: 200px-Day_the_Earth_Stood_Still_1951.jpg
+  original_title: The Day the Earth Stood Still
   slug: den-kogda-ostanovilas-zemlia
-  timestamp: 2017-03-30 19:44:09.594087
+  timestamp: 2017-03-31 19:35:15.494441
   title: День, когда остановилась Земля
   user_id: 1
 - description: фильм ужасов, выпущен в 1953 году кинокомпанией Warner Brothers. Ремейк
@@ -637,7 +698,77 @@ movies:
     эстетическим значением.
   id: 41
   image: Houseofwax1.jpg
+  original_title: null
   slug: dom-voskovykh-figur
   timestamp: 2017-03-31 06:55:50.234335
   title: Дом восковых фигур
+  user_id: 1
+- description: ' американский фантастический фильм 2005 года. Сюжет основан на одноимённом
+    мультсериале Питера Чон Гонсика, который демонстрировался на канале MTV в 1995
+    году.'
+  id: 42
+  image: Aeon_Flux_poster.jpg
+  original_title: null
+  slug: eon-flaks
+  timestamp: 2017-03-31 18:56:30.459760
+  title: Эон Флакс
+  user_id: 1
+- description: "австралийский дистопический боевик 1979 года режиссёра Джорджа Миллера\
+    \ с Мелом Гибсоном в главной роли. Ряд источников называет фильм одним из лучших\
+    \ произведений в жанре дизельпанк[1].\r\n\r\nПродолжения — фильм «Безумный Макс:\
+    \ Дорога ярости» (2015) (по хронологии событий) и фильм «Безумный Макс 2: Воин\
+    \ дороги» (1981) (по дате выхода)."
+  id: 43
+  image: Mad_max_poster.jpg
+  original_title: Mad Max
+  slug: bezumnyi-maks
+  timestamp: 2017-03-31 19:35:50.656572
+  title: Безумный Макс
+  user_id: 1
+- description: " научно-фантастический фильм режиссёра Ридли Скотта. Изначально задумывался\
+    \ как приквел фильма «Чужой» 1979 года, но позже трансформировался в самостоятельный\
+    \ фильм, не являющийся прямым приквелом «Чужого», хотя события фильма разворачиваются\
+    \ всё в той же звёздной системе ζ Сетки[2].\r\n\r\nПервоначально сценарий к фильму\
+    \ написал Джон Спэйтс, но поскольку его история предполагала большой бюджет ($250\
+    \ млн) и развитие концепции «Чужих», а студия не рискнула выделить такие деньги\
+    \ на фильм с рейтингом R, то тогда Ридли Скотт решил отойти от тематики «Чужих»,\
+    \ и вскоре он передал сценарий Деймону Линделофу, сценаристу «Остаться в живых»,\
+    \ который радикально переписал сценарий под более скромный бюджет (в том числе\
+    \ убрав несколько масштабных сцен непосредственно с «Чужими» в версии Спэйтса)\
+    \ и добавил в него религиозные мотивы[2]. Декорации создавались при непосредственном\
+    \ участии Х. Р. Гигера — художника и автора внешности самого первого «Чужого»[3].\r\
+    \n\r\nОригинальный саундтрек «Judge and Jury» к трейлерам и тизерам фильма был\
+    \ записан американской группой оркестровой музыки Audiomachine, композитором выступил\
+    \ Макс Рихтер. Съёмки начались в марте 2011 года в Торонто[4], позже Скотт перевёз\
+    \ группу в Лондон[5]. Другие места съёмок — Марокко[6], Шотландия[7] и Исландия[8].\
+    \ Премьера фильма во Франции, Бельгии, Швейцарии и[9][10] России состоялась 30\
+    \ мая 2012 года. В Великобритании премьера прошла 1 июня, в США — 8 июня, в Германии\
+    \ — 9 августа."
+  id: 44
+  image: Prometheus_poster.jpg
+  original_title: null
+  slug: prometei
+  timestamp: 2017-03-31 18:58:06.628209
+  title: Прометей
+  user_id: 1
+- description: "американский телевизионный сериал в жанре антиутопии и альтернативной\
+    \ истории производства Amazon Studios, Scott Free, Headline Pictures и Electric\
+    \ Shepherd Productions[1]. Сериал основан на одноимённом романе 1962 года американского\
+    \ писателя Филипа Дика. Сюжет является альтернативной историей мира, в котором\
+    \ страны Оси выиграли Вторую мировую войну. Соединённые Штаты были оккупированы\
+    \ и разделены на три части: японское марионеточное государство Тихоокеанских Штатов\
+    \ Америки, которое занимает территории на запад от Скалистых гор бывших США; нацистское\
+    \ марионеточное государство, которое включает восточную часть бывших США; и нейтральную\
+    \ зону, которая выступает в качестве буферной зоны между двумя частями и которая\
+    \ получила название Штаты Скалистых гор.\r\n\r\nПремьера пилота состоялась 15\
+    \ января 2015 года, и он стал «самым просматриваемым с момента начала программы\
+    \ развития оригинальных сериалов»[2]. 18 февраля 2015 года сериал был расширен\
+    \ до 10-серийного сезона[3]. Остальные девять эпизодов вышли 20 ноября 2015[4][5].\
+    \ Релиз второго сезона из десяти эпизодов состоялся 16 декабря 2016 года[6]."
+  id: 45
+  image: untitled12.jpg
+  original_title: null
+  slug: chelovek-v-vysokom-zamke
+  timestamp: 2017-03-31 19:00:14.671823
+  title: Человек в высоком замке
   user_id: 1
