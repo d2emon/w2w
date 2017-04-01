@@ -2,7 +2,7 @@ from flask import request, render_template, redirect, url_for, flash, jsonify, s
 from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
-from web.models import Genre, Movie 
+from web.models import Genre, Movie
 from web.forms import GenreForm
 
 
@@ -23,7 +23,7 @@ def view_genre(slug):
     if genre is None:
         flash(gettext('%(title)s not found.', title=slug))
         return redirect(url_for('index'))
-    movies = Movie.ordered(session.get('sort_by')).paginate(1, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    movies = Movie.ordered(session.get('sort_by')).filter(Movie.genres.contains(genre)).paginate(1, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
     return render_template('genre/view.html',
                            genre=genre,
                            movies=movies,
@@ -44,7 +44,7 @@ def add_genre():
     return render_template('genre/edit.html',
                            form=form,
                            )
-    
+
 
 @app.route('/genre/<slug>/edit', methods=['POST', 'GET', ])
 @login_required
