@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  W2W\n"
 "Report-Msgid-Bugs-To: d2emonium@gmail.com\n"
-"POT-Creation-Date: 2017-03-28 21:51+0300\n"
+"POT-Creation-Date: 2017-04-02 00:13+0300\n"
 "PO-Revision-Date: 2017-03-24 09:27+0300\n"
 "Last-Translator: FULL NAME <d2emonium@gmail.com>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
-#: web/forms.py:29
+#: src/web/forms.py:32
 msgid ""
 "This nickname has invalid characters. Please use letters, numbers and "
 "underscores only."
@@ -27,400 +27,465 @@ msgstr ""
 "Это имя содержит недопустимые символы. Пожалуйста используйте только "
 "буквы, цифры и знак подчеркивания."
 
-#: web/forms.py:34
+#: src/web/forms.py:37
 msgid "This nickname is allready in use. Please choose another one."
 msgstr "К сожалению, это имя занято. Выберите другое имя."
 
-#: web/forms.py:48
+#: src/web/forms.py:57 src/web/forms.py:70
 msgid "Title"
 msgstr "Название"
 
-#: web/forms.py:49
+#: src/web/forms.py:58
+msgid "Original title"
+msgstr "Оригинальное название"
+
+#: src/web/forms.py:59 src/web/forms.py:71
 msgid "URL"
 msgstr ""
 
-#: web/forms.py:54
+#: src/web/forms.py:64
+msgid "Genre"
+msgstr "Жанр"
+
+#: src/web/forms.py:66 src/web/forms.py:76
 msgid "Description"
 msgstr "Описание"
 
-#: web/translate.py:24
-msgid "Error: Unexpected error."
-msgstr "Ошибка: Неожиданная ошибка."
-
-#: web/templates/404.html:3
-msgid "File Not Found"
-msgstr "Файл Не Найден"
-
-#: web/templates/404.html:4 web/templates/500.html:5
-msgid "Back"
-msgstr "Назад"
-
-#: web/templates/500.html:3
-msgid "An unexpected error has occured"
-msgstr "Произошла непредвиденная ошибка"
-
-#: web/templates/500.html:4
-msgid "The administrator has been notified. Sorry for the inconvinience!"
-msgstr "Администратор получит сообщение об ошибке. Просим прощения за неудобства!"
-
-#: web/templates/base.html:33
-msgid "Error: Could not contact server."
-msgstr "Ошибка: Не могу соединиться с сервером."
-
-#: web/templates/base.html:46
-msgid "Toggle navigation"
-msgstr "Включить навигацию"
-
-#: web/templates/base.html:57
-msgid "Search"
-msgstr "Искать"
-
-#: web/templates/base.html:66
-msgid "Your Profile"
-msgstr "Ваш Профиль"
-
-#: web/templates/base.html:67
-msgid "Add Movie"
-msgstr "Добавить Фильм"
-
-#: web/templates/base.html:68
-msgid "Logout"
-msgstr "Выход"
-
-#: web/templates/base.html:97
-msgid "Home"
-msgstr "Главная"
-
-#: web/templates/base.html:98
-msgid "About Us"
-msgstr "О Нас"
-
-#: web/templates/base.html:99
-msgid "Rules"
-msgstr "Правила"
-
-#: web/templates/base.html:100
-msgid "Copyright"
-msgstr "Правообладатели"
-
-#: web/templates/base.html:101
-msgid "Soon"
-msgstr "Ожидаемые"
-
-#: web/templates/base.html:102
-msgid "Site News"
-msgstr "Новости Сайта"
-
-#: web/templates/base.html:103
-msgid "Order Movie"
-msgstr "Заказы"
-
-#: web/templates/base.html:104
-msgid "Movie News"
-msgstr "Новости Кино"
-
-#: web/templates/base.html:105
-msgid "Actors"
-msgstr "Актеры"
-
-#: web/templates/base.html:106
-msgid "Movies"
-msgstr "Фильмы"
-
-#: web/templates/base.html:107
-msgid "Cartoons"
-msgstr "Мультфильмы"
-
-#: web/templates/base.html:108
-msgid "Series"
-msgstr "Сериалы"
-
-#: web/templates/base.html:109
-msgid "TV Issues"
-msgstr "ТВ Передачи"
-
-#: web/templates/base.html:110
-msgid "Online"
-msgstr "Онлайн"
-
-#: web/templates/base.html:111
-msgid "Movies 2016"
-msgstr "Фильмы 2016"
-
-#: web/templates/base.html:112
-msgid "Movies 2017"
-msgstr "Фильмы 2017"
-
-#: web/templates/base.html:159
-msgid "Social networks: "
-msgstr "Социальные сети: "
-
-#: web/templates/edit.html:3
-msgid "Edit Your Profile"
-msgstr "Редактировать Ваш Профиль"
-
-#: web/templates/edit.html:8
-msgid "Your nickname:"
-msgstr "Ваш псевдоним:"
-
-#: web/templates/edit.html:17
-msgid "About yourself:"
-msgstr "О себе:"
-
-#: web/templates/edit.html:27
-msgid "Save Changes"
-msgstr "Сохранить Изменения"
-
-#: web/templates/index.html:4
-#, python-format
-msgid "Hi, %(user)s!"
-msgstr "Привет, %(user)s!"
-
-#: web/templates/index.html:9
-msgid "Say something:"
-msgstr "Скажите что-нибудь:"
-
-#: web/templates/index.html:12
-msgid "Post!"
-msgstr "Опубликовать!"
-
-#: web/templates/index.html:28 web/templates/index.html:30
-#: web/templates/user.html:29 web/templates/user.html:31
-msgid "Newer posts"
-msgstr "К новым"
-
-#: web/templates/index.html:33 web/templates/index.html:35
-#: web/templates/user.html:34 web/templates/user.html:36
-msgid "Older posts"
-msgstr "К старым"
-
-#: web/templates/login.html:19
-msgid "Please Sign In"
-msgstr "Пожалуйста Войдите"
-
-#: web/templates/login.html:22
-msgid "Click on your OpenID provider below:"
-msgstr "Выберите свой провайдер OpenID"
-
-#: web/templates/login.html:29
-msgid "Or enter your OpenID here:"
-msgstr "Или введите свой OpenID"
-
-#: web/templates/login.html:40
-msgid "Remember Me"
-msgstr "Запомнить Меня"
-
-#: web/templates/login.html:46
-msgid "Sign In"
-msgstr "Войти"
-
-#: web/templates/post.html:6
-#, python-format
-msgid "%(nickname)s said %(when)s:"
-msgstr "%(nickname)s сказал %(when)s:"
-
-#: web/templates/movie/brief.html:7 web/templates/post.html:9
-msgid "Delete"
-msgstr "Удалить"
-
-#: web/templates/post.html:14
-msgid "Translate"
-msgstr "Перевести"
-
-#: web/templates/search_results.html:3
-#, python-format
-msgid "Search results for \"%(query)s\""
-msgstr "Результаты поиска \"%(query)s\""
-
-#: web/templates/user.html:10
-#, python-format
-msgid "Last seen: %(seen)s"
-msgstr "Был на сайте: %(seen)s"
-
-#: web/templates/user.html:12
-#, python-format
-msgid "Followers: %(followers)s"
-msgstr "Последователи: %(followers)s"
-
-#: web/templates/user.html:12
-#, python-format
-msgid "Following: %(following)s"
-msgstr "Следит за: %(following)s"
-
-#: web/templates/user.html:14
-msgid "Edit your profile"
-msgstr "Редактировать Ваш Профиль"
-
-#: web/templates/user.html:16
-msgid "Follow"
-msgstr "Отслеживать"
-
-#: web/templates/user.html:18
-msgid "Unfollow"
-msgstr "Не Отслеживать"
-
-#: web/templates/movie/brief.html:5
-msgid "Edit"
-msgstr "Редактировать"
-
-#: web/templates/movie/edit.html:14
-msgid "Edit Movie"
-msgstr "Редактировать Фильм"
-
-#: web/templates/movie/edit.html:24
-msgid "Save"
-msgstr "Сохранить"
-
-#: web/templates/movie/view.html:7
-msgid "Edit movie"
-msgstr "Редактировать Фильм"
-
-#: web/templates/movie/view.html:12
-msgid "Directed by"
-msgstr "Режиссер"
-
-#: web/templates/movie/view.html:13
-msgid "Produced by"
-msgstr "Продюссер"
-
-#: web/templates/movie/view.html:14
-msgid "Written by"
-msgstr "Автор"
-
-#: web/templates/movie/view.html:15
-msgid "Screenplay by"
-msgstr "Сценарий"
-
-#: web/templates/movie/view.html:16
-msgid "Story by"
-msgstr "Сценарий"
-
-#: web/templates/movie/view.html:17
-msgid "Based on"
-msgstr "Основан на"
-
-#: web/templates/movie/view.html:18
-msgid "Starring"
-msgstr "В главных ролях"
-
-#: web/templates/movie/view.html:19
-msgid "Narrated by"
-msgstr "Ведущий"
-
-#: web/templates/movie/view.html:20
-msgid "Music by"
-msgstr "Композитор"
-
-#: web/templates/movie/view.html:21
-msgid "Cinematography"
-msgstr "Кинематография"
-
-#: web/templates/movie/view.html:22
-msgid "Edited by"
-msgstr "Редактор"
-
-#: web/templates/movie/view.html:23
-msgid "Production company"
-msgstr "Кинокомпания"
-
-#: web/templates/movie/view.html:24
-msgid "Distributed by"
-msgstr "Выпустил"
-
-#: web/templates/movie/view.html:25
-msgid "Release date"
-msgstr "Дата выпуска"
-
-#: web/templates/movie/view.html:26
-msgid "Running time"
-msgstr "Длительность"
-
-#: web/templates/movie/view.html:27
-msgid "Country"
-msgstr "Страна"
-
-#: web/templates/movie/view.html:28
-msgid "Language"
-msgstr "Язык"
-
-#: web/templates/movie/view.html:29
-msgid "Budget"
-msgstr "Бюджет"
-
-#: web/templates/movie/view.html:30
-msgid "Box office"
-msgstr ""
-
-#: web/templates/movie/view.html:32
-#, python-format
-msgid "Added %(added)s by %(user)s"
-msgstr "Добавил %(user)s %(added)s"
-
-#: web/views/__init__.py:40
+#: src/web/views/__init__.py:39
 msgid "Your post is now live!"
 msgstr "Ваше сообщение опубликовано!"
 
-#: web/views/__init__.py:91
+#: src/web/views/__init__.py:80
+msgid "Error: Unexpected error."
+msgstr "Ошибка: Неожиданная ошибка."
+
+#: src/web/views/__init__.py:106 src/web/views/__init__.py:111
+#: src/web/views/movies.py:141 src/web/views/movies.py:148
+msgid "No file uploaded."
+msgstr "Файл не загружен."
+
+#: src/web/views/__init__.py:122 src/web/views/movies.py:174
+#, python-format
+msgid "File %(filename)s is not allowed."
+msgstr "Файл %(filename)s запрещен к загрузке."
+
+#: src/web/views/__init__.py:168
 msgid "Invalid login. Please try again."
 msgstr "Неправильный логин. Пожалуйста повторите попытку."
 
-#: web/views/follow.py:14 web/views/follow.py:35 web/views/user.py:41
+#: src/web/views/follow.py:14 src/web/views/follow.py:35
+#: src/web/views/user.py:41
 #, python-format
 msgid "User %(nickname)s not found."
 msgstr "Пользователь %(nickname)s не найден."
 
-#: web/views/follow.py:17
+#: src/web/views/follow.py:17
 msgid "Cannot follow yourself!"
 msgstr "Не могу добавить себя в отслеживаемые!"
 
-#: web/views/follow.py:21
+#: src/web/views/follow.py:21
 #, python-format
 msgid "Cannot follow %(nickname)s!"
 msgstr "Не могу добавить %(nickname)s в отслежииваемые!"
 
-#: web/views/follow.py:25
+#: src/web/views/follow.py:25
 #, python-format
 msgid "You are now following %(nickname)s!"
 msgstr "Вы теперь отслеживаете %(nickname)s!"
 
-#: web/views/follow.py:38
+#: src/web/views/follow.py:38
 msgid "Cannot unfollow yourself!"
 msgstr "Не могу перестать отслеживать себя!"
 
-#: web/views/follow.py:42
+#: src/web/views/follow.py:42
 #, python-format
 msgid "Cannot unfollow %(nickname)s!"
 msgstr "Не могу перестать отслеживать %(nickname)s!"
 
-#: web/views/follow.py:46
+#: src/web/views/follow.py:46
 #, python-format
 msgid "You have stopped following %(nickname)s!"
 msgstr "Вы перестали отслеживать %(nickname)s!"
 
-#: web/views/movies.py:15
+#: src/web/views/genres.py:24 src/web/views/movies.py:16
 #, python-format
 msgid "%(title)s not found."
 msgstr "%(title)s не найдено."
 
-#: web/views/movies.py:33 web/views/movies.py:56 web/views/user.py:59
+#: src/web/views/genres.py:42 src/web/views/genres.py:61
+#: src/web/views/movies.py:35 src/web/views/movies.py:70
+#: src/web/views/user.py:59
 msgid "Your changes have been saved."
 msgstr "Ваши изменения сохранены."
 
-#: web/views/movies.py:46
+#: src/web/views/genres.py:54
+msgid "This genre doesn't exist."
+msgstr ""
+
+#: src/web/views/movies.py:54
 msgid "Your can edit only your movies."
 msgstr "Вы можете редактировать только свои фильмы."
 
-#: web/views/post.py:13
+#: src/web/views/movies.py:168
+msgid "Ok."
+msgstr ""
+
+#: src/web/views/post.py:13
 msgid "Post not found"
 msgstr "Запись не найдена"
 
-#: web/views/post.py:16
+#: src/web/views/post.py:16
 msgid "You cannot delete this post."
 msgstr "Вы не можете удалить эту запись."
 
-#: web/views/post.py:20
+#: src/web/views/post.py:20
 msgid "Your post has been deleted."
 msgstr "Ваша запись удалена."
+
+#: templates/404.html:3
+msgid "File Not Found"
+msgstr "Файл Не Найден"
+
+#: templates/404.html:4 templates/500.html:5
+msgid "Back"
+msgstr "Назад"
+
+#: templates/500.html:3
+msgid "An unexpected error has occured"
+msgstr "Произошла непредвиденная ошибка"
+
+#: templates/500.html:4
+msgid "The administrator has been notified. Sorry for the inconvinience!"
+msgstr "Администратор получит сообщение об ошибке. Просим прощения за неудобства!"
+
+#: templates/base.html:38
+msgid "Error: Could not contact server."
+msgstr "Ошибка: Не могу соединиться с сервером."
+
+#: templates/base.html:51
+msgid "Toggle navigation"
+msgstr "Включить навигацию"
+
+#: templates/base.html:62
+msgid "Search"
+msgstr "Искать"
+
+#: templates/base.html:71
+msgid "Your Profile"
+msgstr "Ваш Профиль"
+
+#: templates/base.html:72
+msgid "Add Genre"
+msgstr "Добавить Жанр"
+
+#: templates/base.html:73 templates/movie/edit.html:127
+msgid "Add Movie"
+msgstr "Добавить Фильм"
+
+#: templates/base.html:74
+msgid "Export Movies"
+msgstr "Экспортировать Фильмы"
+
+#: templates/base.html:75
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/base.html:78 templates/upload.html:11
+msgid "Import"
+msgstr "Импортировать"
+
+#: templates/base.html:80
+msgid "Login"
+msgstr "Войти"
+
+#: templates/base.html:82
+msgid "Random Movie"
+msgstr "Случайный Фильм"
+
+#: templates/base.html:119
+msgid "Home"
+msgstr "Главная"
+
+#: templates/base.html:120
+msgid "About Us"
+msgstr "О Нас"
+
+#: templates/base.html:121
+msgid "Rules"
+msgstr "Правила"
+
+#: templates/base.html:122
+msgid "Copyright"
+msgstr "Правообладатели"
+
+#: templates/base.html:123
+msgid "Soon"
+msgstr "Ожидаемые"
+
+#: templates/base.html:124
+msgid "Site News"
+msgstr "Новости Сайта"
+
+#: templates/base.html:125
+msgid "Order Movie"
+msgstr "Заказы"
+
+#: templates/base.html:126
+msgid "Movie News"
+msgstr "Новости Кино"
+
+#: templates/base.html:127
+msgid "Actors"
+msgstr "Актеры"
+
+#: templates/base.html:128
+msgid "Movies"
+msgstr "Фильмы"
+
+#: templates/base.html:129
+msgid "Cartoons"
+msgstr "Мультфильмы"
+
+#: templates/base.html:130
+msgid "Series"
+msgstr "Сериалы"
+
+#: templates/base.html:131
+msgid "TV Issues"
+msgstr "ТВ Передачи"
+
+#: templates/base.html:132
+msgid "Online"
+msgstr "Онлайн"
+
+#: templates/base.html:133
+msgid "Movies 2016"
+msgstr "Фильмы 2016"
+
+#: templates/base.html:134
+msgid "Movies 2017"
+msgstr "Фильмы 2017"
+
+#: templates/base.html:181
+msgid "Social networks: "
+msgstr "Социальные сети: "
+
+#: templates/edit.html:3
+msgid "Edit Your Profile"
+msgstr "Редактировать Ваш Профиль"
+
+#: templates/edit.html:8
+msgid "Your nickname:"
+msgstr "Ваш псевдоним:"
+
+#: templates/edit.html:17
+msgid "About yourself:"
+msgstr "О себе:"
+
+#: templates/edit.html:27
+msgid "Save Changes"
+msgstr "Сохранить Изменения"
+
+#: templates/index.html:65
+#, python-format
+msgid "Hi, %(user)s!"
+msgstr "Привет, %(user)s!"
+
+#: templates/index.html:69
+msgid "Say something:"
+msgstr "Скажите что-нибудь:"
+
+#: templates/index.html:72
+msgid "Post!"
+msgstr "Опубликовать!"
+
+#: templates/index.html:87 templates/index.html:89 templates/user.html:29
+#: templates/user.html:31
+msgid "Newer posts"
+msgstr "К новым"
+
+#: templates/index.html:92 templates/index.html:94 templates/user.html:34
+#: templates/user.html:36
+msgid "Older posts"
+msgstr "К старым"
+
+#: templates/login.html:19
+msgid "Please Sign In"
+msgstr "Пожалуйста Войдите"
+
+#: templates/login.html:22
+msgid "Click on your OpenID provider below:"
+msgstr "Выберите свой провайдер OpenID"
+
+#: templates/login.html:29
+msgid "Or enter your OpenID here:"
+msgstr "Или введите свой OpenID"
+
+#: templates/login.html:40
+msgid "Remember Me"
+msgstr "Запомнить Меня"
+
+#: templates/login.html:46
+msgid "Sign In"
+msgstr "Войти"
+
+#: templates/post.html:6
+#, python-format
+msgid "%(nickname)s said %(when)s:"
+msgstr "%(nickname)s сказал %(when)s:"
+
+#: templates/post.html:9
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/post.html:14
+msgid "Translate"
+msgstr "Перевести"
+
+#: templates/search_results.html:3
+#, python-format
+msgid "Search results for \"%(query)s\""
+msgstr "Результаты поиска \"%(query)s\""
+
+#: templates/upload.html:3
+msgid "Import From File"
+msgstr "Импортировать Из Файла"
+
+#: templates/upload.html:8
+msgid "Browse"
+msgstr "Выбрать"
+
+#: templates/user.html:10
+#, python-format
+msgid "Last seen: %(seen)s"
+msgstr "Был на сайте: %(seen)s"
+
+#: templates/user.html:12
+#, python-format
+msgid "Followers: %(followers)s"
+msgstr "Последователи: %(followers)s"
+
+#: templates/user.html:12
+#, python-format
+msgid "Following: %(following)s"
+msgstr "Следит за: %(following)s"
+
+#: templates/user.html:14
+msgid "Edit your profile"
+msgstr "Редактировать Ваш Профиль"
+
+#: templates/user.html:16
+msgid "Follow"
+msgstr "Отслеживать"
+
+#: templates/user.html:18
+msgid "Unfollow"
+msgstr "Не Отслеживать"
+
+#: templates/genre/edit.html:14
+msgid "Edit Genre"
+msgstr "Редактировать Жанр"
+
+#: templates/genre/edit.html:24 templates/movie/edit.html:152
+msgid "Save"
+msgstr "Сохранить"
+
+#: templates/movie/edit.html:136
+msgid "Genre:"
+msgstr "Жанр:"
+
+#: templates/movie/edit.html:142
+msgid "Add"
+msgstr "Добавить"
+
+#: templates/movie/edit.html:147
+msgid "Drop image here"
+msgstr "Бросьте изображение сюда"
+
+#: templates/movie/view.html:18
+msgid "Wikipedia"
+msgstr ""
+
+#: templates/movie/view.html:23
+msgid "Directed by"
+msgstr "Режиссер"
+
+#: templates/movie/view.html:24
+msgid "Produced by"
+msgstr "Продюссер"
+
+#: templates/movie/view.html:25
+msgid "Written by"
+msgstr "Автор"
+
+#: templates/movie/view.html:26
+msgid "Screenplay by"
+msgstr "Сценарий"
+
+#: templates/movie/view.html:27
+msgid "Story by"
+msgstr "Сценарий"
+
+#: templates/movie/view.html:28
+msgid "Based on"
+msgstr "Основан на"
+
+#: templates/movie/view.html:29
+msgid "Starring"
+msgstr "В главных ролях"
+
+#: templates/movie/view.html:30
+msgid "Narrated by"
+msgstr "Ведущий"
+
+#: templates/movie/view.html:31
+msgid "Music by"
+msgstr "Композитор"
+
+#: templates/movie/view.html:32
+msgid "Cinematography"
+msgstr "Кинематография"
+
+#: templates/movie/view.html:33
+msgid "Edited    by"
+msgstr ""
+
+#: templates/movie/view.html:34
+msgid "Production company"
+msgstr "Кинокомпания"
+
+#: templates/movie/view.html:35
+msgid "Distributed by"
+msgstr "Выпустил"
+
+#: templates/movie/view.html:36
+msgid "Release date"
+msgstr "Дата выпуска"
+
+#: templates/movie/view.html:37
+msgid "Running time"
+msgstr "Длительность"
+
+#: templates/movie/view.html:38
+msgid "Country"
+msgstr "Страна"
+
+#: templates/movie/view.html:39
+msgid "Language"
+msgstr "Язык"
+
+#: templates/movie/view.html:40
+msgid "Budget"
+msgstr "Бюджет"
+
+#: templates/movie/view.html:41
+msgid "Box office"
+msgstr ""
+
+#: templates/movie/view.html:43
+#, python-format
+msgid "Added %(added)s by %(user)s"
+msgstr "Добавил %(user)s %(added)s"
 
 #~ msgid "User  not found."
 #~ msgstr "Пользователь  не найден."
@@ -442,4 +507,16 @@ msgstr "Ваша запись удалена."
 
 #~ msgid "Please log in to access this page."
 #~ msgstr "Пожалуйста войдите для доступа к этой странице"
+
+#~ msgid "Edit"
+#~ msgstr "Редактировать"
+
+#~ msgid "Edit Movie"
+#~ msgstr "Редактировать Фильм"
+
+#~ msgid "Edit movie"
+#~ msgstr "Редактировать Фильм"
+
+#~ msgid "Edited by"
+#~ msgstr "Редактор"
 
