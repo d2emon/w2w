@@ -1,66 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>{{ genre.title }} <a href="{{ url_for('edit_genre', slug=genre.slug) }}"><span class="glyphicon glyphicon-pencil"></span></a></h1>
-
-    {% if movies.items %}
-    <div class="row">
-      <div class="text-center">
-        <ul class="pagination">
-        {% if movies.has_prev %}
-        <li><a href="{{ url_for('index', movies=movies.prev_num) }}">&lt;&lt;</a></li>
-        {% else %}
-        <li class="disabled"><a href="#">&lt;&lt;</a></li>
-        {% endif %}
-{% for page in movies.iter_pages() %}
-    {% if page %}
-      {% if page != movies.page %}
-        <li><a href="{{ url_for('index', movies=page) }}">{{ page }}</a></li>
-      {% else %}
-        <li><span><strong>{{ page }}</strong></span></li>
-      {% endif %}
-    {% else %}
-      <li><span class="ellipsis">…</span></li>
-    {% endif %}
-{% endfor %}
-        {% if movies.has_next %}
-        <li class=""><a href="{{ url_for('index', movies=movies.next_num) }}">&gt;&gt;</a></li>
-        {% else %}
-        <li class="disabled"><a href="#">&gt;&gt;</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    {% for movie in movies.items %}
-      {% include 'movie/brief.html' %}
-    {% endfor %}     
-      <div class="text-center">
-        <ul class="pagination">
-        {% if movies.has_prev %}
-        <li><a href="{{ url_for('index', movies=movies.prev_num) }}">&lt;&lt;</a></li>
-        {% else %}
-        <li class="disabled"><a href="#">&lt;&lt;</a></li>
-        {% endif %}
-{% for page in movies.iter_pages() %}
-    {% if page %}
-      {% if page != movies.page %}
-        <li><a href="{{ url_for('index', movies=page) }}">{{ page }}</a></li>
-      {% else %}
-        <li><span><strong>{{ page }}</strong></span></li>
-      {% endif %}
-    {% else %}
-      <li><span class="ellipsis">…</span></li>
-    {% endif %}
-{% endfor %}
-        {% if movies.has_next %}
-        <li class=""><a href="{{ url_for('index', movies=movies.next_num) }}">&gt;&gt;</a></li>
-        {% else %}
-        <li class="disabled"><a href="#">&gt;&gt;</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    </div>
-    {% endif %}  
-
+    <h1>{{ genre.title }} <a href="{{ url_for('edit_genre', slug=genre.slug) }}"><span class="glyphicon glyphicon-pencil"></span></a></h1>
+    {% include 'movie/list.html' %}
+    {% if genre.description %}
     <div class="well">
     {{ genre.description }}
     </div>
+    {% endif %}
 {% endblock %}
