@@ -60,8 +60,7 @@ def edit_movie(slug):
     if form.validate_on_submit():
         form.populate_obj(movie)
         for genre_id in form.genre_ids.data:
-            genre = Genre.query.get(genre_id)
-            movie.add_genre(genre)
+            movie.add_genre(Genre.query.get(genre_id))
         if not movie.user_id:
             movie.user_id = g.user.id
         movie.timestamp = datetime.utcnow()
@@ -69,13 +68,13 @@ def edit_movie(slug):
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
-    genres = [str(genre.id) for genre in movie.genres]
+    genres = [genre.id for genre in movie.genres]
     if genres:
         print("GENRES", movie.genres)
         while len(form.genre_ids) > 0:
             form.genre_ids.pop_entry()
     for genre in movie.genres:
-        form.genre_ids.append_entry(genre.id)
+        form.genre_ids.append_entry(genre)
     print("Genres", genres)
     print("Ids", form.genre_ids.data)
     print("Entries", form.genre_ids.entries)

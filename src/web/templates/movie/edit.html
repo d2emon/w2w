@@ -99,7 +99,7 @@ $(function() {
     //Add new entry
     $this.find("button[data-toggle=fieldset-add-row]").click(function() {
       var target = $($(this).data("target"))
-      var oldrow = target.find("ul[data-toggle=fieldset-entry] li:last");
+      var oldrow = target.find("li[data-toggle=fieldset-entry]:last");
       var row = oldrow.clone(true, true);
       var elem_id = row.find(":input")[0].id;
       var elem_num = parseInt(elem_id.replace(/.*-(\d{1,4})/m, '$1')) + 1;
@@ -116,8 +116,8 @@ $(function() {
     });
 
     $this.find("button[data-toggle=fieldset-remove-row]").click(function() {
-      if($this.find("div[data-toggle=fieldset-entry]").length > 1) {
-        var thisRow = $(this).closest("div[data-toggle=fieldset-entry]");
+      if($this.find("li[data-toggle=fieldset-entry]").length > 1) {
+        var thisRow = $(this).closest("li[data-toggle=fieldset-entry]");
         thisRow.remove();
       }
     }); //End remove row
@@ -133,10 +133,13 @@ $(function() {
             {{ render_field(form.slug, size="42", maxlength=64) }}
             {{ render_field(form.original_title, size="42") }}
             <div data-toggle="fieldset" id="genre-fieldset">
-              {{ render_field(form.genre_ids, data_toggle="fieldset-entry") }}
+              {{_('Genre:')}}
               <ul>
-                <li><button type="button" class="btn btn-default" data-toggle="fieldset-add-row" data-target="#genre-fieldset">{{_('Add')}}</button></li>
+                {% for genre in form.genre_ids %}
+                  <li data-toggle="fieldset-entry">{{ genre }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="genre-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button></li>
+                {% endfor %}
               </ul>
+              <button type="button" class="btn btn-default" data-toggle="fieldset-add-row" data-target="#genre-fieldset">{{_('Add')}}</button>
             </div>
             {% if form.image.data %}<div class="dz-preview"><div class="dz-image"><img src="{{ url_for('static', filename='upload/' + form.image.data) | resize('120x120', fill=1) }}" ></div></div>{% endif %}
             <div id="movie-dropzone" class="dropzone">
