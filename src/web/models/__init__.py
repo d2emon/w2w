@@ -1,5 +1,6 @@
 from web import app, db, resize
 from gravatar import gravatar
+from flask import url_for
 import flask_whooshalchemy as whooshalchemy
 from sqlalchemy.sql.expression import func
 from datetime import datetime
@@ -69,7 +70,7 @@ class Movie(db.Model):
     def avatar(self, width=128, height=None):
         if self.image:
             try:
-                url = "static/upload/{}".format(self.image)
+                url = url_for('static', filename="upload/{}".format(self.image))
                 constraints = []
                 if width:
                     constraints.append(str(width))
