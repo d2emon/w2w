@@ -56,6 +56,9 @@ def edit_movie(slug):
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)
+        for movie_genre in movie.genres:
+            if movie_genre not in form.genre_ids.data:
+                movie.del_genre(movie_genre)
         for genre_id in form.genre_ids.data:
             if genre_id:
                 movie.add_genre(genre_id)
