@@ -33,3 +33,4 @@ DEBUG: true
 RESIZE_URL: /
 # RESIZE_ROOT: /home/d2emon/projects/python/w2w/src/web
 RESIZE_TARGET_DIRECTORY: static/resized-images
+STATIC_FOLDER: static/
