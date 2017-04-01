@@ -151,18 +151,20 @@ class Movie(db.Model):
 
     def avatar(self, width=128, height=None):
         if self.image:
-            url = "static/upload/{}".format(self.image)
-            constraints = []
-            if width:
-                constraints.append(str(width))
-            else:
-                constraints.append('')
-            if height:
-                constraints.append(str(height))
+            try:
+                url = "static/upload/{}".format(self.image)
+                constraints = []
+                if width:
+                    constraints.append(str(width))
+                else:
+                    constraints.append('')
+                if height:
+                    constraints.append(str(height))
 
-            size = "x".join(constraints)
-            return resize(url, str(size))
-
+                size = "x".join(constraints)
+                return resize(url, str(size))
+            except:
+                pass
         if (height is None) or (width < height):
             size = width
         else:
