@@ -19,7 +19,7 @@ def login():
         # return oidc.user_getfield('email')
         return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
         # flash('Login requested for OpenID="' + form.openid.data + '", remember_me=' + str(form.remember_me.data))
-    return render_template('login.html',
+    return render_template('user/login.html',
                            title='Sign In',
                            form=form,
                            providers=app.config['OPENID_PROVIDERS'],
@@ -41,7 +41,7 @@ def user(nickname, page=1):
         flash(gettext('User %(nickname)s not found.', nickname=nickname))
         return redirect(url_for('index'))
     posts = user.posts.paginate(page, app.config.get('POSTS_PER_PAGE', 3), False)
-    return render_template('user.html',
+    return render_template('user/user.html',
                            user=user,
                            posts=posts,
                            )
@@ -61,6 +61,6 @@ def edit():
     else:
         form.nickname.data = g.user.nickname
         form.about_me.data = g.user.about_me
-    return render_template('edit.html',
+    return render_template('user/edit.html',
                            form=form,
                            )

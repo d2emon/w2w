@@ -1,0 +1,15 @@
+    {% if moviefeed %}
+    <div id="sliderbox" class="carousel">
+      <div class="jcarousel" data-jcarousel="true">
+        <ul style="left: 0px; top: 0px;">
+        {% for movie in moviefeed %}
+        {% include 'movie/slider.html' %}
+        {% endfor %}      
+        </ul>
+      </div>
+
+
+      <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">‹</a>
+      <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+    </div>
+    {% endif %}

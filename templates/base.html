@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}" />
     <link href="{{ url_for('static', filename='bower/dropzone/dist/dropzone.css') }}" rel="stylesheet" media="screen">
     <link href="{{ url_for('static', filename='bower/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
-    <!-- link href="/static/bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet" -->
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="screen">
     <script src="{{ url_for('static', filename='bower/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower/bootstrap/dist/js/bootstrap.min.js') }}"></script>
@@ -44,146 +43,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-      <div class="navbar navbar-inverse navbar-fixed-top tpl-bUserbarContent">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">{{ _('Toggle navigation') }}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ url_for('index') }}">What2Watch</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-left" action="{{ url_for('search') }}" method="post" name="search">
-              {{ g.search_form.hidden_tag() }}
-              <div class="form-group has-feedback has-feedback-left">
-                {{ g.search_form.search(size=40, placeholder=_("Search"), class="form-control search-query")}}
-                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-              </div>
-            </form>
-            <ul class="nav navbar-nav">
-              {% if g.user.is_authenticated %}
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{ g.user.nickname }} <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
-                  <li><a href="{{ url_for('add_genre') }}">{{ _('Add Genre') }}</a></li>
-                  <li><a href="{{ url_for('add_movie') }}">{{ _('Add Movie') }}</a></li>
-                  <li><a href="{{ url_for('export_movies') }}">{{ _('Export Movies') }}</a></li>
-                  <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
-                </ul>
-              </li>
-              <li><a href="{{ url_for('import_file') }}">{{ _('Import') }}</a></li>
-              {% else %}
-              <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
-              {% endif %}
-              <li><a href="{{ url_for('random_movie') }}">{{ _('Random Movie') }}</a></li>
-              {% if session['wld'] %}
-                <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">{{session['wld']}}</span></a></li>
-              {% endif %}
-              {% if session['nsfw'] %}
-                <li><a href="{{ url_for('index', nsfw="") }}"><span class="label label-danger">NSFW</span></a></li>
-              {% endif %}
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Feedback</a></li>
-              <li><a href="#">RSS feed</a></li>
-            </ul>
-          </div>
+    <div class="navbar navbar-inverse navbar-fixed-top tpl-bUserbarContent">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">{{ _('Toggle navigation') }}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('index') }}">What2Watch</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-left" action="{{ url_for('search') }}" method="post" name="search">
+            {{ g.search_form.hidden_tag() }}
+            <div class="form-group has-feedback has-feedback-left">
+              {{ g.search_form.search(size=40, placeholder=_("Search"), class="form-control search-query")}}
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav">
+            {% if g.user.is_authenticated %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{ g.user.nickname }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+                <li><a href="{{ url_for('add_genre') }}">{{ _('Add Genre') }}</a></li>
+                <li><a href="{{ url_for('add_movie') }}">{{ _('Add Movie') }}</a></li>
+                <li><a href="{{ url_for('export_movies') }}">{{ _('Export Movies') }}</a></li>
+                <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+              </ul>
+            </li>
+            <li><a href="{{ url_for('import_file') }}">{{ _('Import') }}</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('random_movie') }}">{{ _('Random Movie') }}</a></li>
+            {% if session['wld'] %}
+            <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">{{session['wld']}}</span></a></li>
+            {% endif %}
+            {% if session['nsfw'] %}
+             <li><a href="{{ url_for('index', nsfw="") }}"><span class="label label-danger">NSFW</span></a></li>
+            {% endif %}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">RSS feed</a></li>
+          </ul>
         </div>
       </div>
+    </div>
 
-    {% if moviefeed %}
-    <div id="sliderbox" class="carousel">
-      <div class="jcarousel" data-jcarousel="true">
-        <ul style="left: 0px; top: 0px;">
-        {% for movie in moviefeed %}
-        {% include 'movie/slider.html' %}
-        {% endfor %}      
+    {% include 'slider.html' %}
+    
+    <section>
+      <div class="menubar downbar">
+        <ul>
+          <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+          <!-- li><a href="{{ url_for('index') }}">{{ _('About Us') }}</a></li -->
+          <li><a href="{{ url_for('index') }}">{{ _('Rules') }}</a></li>
+          <li><a href="{{ url_for('index') }}">{{ _('Copyright') }}</a></li>
+          <li><a href="{{ url_for('index') }}">{{ _('Soon') }}</a></li>
+          <!-- li><a href="{{ url_for('index') }}">{{ _('Site News') }}</a></li -->
+          <!-- li><a href="{{ url_for('index') }}">{{ _('Order Movie') }}</a></li -->
+          <!-- li><a href="{{ url_for('index') }}">{{ _('Movie News') }}</a></li -->
+          <!-- li><a href="{{ url_for('index') }}">{{ _('Actors') }}</a></li -->
+          <!-- li><a href="{{ url_for('index', type='movies') }}">{{ _('Movies') }}</a></li -->
+          <li><a href="{{ url_for('index', type='cartoon') }}">{{ _('Cartoons') }}</a></li>
+          <li><a href="{{ url_for('index', type='series') }}">{{ _('Series') }}</a></li>
+          <li><a href="{{ url_for('index', type='tv') }}">{{ _('TV Issues') }}</a></li>
+          <!-- li><a href="{{ url_for('index') }}">{{ _('Online') }}</a></li -->
+          <li><a href="{{ url_for('index', year=2016) }}">{{ _('Movies 2016') }}</a></li>
+          <li><a href="{{ url_for('index', year=2017) }}">{{ _('Movies 2017') }}</a></li>
         </ul>
       </div>
+    </section>
 
-
-      <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">‹</a>
-      <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+    {% if g.genres %}
+	  <div class="genres films-category">
+      {% for genre in g.genres %}
+      <a href="{{ url_for('view_genre', slug=genre.slug) }}">{{ genre.title }}</a> 
+      {% endfor %}      
     </div>
     {% endif %}
-    
-  <section>
-    <div class="menubar downbar">
-      <!-- div class="downcontent" -->
-        <!-- div class="d-menu" -->
-          <ul>
-            <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
-            <!-- li><a href="{{ url_for('index') }}">{{ _('About Us') }}</a></li -->
-            <li><a href="{{ url_for('index') }}">{{ _('Rules') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Copyright') }}</a></li>
-            <li><a href="{{ url_for('index') }}">{{ _('Soon') }}</a></li>
-            <!-- li><a href="{{ url_for('index') }}">{{ _('Site News') }}</a></li -->
-            <!-- li><a href="{{ url_for('index') }}">{{ _('Order Movie') }}</a></li -->
-            <!-- li><a href="{{ url_for('index') }}">{{ _('Movie News') }}</a></li -->
-            <!-- li><a href="{{ url_for('index') }}">{{ _('Actors') }}</a></li -->
-            <!-- li><a href="{{ url_for('index', type='movies') }}">{{ _('Movies') }}</a></li -->
-            <li><a href="{{ url_for('index', type='cartoon') }}">{{ _('Cartoons') }}</a></li>
-            <li><a href="{{ url_for('index', type='series') }}">{{ _('Series') }}</a></li>
-            <li><a href="{{ url_for('index', type='tv') }}">{{ _('TV Issues') }}</a></li>
-            <!-- li><a href="{{ url_for('index') }}">{{ _('Online') }}</a></li -->
-            <li><a href="{{ url_for('index', year=2016) }}">{{ _('Movies 2016') }}</a></li>
-            <li><a href="{{ url_for('index', year=2017) }}">{{ _('Movies 2017') }}</a></li>
-          </ul>
-        <!-- /div -->
-      <!-- /div -->
-    </div>
-  </section>
-
-  {% if g.genres %}
-	<div class="genres films-category">
-      {% for genre in g.genres %}
-        <a href="{{ url_for('view_genre', slug=genre.slug) }}">{{ genre.title }}</a>&nbsp; 
-      {% endfor %}      
-		<div style="clear: both;">
-    </div>
-  </div>
-{% endif %}
 
     <div class="container">
       <div class="row">
         <div class="span12">
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    {% for message in messages %}
-      <div class="alert alert-info">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      {{ message }}
-      </div>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}    
-          {% block content %}{% endblock %}
+          {% include 'messages.html' %}
+          {% block content %}
+          {% endblock %}
         </div>
       </div>
     </div>   
 
-[aviable=cat|main]
-<div class="blok2">
-  <div class="blok3">
-{include file="engine/modules/catface.php"}
-  </div>    
-</div>
-[/aviable]
-<div style="clear: both;"></div>
-
-<hr>
-
-<p style="padding-left: 50px;">
-  {{ _('Social networks: ')}}
-  <a rel="nofollow" href="/autohelp100" target="_blank">Twitter</a> 
-  <a rel="nofollow" href="/public57171483" target="_blank">Vkontakte</a> 
-  <a rel="nofollow" href="/interesariy" target="_blank">Odnoklassniki</a>
-  <p style="padding-left: 75%; margin-top: -40px;"></p>   
-</p>
+    <div class="footer">
+      {{ _('Social networks: ')}}
+      <a rel="nofollow" href="/autohelp100" target="_blank">Twitter</a> 
+      <a rel="nofollow" href="/public57171483" target="_blank">Vkontakte</a> 
+      <a rel="nofollow" href="/interesariy" target="_blank">Odnoklassniki</a>
+    </div>
     
+{% block script %}
+{% endblock %}
   </body>
 </html>

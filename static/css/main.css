@@ -207,3 +207,9 @@ input, textarea, select {
 .dropzone .dz-preview.dz-image-preview {
     background: none;
 }
+
+.footer {
+    margin: 20px 0px;
+    padding: 20px 50px;
+    border-top: 1px solid #eeeeee;
+}
