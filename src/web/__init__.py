@@ -54,6 +54,7 @@ for f in config_files:
     if os.path.isfile(filename):
         app.config.update(from_yaml(filename))
 app.static_folder = os.path.join(basedir, app.config.get('STATIC_FOLDER', ''))
+app.template_folder = os.path.join(basedir, app.config.get('TEMPLATE_FOLDER', ''))
 
 log = app.config.get("LOGGING", False)  # not app.debug
 if log:
@@ -76,6 +77,7 @@ oid = OpenID(app, os.path.join(basedir, 'tmp'))
 
 app.jinja_env.globals['momentjs'] = momentjs
 
-print("STATIC_FOLDER", app.static_folder)
+# print("STATIC_FOLDER", app.static_folder)
+# print("TEMPLATE_FOLDER", app.template_folder)
 
 from web import views, models
