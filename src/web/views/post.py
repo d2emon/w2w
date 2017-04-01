@@ -2,7 +2,7 @@ from flask import g, url_for, render_template, redirect, flash
 from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
-from web.models import Post
+from web.models.post import Post
 
 
 @app.route('/del/<int:id>')

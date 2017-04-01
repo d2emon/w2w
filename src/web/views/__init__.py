@@ -6,7 +6,9 @@ from flask_sqlalchemy import get_debug_queries
 from werkzeug.utils import secure_filename
 from web import app, db, oid, lm, babel
 from web.forms import PostForm, SearchForm
-from web.models import User, ROLE_USER, Post, Movie, Genre
+from web.models import Movie, Genre
+from web.models.user import User, ROLE_USER
+from web.models.post import Post
 import os
 from config import basedir
 

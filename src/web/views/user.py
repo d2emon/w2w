@@ -3,7 +3,7 @@ from flask_login import login_required, logout_user
 from flask_babel import gettext
 from web import app, db, oid
 from web.forms import LoginForm, EditForm
-from web.models import User
+from web.models.user import User
 
 
 @app.route('/login', methods=['GET', 'POST', ])

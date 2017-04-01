@@ -2,7 +2,7 @@ from flask import g, url_for, redirect, flash
 from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
-from web.models import User
+from web.models.user import User
 from web.emails import follower_notification
 
 

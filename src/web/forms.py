@@ -3,7 +3,8 @@ from flask_babel import gettext
 from wtforms import TextField, BooleanField, TextAreaField, HiddenField, FieldList
 from wtforms.validators import Required, Length, Regexp
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
-from web.models import User, Genre
+from web.models import Genre
+from web.models.user import User
 from guess_language import guessLanguage
 
 
