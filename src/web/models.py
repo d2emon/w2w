@@ -201,12 +201,21 @@ class Movie(db.Model):
         return new_slug
 
     def as_dict(self):
-        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        d = {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        d['genres'] = [g.title for g in self.genres]
+        return d
 
     def from_dict(self, data):
         for k, v in data.items():
             if k in self.__table__.columns:
                 setattr(self, k, v)
+        genres = data.get('genres', [])
+        for g in genres:
+            genre = Genre.query.filter_by(title=g).first()
+            if genre is None:
+                genre = Genre(title=g)
+                db.session.add(genre)
+            self.add_genre(genre)
 
     @staticmethod
     def from_yml(data, user_id=None):
