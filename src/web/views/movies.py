@@ -15,9 +15,6 @@ def view_movie(slug):
     if movie is None:
         flash(gettext('%(title)s not found.', title=slug))
         return redirect(url_for('index'))
-    print("GENRES")
-    for genre in movie.genres:
-        print(genre)
     return render_template('movie/view.html',
                            movie=movie,
                            )
@@ -60,7 +57,8 @@ def edit_movie(slug):
     if form.validate_on_submit():
         form.populate_obj(movie)
         for genre_id in form.genre_ids.data:
-            movie.add_genre(Genre.query.get(genre_id))
+            if genre_id:
+                movie.add_genre(genre_id)
         if not movie.user_id:
             movie.user_id = g.user.id
         movie.timestamp = datetime.utcnow()
