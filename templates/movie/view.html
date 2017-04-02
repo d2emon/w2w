@@ -16,7 +16,12 @@
         <h2>{{ movie.original_title }}</h2>
 		    {% endif %}
         <div>
-          <p><a href="{{ movie.wikipedia }}" target="_blank">{{_('Wikipedia')}}</a></p>
+          <ul class="iconset">
+            <li><a href="{{ movie.wikipedia }}" target="_blank"><img src="{{ url_for('static', filename='images/wikipedia.png') }}" width="32" height="32"></a></li>
+            <li><a href="http://lurkmore.to/{{ movie.title }}" target="_blank"><img src="{{ url_for('static', filename='images/lurkmore.png') }}" width="32" height="32"></a></li>
+            <li><a href="https://www.google.ru?q={{ movie.title }}" target="_blank"><img src="{{ url_for('static', filename='images/google.png') }}" width="32" height="32"></a></li>
+            <li><a href="http://posmotre.li/{{ movie.title }}" target="_blank"><img src="{{ url_for('static', filename='images/posmotreli.png') }}" width="32" height="32"></a></li>
+	      </ul>
           {% if movie.genres %}
           <p>{{ movie.genre_names }}</p>
           {% endif %}

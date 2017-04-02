@@ -241,3 +241,19 @@ input, textarea, select {
 .wiki table {
     color: #000000;
 }
+
+.iconset {
+	padding: 0px;
+}
+
+.iconset li {
+	margin: 2px;
+	display: inline-block;
+	list-style-type: none;
+}
+
+.iconset img {
+	width: 32px;
+	height: 32px;
+    border-radius: 4px;	
+}

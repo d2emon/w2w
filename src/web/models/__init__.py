@@ -122,6 +122,7 @@ class Movie(db.Model):
         for k, v in data.items():
             if k in self.__table__.columns:
                 setattr(self, k, v)
+        db.session.add(self)
         genres = data.get('genres', [])
         for g in genres:
             genre = Genre.query.filter_by(title=g).first()
@@ -139,15 +140,18 @@ class Movie(db.Model):
             # {'slug': 'sekretnye-materialy'}
 
             slug = d.get('slug')
-            slug = Movie.make_unique_slug(slug)
+            slug = Movie.make_slug(slug)
 
             m.from_dict({
                 "title": d.get('title', 'UNTITLED'),
                 "slug": slug,
+                "wiki_url": d.get('wiki_url'),
                 "image": d.get('image'),
                 "description": d.get('description'),
                 "user_id": user_id,
-                "timestamp": d.get('timestamp', datetime.utcnow())
+                "timestamp": d.get('timestamp', datetime.utcnow()),
+                "genres": d.get('genres', []),
+                
             })
             movies.append(m)
         return movies
