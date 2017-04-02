@@ -135,3 +135,25 @@ def upload_movie_image():
             'status': True,
             'Message': gettext('File %(filename)s is not allowed.', filename=f.filename),
         })
+
+
+@app.route('/movie/<slug>/wiki')
+@login_required
+def parse_movie(slug):
+    import wikiparser
+    movie = Movie.by_slug(slug=slug)
+    p = wikiparser.parse_wiki(movie.title)
+    print(p)
+    print("-"*80)
+    print(p['page'].title)
+    print("-"*80)
+    print(p['page'].summary)
+    print("-"*80)
+    print(p['page'].sections)
+    print("-"*80)
+    print(p['page'].content)
+    print("-"*80)
+    t = p['page'].html()
+    for k, v in p['properties'].items():
+        print("{}: {}".format(k, v))
+    return t
