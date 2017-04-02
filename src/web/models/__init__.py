@@ -59,14 +59,20 @@ class Movie(db.Model):
         self.timestamp = datetime.utcnow()
 
     def has_genre(self, genre):
+        if genre is None:
+            return False
         return self.genres.filter(movie_genres.c.genre_id == genre.id).count() > 0
 
     def add_genre(self, genre):
+        if genre is None:
+            return self
         if not self.has_genre(genre):
             self.genres.append(genre)
         return self
 
     def del_genre(self, genre):
+        if genre is None:
+            return self
         if self.has_genre(genre):
             self.genres.remove(genre)
         return self
@@ -165,7 +171,10 @@ class Movie(db.Model):
 
     @staticmethod
     def by_genre(genre, order_by=''):
-        return Movie.ordered(order_by).filter(Movie.genres.contains(genre))
+        q = Movie.ordered(order_by)
+        if genre is None:
+            return q.filter(~Movie.genres.any())
+        return q.filter(Movie.genres.contains(genre))
 
     @staticmethod
     def by_random():
@@ -252,6 +261,10 @@ class Genre(db.Model):
     @staticmethod
     def by_slug(slug):
         return Genre.query.filter_by(slug=slug).first_or_404()
+
+    @staticmethod
+    def alphabet():
+        return Genre.query.order_by(Genre.title).all()
 
 
 whooshalchemy.whoosh_index(app, Movie)

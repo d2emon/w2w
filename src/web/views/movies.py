@@ -1,8 +1,6 @@
 from flask import g, url_for, render_template, redirect, flash, request, jsonify, make_response
 from flask_login import login_required
 from flask_babel import gettext
-from slugify import slugify
-from datetime import datetime
 import yaml
 from web import app, db
 from web.forms import MovieForm
@@ -35,9 +33,10 @@ def add_movie():
     form = MovieForm()
     if form.validate_on_submit():
         form.populate_obj(movie)
-
         movie.normalize(g.user.id)
         db.session.add(movie)
+
+        movie.update_genres([genre.data for genre in form.genre_ids])
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
@@ -56,10 +55,10 @@ def edit_movie(slug):
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)
-        movie.update_genres(movie_genres)
-
         movie.normalize(g.user.id)
         db.session.add(movie)
+
+        movie.update_genres([genre.data for genre in form.genre_ids])
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
@@ -119,7 +118,7 @@ def upload_movie_image():
         filename = ''.join([name, ext])
         version = 1
         while True:
-            full_filename = os.path.join(basedir, 'src', 'web', 'static', 'upload', filename)
+            full_filename = os.path.join(basedir, 'static', 'upload', filename)
             if not os.path.isfile(full_filename):
                 break
             version += 1

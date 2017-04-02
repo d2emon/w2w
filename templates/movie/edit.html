@@ -127,7 +127,7 @@ $(function() {
 <h1>{% if form.slug.data %}{{ form.title.data }}{% else %}{{ _('Add Movie') }}{% endif%}</h1>
     <div class="well">
         {% from "formhelper.html" import render_field %}
-        <form id="movie-form" class="form-horizontal" action="\movie\{{ form.slug.data }}\edit" method="post" name="edit">
+        <form id="movie-form" class="form-horizontal" action="" method="post" name="edit">
             {{ form.hidden_tag() }}
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}

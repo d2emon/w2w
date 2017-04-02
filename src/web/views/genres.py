@@ -17,15 +17,19 @@ def genre_slug():
     return jsonify(resp)
 
 
-@app.route('/genre/<slug>', methods=['POST', 'GET', ])
-def view_genre(slug):
+@app.route('/genre/')
+@app.route('/genre/<slug>')
+def view_genre(slug=None):
     try:
         page = int(request.args.get('movies', 1))
     except ValueError:
         page = 1
 
-    genre = Genre.by_slug(slug)
-    movies = Movie.by_genre(genre).paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    if slug is None:
+        genre = None
+    else:
+        genre = Genre.by_slug(slug)
+    movies = Movie.by_genre(genre, order_by=session.get('sort_by')).paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
     return render_template('genre/view.html',
                            genre=genre,
                            movies=movies,
