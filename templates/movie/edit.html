@@ -132,6 +132,7 @@ $(function() {
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}
             {{ render_field(form.original_title, size="42") }}
+            {{ render_field(form.wiki_url, size="42") }}
             <div data-toggle="fieldset" id="genre-fieldset" class="control-group">
               {{_('Genre:')}}
               <ul>

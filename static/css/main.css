@@ -232,3 +232,12 @@ input, textarea, select {
     margin: 2px 0px;
     font-size: 14px;
 }
+
+.wiki {
+    background: #ffffff;
+    color: #000000;
+}
+
+.wiki table {
+    color: #000000;
+}

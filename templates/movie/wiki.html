@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+      {% if page %}
+      <div class="well wiki col-md-6">
+        {{ page.html() | safe }}
+      </div>
+      {% endif %}
+      <div class="col-md-6">
+        <div class="pull-right">
+          <img src="{{ movie.image }}" class="img-polaroid">
+        </div>
+        <h1>
+          {{ movie.title }}
+        </h1>
+        {% if movie.original_title %}
+        <h2>{{ movie.original_title }}</h2>
+		    {% endif %}
+        <div>
+          {% if movie.genres %}
+          <p>{{ movie.genre_names }}</p>
+          {% endif %}
+          <ul>
+            {% if movie.genre %}
+            <li>
+              {{_('Genre')}} 
+              <ul>
+              {% for s in movie.genre %}
+                <li>{{ s | safe }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.author %}
+            <li>
+              {{_('By')}} 
+              <ul>
+              {% for s in movie.author %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.director %}
+            <li>
+              {{_('Directed by')}}
+              <ul>
+              {% for s in movie.director %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.producer %}
+            <li>
+              {{_('Produced by')}}
+              <ul>
+              {% for s in movie.producer %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.executive_producer %}
+            <li>
+              {{_('Executive producers')}}
+              <ul>
+                {% for s in movie.executive_producer %}
+                <li>{{ s }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Written by')}} {writers} </li>
+            {% if movie.screenplay %}
+            <li>
+              {{_('Screenplay by')}}
+              <ul>
+                {% for s in movie.screenplay %}
+                <li>{{ s }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Story by')}} {story}</li>
+            <li>{{_('Based on')}} {based on}</li>
+            {% if movie.starring %}
+            <li>
+              {{_('Starring')}} 
+              <ul>
+              {% for s in movie.starring %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Narrated by')}} {narrators}</li>
+            {% if movie.composer %}
+            <li>
+              {{_('Music by')}} 
+              <ul>
+              {% for s in movie.composer %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.cinematography %}
+            <li>
+              {{_('Cinematography')}}
+              <ul>
+              {% for s in movie.cinematography %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Edited    by')}} {editing}</li>
+            {% if movie.company %}
+            <li>
+              {{_('Production company')}}
+              <ul>
+              {% for s in movie.company %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Distributed by')}} {distributor}</li>
+            {% if movie.release %}
+            <li>
+              {{_('Release date')}}
+              <ul>
+              {% for s in movie.release %}
+                <li>{{ s }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Running time')}} {{ movie.length }}</li>
+            {% if movie.country %}
+            <li>
+              {{_('Country')}} 
+              <ul>
+                {% for s in movie.country %}
+                <li>{{ s | safe }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.lang %}
+            <li>
+              {{_('Language')}}
+              <ul>
+                {% for s in movie.lang %}
+                <li>{{ s }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.budget %}
+            <li>
+              {{_('Budget')}}
+              <ul>
+                {% for s in movie.budget %}
+                <li>{{ s }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.box_office %}
+            <li>
+              {{_('Box office')}}
+              <ul>
+                {% for s in movie.box_office %}
+                <li>{{ s }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>{{_('Seasons')}} {{ movie.seasons }}</li>
+            <li>{{_('Episodes')}} {{ movie.episodes }}</li>
+            {% if movie.channel %}
+            <li>
+              {{_('Channel')}}
+              <ul>
+                {% for s in movie.channel %}
+                <li>{{ s }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            <li>
+              {{_('On screen')}}
+              {{ movie.on_screen[0] }} - {{ movie.on_screen[1] }}
+              </ul>
+            </li>
+            {% if movie.IMDB %}
+            <li>
+              {{_('IMDB')}}
+              <ul>
+                {% for s in movie.IMDB %}
+                <li>{{ s }}</li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% if movie.site %}
+            <li>
+              {{_('Site')}}
+              <ul>
+                {% for s in movie.site %}
+                  <li><a href="{{ s }}">{{ s }}</a></li>
+                {%endfor %}
+              </ul>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+        <div>
+          {{ movie.summary }}
+        </div>
+      </div>
+      <!-- div class="well col-md-6">
+        {{ props }}
+      </div -->
+    </div>
+    {% if page %}
+    <div class="row">
+      <pre class="well wiki">
+        {{ page.content }}
+      </pre>
+    </div>
+    {% endif %}
+{% endblock %}

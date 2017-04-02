@@ -21,6 +21,7 @@ class Movie(db.Model):
     title = db.Column(db.String(140), nullable=False)
     original_title = db.Column(db.String(140), nullable=True)
     slug = db.Column(db.String(64), nullable=False, unique=True)
+    wiki_url = db.Column(db.String(64), nullable=True)
     image = db.Column(db.String(64), nullable=True)
     description = db.Column(db.UnicodeText)
     timestamp = db.Column(db.DateTime)
@@ -152,8 +153,14 @@ class Movie(db.Model):
         return movies
 
     @property
+    def wikipage(self):
+        if self.wiki_url:
+            return self.wiki_url
+        return self.title
+
+    @property
     def wikipedia(self):
-        return "https://ru.wikipedia.org/wiki/{}".format(self.title)
+        return "https://ru.wikipedia.org/wiki/{}".format(self.wikipage)
 
     # Query shortcuts
     @staticmethod

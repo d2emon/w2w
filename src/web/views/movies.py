@@ -142,18 +142,19 @@ def upload_movie_image():
 def parse_movie(slug):
     import wikiparser
     movie = Movie.by_slug(slug=slug)
-    p = wikiparser.parse_wiki(movie.title)
-    print(p)
-    print("-"*80)
-    print(p['page'].title)
-    print("-"*80)
-    print(p['page'].summary)
-    print("-"*80)
-    print(p['page'].sections)
-    print("-"*80)
-    print(p['page'].content)
-    print("-"*80)
-    t = p['page'].html()
-    for k, v in p['properties'].items():
-        print("{}: {}".format(k, v))
-    return t
+    p = wikiparser.parse_wiki(movie.wikipage)
+    # print("PARSED", p)
+    # print("-"*80)
+    # if p['page'] is not None:
+    #     print(p['page'].title)
+    # else:
+    #     t = ''
+    # for k, v in p['properties'].items():
+    #     print("{}:\t{}\n".format(k, v))
+    # for k, v in p['movie'].items():
+    #     print("M\t{}:\t{}".format(k, v))
+    return render_template('movie/wiki.html',
+                           movie=p['movie'],
+                           page=p['page'],
+                           props=p['properties'],
+                           )
