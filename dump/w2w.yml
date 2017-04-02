@@ -265,7 +265,7 @@ movies:
   - Драма
   id: 1
   image: 250px-The_X-Files_logo.svg.png
-  original_title: The X-Files
+  original_title: null
   slug: sekretnye-materialy
   timestamp: 2017-04-02 07:33:40.576237
   title: Секретные материалы
@@ -280,7 +280,7 @@ movies:
   - Фантастика
   id: 2
   image: Signs_dvd_cover.jpg
-  original_title: Signs
+  original_title: null
   slug: znaki
   timestamp: 2017-04-02 16:23:49.539104
   title: Знаки
@@ -294,7 +294,7 @@ movies:
   - Фантастика
   id: 3
   image: untitled9.jpg
-  original_title: ' Bugs'
+  original_title: null
   slug: elektronnye-zhuchki
   timestamp: 2017-04-02 07:48:26.674809
   title: Электронные жучки
@@ -312,7 +312,7 @@ movies:
   - Драма
   id: 4
   image: Triangle-m2009.jpg
-  original_title: Triangle
+  original_title: null
   slug: treugolnik
   timestamp: 2017-04-02 16:40:21.566939
   title: Треугольник
@@ -329,7 +329,7 @@ movies:
   - Приключения
   id: 5
   image: untitled6.jpg
-  original_title: ''
+  original_title: null
   slug: sokrovishcha-o-k
   timestamp: 2017-04-02 07:34:07.091424
   title: Сокровища О. К.
@@ -342,7 +342,7 @@ movies:
   - Фантастика
   id: 6
   image: Phantasm.jpg
-  original_title: Phantasm
+  original_title: null
   slug: fantazm
   timestamp: 2017-04-02 16:40:41.623802
   title: Фантазм
@@ -356,7 +356,7 @@ movies:
   - Треш
   id: 7
   image: 12_oz._Mouse_title.jpg
-  original_title: 12 oz. Mouse
+  original_title: null
   slug: pollitrovaia-mysh
   timestamp: 2017-04-02 07:29:55.042399
   title: Поллитровая мышь
@@ -367,7 +367,7 @@ movies:
   - Комедия
   id: 8
   image: Gauche_en_sortant_de_l_ascenseur.jpg
-  original_title: À gauche en sortant de l'ascenseur
+  original_title: null
   slug: nalevo-ot-lifta
   timestamp: 2017-04-02 07:23:30.353552
   title: Налево от лифта
@@ -380,7 +380,7 @@ movies:
   - Ужасы
   id: 9
   image: ArachnophobiaPoster.jpg
-  original_title: Arachnophobia
+  original_title: null
   slug: arakhnofobiia
   timestamp: 2017-04-02 15:28:26.524691
   title: Арахнофобия
@@ -397,7 +397,7 @@ movies:
   - Вестерн
   id: 10
   image: -2.jpg
-  original_title: ''
+  original_title: null
   slug: solovei-razboinik
   timestamp: 2017-04-02 16:35:38.405464
   title: Соловей-разбойник
@@ -409,7 +409,7 @@ movies:
   - Триллер
   id: 11
   image: untitled11.jpg
-  original_title: ''
+  original_title: null
   slug: chernaia-komnata
   timestamp: 2017-04-02 16:44:30.209966
   title: Черная комната
@@ -425,7 +425,7 @@ movies:
   - Комедия
   id: 12
   image: National_Lampoons_Vacation_1983.jpg
-  original_title: National Lampoon's Vacation
+  original_title: null
   slug: kanikuly
   timestamp: 2017-04-02 16:25:34.111472
   title: Каникулы
@@ -438,7 +438,7 @@ movies:
   - Ужасы
   id: 13
   image: untitled5.jpg
-  original_title: Waxwork
+  original_title: null
   slug: muzei-voskovykh-figur
   timestamp: 2017-04-02 16:28:54.643814
   title: Музей восковых фигур
@@ -452,7 +452,7 @@ movies:
   - Комедия
   id: 14
   image: untitled3.jpg
-  original_title: Life with Louie
+  original_title: null
   slug: zhizn-s-lui
   timestamp: 2017-04-02 07:14:11.324949
   title: Жизнь с Луи
@@ -468,7 +468,7 @@ movies:
   - Семейное
   id: 15
   image: 1988_CPA_5918.jpg
-  original_title: ''
+  original_title: null
   slug: nu-pogodi
   timestamp: 2017-04-02 07:31:14.792729
   title: Ну, погоди!
@@ -485,7 +485,7 @@ movies:
   - Комедия
   id: 16
   image: Barbarella.jpg
-  original_title: Barbarella
+  original_title: null
   slug: barbarella
   timestamp: 2017-04-02 07:08:50.922364
   title: Барбарелла
@@ -498,7 +498,7 @@ movies:
   - Фантастика
   id: 17
   image: Planet_of_the_Apes_1.jpg
-  original_title: Planet of the Apes
+  original_title: null
   slug: planeta-obezian
   timestamp: 2017-04-02 16:30:37.693670
   title: Планета обезьян
@@ -513,7 +513,7 @@ movies:
   - Триллер
   id: 18
   image: Spellbound_poster.jpg
-  original_title: Spellbound
+  original_title: null
   slug: zavorozhionnyi
   timestamp: 2017-04-02 07:14:47.887761
   title: Заворожённый
@@ -527,7 +527,7 @@ movies:
   - Фантастика
   id: 19
   image: Invasion_of_the_body_snatchers.jpg
-  original_title: Invasion of the Body Snatchers
+  original_title: null
   slug: vtorzhenie-pokhititelei-tel
   timestamp: 2017-04-02 16:17:05.492287
   title: Вторжение похитителей тел
@@ -542,7 +542,7 @@ movies:
   - Комедия
   id: 20
   image: 1978_kogda_ya_stanu_velikanom.jpg
-  original_title: ''
+  original_title: null
   slug: kogda-ia-stanu-velikanom
   timestamp: 2017-04-02 07:21:51.048795
   title: Когда я стану великаном
@@ -556,7 +556,7 @@ movies:
   - Фентези
   id: 21
   image: The_Fall_Poster.jpg
-  original_title: The Fall
+  original_title: null
   slug: zapredele
   timestamp: 2017-04-02 16:21:00.970524
   title: Запределье
@@ -571,7 +571,7 @@ movies:
   - Триллер
   id: 22
   image: Now_You_See_Me.jpg
-  original_title: Now You See Me
+  original_title: null
   slug: illiuziia-obmana
   timestamp: 2017-04-02 07:18:41.320513
   title: Иллюзия обмана
@@ -585,7 +585,7 @@ movies:
   - Драма
   id: 23
   image: untitled4.jpg
-  original_title: Emerald City
+  original_title: null
   slug: izumrudnyi-gorod
   timestamp: 2017-04-02 16:24:35.691278
   title: Изумрудный город
@@ -600,7 +600,7 @@ movies:
   - Антиутопия
   id: 24
   image: Divergent_poster.jpg
-  original_title: Divergent
+  original_title: null
   slug: divergent
   timestamp: 2017-04-02 16:17:51.478947
   title: Дивергент
@@ -620,7 +620,7 @@ movies:
   - Триллер
   id: 25
   image: Penny_Dreadful.svg.png
-  original_title: Penny Dreadful
+  original_title: null
   slug: strashnye-skazki
   timestamp: 2017-04-02 16:38:34.520692
   title: Страшные сказки
@@ -635,7 +635,7 @@ movies:
   - Драма
   id: 26
   image: -__2011.jpg
-  original_title: ''
+  original_title: null
   slug: zaiats-zharennyi-po-berlinski
   timestamp: 2017-04-02 07:16:54.912173
   title: Заяц, жаренный по-берлински
@@ -649,7 +649,7 @@ movies:
   - Байопик
   id: 27
   image: untitled8.jpg
-  original_title: ''
+  original_title: null
   slug: iaroslav-tysiachu-let-nazad
   timestamp: 2017-04-02 07:51:10.837492
   title: Ярослав. Тысячу лет назад
@@ -662,7 +662,7 @@ movies:
   - Комедия
   id: 28
   image: Strana_chudes.jpg
-  original_title: ''
+  original_title: null
   slug: strana-chudes
   timestamp: 2017-04-02 16:37:29.306244
   title: Страна чудес
@@ -677,7 +677,7 @@ movies:
   - Семейное
   id: 29
   image: 2015.jpg
-  original_title: ''
+  original_title: null
   slug: prizrak
   timestamp: 2017-04-02 16:32:20.334291
   title: Призрак
@@ -689,7 +689,7 @@ movies:
   - Приключения
   id: 30
   image: 1945.JPG
-  original_title: ''
+  original_title: null
   slug: piatnadtsatiletnii-kapitan
   timestamp: 2017-04-02 16:33:40.694575
   title: Пятнадцатилетний капитан
@@ -831,7 +831,7 @@ movies:
   - Детектив
   id: 31
   image: -.jpg
-  original_title: ''
+  original_title: null
   slug: zmeinyi-istochnik
   timestamp: 2017-04-02 07:17:17.328070
   title: Змеиный источник
@@ -849,7 +849,7 @@ movies:
   - Комедия
   id: 32
   image: Enanorojo.png
-  original_title: Red Dwarf
+  original_title: null
   slug: krasnyi-karlik
   timestamp: 2017-04-02 16:26:25.302613
   title: Красный карлик
@@ -882,7 +882,7 @@ movies:
   - Приключения
   id: 34
   image: untitled2.jpg
-  original_title: ''
+  original_title: null
   slug: viking
   timestamp: 2017-04-02 16:13:24.030859
   title: Викинг
@@ -896,7 +896,7 @@ movies:
   - Драма
   id: 35
   image: Vikings-logo.png
-  original_title: Vikings
+  original_title: null
   slug: vikingi
   timestamp: 2017-04-02 16:15:06.613163
   title: Викинги
@@ -908,7 +908,7 @@ movies:
   genres: []
   id: 36
   image: Howard_Lovecraft_grande.jpg
-  original_title: Howard Lovecraft and the Frozen Kingdom
+  original_title: null
   slug: howard-lovecraft-and-the-frozen-kingdom
   timestamp: 2017-04-02 07:03:52.349416
   title: Howard Lovecraft and the Frozen Kingdom
@@ -923,7 +923,7 @@ movies:
   - Боевик
   id: 37
   image: 230px-Mnemosyne_no_Musume-tachi.jpg
-  original_title: Mnemosyne-ムネモシュネの娘たち-
+  original_title: null
   slug: docheri-mnemoziny
   timestamp: 2017-04-02 07:13:38.647024
   title: Дочери Мнемозины
@@ -939,7 +939,7 @@ movies:
   - Триллер
   id: 38
   image: untitled10.jpg
-  original_title: The Quatermass Xperimen
+  original_title: null
   slug: eksperiment-kuotermassa
   timestamp: 2017-04-02 07:43:01.691066
   title: Эксперимент Куотермасса
@@ -954,7 +954,7 @@ movies:
   - Детектив
   id: 39
   image: 250px-Numb3rs_logo.svg.png
-  original_title: Numb3rs
+  original_title: null
   slug: 4isla
   timestamp: 2017-04-01 19:17:50.906193
   title: 4исла
@@ -969,7 +969,7 @@ movies:
   - Триллер
   id: 40
   image: 200px-Day_the_Earth_Stood_Still_1951.jpg
-  original_title: The Day the Earth Stood Still
+  original_title: null
   slug: den-kogda-ostanovilas-zemlia
   timestamp: 2017-04-02 07:06:06.658326
   title: День, когда остановилась Земля
@@ -985,7 +985,7 @@ movies:
   - Ужасы
   id: 41
   image: Houseofwax1.jpg
-  original_title: House of Wax
+  original_title: null
   slug: dom-voskovykh-figur
   timestamp: 2017-04-02 16:18:29.045782
   title: Дом восковых фигур
@@ -1000,7 +1000,7 @@ movies:
   - Постапокал
   id: 42
   image: Aeon_Flux_poster.jpg
-  original_title: Æon Flux
+  original_title: null
   slug: eon-flaks
   timestamp: 2017-04-02 07:49:52.320955
   title: Эон Флакс
@@ -1016,7 +1016,7 @@ movies:
   - Боевик
   id: 43
   image: Mad_max_poster.jpg
-  original_title: Mad Max
+  original_title: null
   slug: bezumnyi-maks
   timestamp: 2017-04-02 07:09:17.034679
   title: Безумный Макс
@@ -1047,7 +1047,7 @@ movies:
   - Боевик
   id: 44
   image: Prometheus_poster.jpg
-  original_title: Prometheus
+  original_title: null
   slug: prometei
   timestamp: 2017-04-02 16:32:56.455778
   title: Прометей
@@ -1073,7 +1073,7 @@ movies:
   - Триллер
   id: 45
   image: untitled12.jpg
-  original_title: The Man in the High Castle
+  original_title: null
   slug: chelovek-v-vysokom-zamke
   timestamp: 2017-04-02 16:43:12.844920
   title: Человек в высоком замке
@@ -1095,7 +1095,7 @@ movies:
   - Антиутопия
   id: 46
   image: V_For_Vendetta_2006_Poster_01.jpg
-  original_title: V for Vendetta
+  original_title: null
   slug: v-znachit-vendetta
   timestamp: 2017-04-02 10:12:55.629259
   title: V — значит вендетта
@@ -1111,7 +1111,7 @@ movies:
   - Альтернативная история
   id: 47
   image: Fatherland.jpg
-  original_title: Fatherland
+  original_title: null
   slug: faterliand
   timestamp: 2017-04-02 16:42:20.713722
   title: Фатерлянд
@@ -1138,7 +1138,7 @@ movies:
   - Драма
   id: 48
   image: 250px-Twinpeaks2.jpg
-  original_title: Twin Peaks
+  original_title: null
   slug: tvin-piks
   timestamp: 2017-04-02 08:01:51.359682
   title: Твин Пикс
@@ -1171,7 +1171,7 @@ movies:
   - Сказка
   id: 49
   image: 230px-Spirited_away.jpg
-  original_title: 千と千尋の神隠し
+  original_title: null
   slug: unesionnye-prizrakami
   timestamp: 2017-04-02 08:08:28.466340
   title: Унесённые призраками
@@ -1185,7 +1185,7 @@ movies:
   - Детектив
   id: 50
   image: Csak_semmi_panik_poster.jpg
-  original_title: Csak semmi pánik...
+  original_title: null
   slug: bez-paniki-maior-kardosh
   timestamp: 2017-04-02 17:13:15.332441
   title: Без паники, майор Кардош!
@@ -1198,7 +1198,7 @@ movies:
   - Драма
   id: 51
   image: Collector_poster.jpg
-  original_title: ''
+  original_title: null
   slug: kollektor
   timestamp: 2017-04-02 17:14:49.175918
   title: Коллектор
@@ -1212,7 +1212,7 @@ movies:
   - Сказка
   id: 52
   image: 220px-Arabela_1979.jpg
-  original_title: Arabela
+  original_title: null
   slug: arabella
   timestamp: 2017-04-02 17:16:37.045364
   title: Арабелла
@@ -1224,7 +1224,7 @@ movies:
   - Приключения
   id: 53
   image: 1977.jpg
-  original_title: ''
+  original_title: null
   slug: veter-nadezhdy
   timestamp: 2017-04-02 17:31:22.659597
   title: Ветер «Надежды»
@@ -1239,7 +1239,7 @@ movies:
   - Драма
   id: 54
   image: Sleeping_beauyt_film_poster_2011.jpg
-  original_title: ''
+  original_title: null
   slug: spiashchaia-krasavitsa
   timestamp: 2017-04-02 17:33:36.966943
   title: Спящая красавица
@@ -1256,7 +1256,7 @@ movies:
   - Музыкальный
   id: 55
   image: Galavant_ABC_intertitle.png
-  original_title: Galavant
+  original_title: null
   slug: galavant
   timestamp: 2017-04-02 17:36:21.931917
   title: Галавант
@@ -1276,7 +1276,7 @@ movies:
   - Триллер
   id: 56
   image: BlackSails.jpg
-  original_title: Black Sails
+  original_title: null
   slug: chiornye-parusa
   timestamp: 2017-04-02 17:38:19.015706
   title: Чёрные паруса
@@ -1295,7 +1295,7 @@ movies:
   - Драма
   id: 57
   image: Over_the_Garden_Wall.jpg
-  original_title: Over the Garden Wall
+  original_title: null
   slug: po-tu-storonu-izgorodi
   timestamp: 2017-04-02 17:47:30.998629
   title: По ту сторону изгороди
@@ -1328,7 +1328,7 @@ movies:
   - Ужасы
   id: 58
   image: Jacobsladderposter.jpg
-  original_title: Jacob's Ladder
+  original_title: null
   slug: lestnitsa-iakova
   timestamp: 2017-04-02 17:46:03.390172
   title: Лестница Иакова
@@ -1342,9 +1342,27 @@ movies:
   - Приключения
   id: 59
   image: 200px-The_Odyssey_DVD.jpg
-  original_title: The Odyssey
+  original_title: null
   slug: odisseia
   timestamp: 2017-04-02 17:48:58.718132
   title: Одиссея
   user_id: 1
   wiki_url: Одиссея (телесериал, 1992)
+- description: "«Свадебная ваза» (фр. Vase de noces) — бельгийский чёрно-белый фильм\
+    \ ужасов 1974 года режиссёра Тьерри Зено[1].\r\n\r\nВ фильме имеются сцены скотоложства\
+    \ (неофициально он известен как The Pig Fucking Movie). В ленте также присутствуют\
+    \ сцены совокупления птиц, показаны трупы животных и копрофагия, из-за чего она\
+    \ была признана непристойной многими источниками, в частности Австралийской аттестационной\
+    \ комиссией[2]."
+  genres:
+  - Ужасы
+  - Треш
+  - Мелодрама
+  id: 60
+  image: Vase_de_noces.jpg
+  original_title: Vase de noces
+  slug: svadebnaia-vaza
+  timestamp: 2017-04-02 21:35:31.950097
+  title: Свадебная ваза
+  user_id: 1
+  wiki_url: ''
