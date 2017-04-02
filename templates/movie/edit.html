@@ -132,11 +132,11 @@ $(function() {
             {{ render_field(form.title, size="42", onchange="javascript:slugify()") }}
             {{ render_field(form.slug, size="42", maxlength=64) }}
             {{ render_field(form.original_title, size="42") }}
-            <div data-toggle="fieldset" id="genre-fieldset">
+            <div data-toggle="fieldset" id="genre-fieldset" class="control-group">
               {{_('Genre:')}}
               <ul>
                 {% for genre in form.genre_ids %}
-                  <li data-toggle="fieldset-entry">{{ genre }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="genre-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button></li>
+                  <li data-toggle="fieldset-entry" class="controls">{{ genre }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="genre-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button></li>
                 {% endfor %}
               </ul>
               <button type="button" class="btn btn-default" data-toggle="fieldset-add-row" data-target="#genre-fieldset">{{_('Add')}}</button>

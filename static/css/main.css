@@ -213,3 +213,22 @@ input, textarea, select {
     padding: 20px 50px;
     border-top: 1px solid #eeeeee;
 }
+
+.control-group {
+    margin: 10px 0px;
+}
+
+.controls input  {
+    border-radius: 4px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.controls select {
+    border-radius: 4px;
+    // height: 34px;
+    padding: 4px 12px;
+    margin: 2px 0px;
+    font-size: 14px;
+}
