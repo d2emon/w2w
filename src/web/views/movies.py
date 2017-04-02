@@ -9,12 +9,20 @@ from web.forms import MovieForm
 from web.models import Movie, Genre
 
 
+@app.route('/slug/movie', methods=['POST', ])
+def movie_slug():
+    title = request.form.get('title')
+    slug = Movie.make_slug(title)
+    resp = {
+        "title": title,
+        "slug": slug,
+    }
+    return jsonify(resp)
+
+
 @app.route('/movie/<slug>', methods=['POST', 'GET', ])
 def view_movie(slug):
-    movie = Movie.query.filter_by(slug=slug).first()
-    if movie is None:
-        flash(gettext('%(title)s not found.', title=slug))
-        return redirect(url_for('index'))
+    movie = Movie.by_slug(slug=slug)
     return render_template('movie/view.html',
                            movie=movie,
                            )
@@ -23,18 +31,16 @@ def view_movie(slug):
 @app.route('/movie/add', methods=['POST', 'GET', ])
 @login_required
 def add_movie():
+    movie = Movie()
     form = MovieForm()
     if form.validate_on_submit():
-        return redirect(url_for('edit_movie', slug=form.slug))
-        movie = Movie()
         form.populate_obj(movie)
-        movie.timestamp = datetime.utcnow()
-        movie.user_id = g.user.id
+
+        movie.normalize(g.user.id)
         db.session.add(movie)
         db.session.commit()
         flash(gettext("Your changes have been saved."))
-        return redirect(url_for('index'))
-        # movie = Movie()
+        return redirect(url_for('view_movie', slug=movie.slug))
     return render_template('movie/edit.html',
                            form=form,
                            )
@@ -43,44 +49,21 @@ def add_movie():
 @app.route('/movie/<slug>/edit', methods=['POST', 'GET', ])
 @login_required
 def edit_movie(slug):
-    # import os
-    # from config import basedir
-    movie = Movie.query.filter_by(slug=slug).first()
-    if not movie:
-        movie = Movie()
-        # flash(gettext("This movie doesn't exist."))
-        # return redirect(url_for('index'))
+    movie = Movie.by_slug(slug=slug)
     if movie.user_id and g.user.id != movie.user_id:
         flash(gettext("Your can edit only your movies."))
         return redirect(url_for('index'))
     form = MovieForm(obj=movie)
     if form.validate_on_submit():
         form.populate_obj(movie)
-        for movie_genre in movie.genres:
-            if movie_genre not in form.genre_ids.data:
-                movie.del_genre(movie_genre)
-        for genre_id in form.genre_ids.data:
-            if genre_id:
-                movie.add_genre(genre_id)
-        if not movie.user_id:
-            movie.user_id = g.user.id
-        movie.timestamp = datetime.utcnow()
+        movie.update_genres(movie_genres)
+
+        movie.normalize(g.user.id)
         db.session.add(movie)
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
-    genres = [genre.id for genre in movie.genres]
-    if genres:
-        print("GENRES", movie.genres)
-        while len(form.genre_ids) > 0:
-            form.genre_ids.pop_entry()
-    for genre in movie.genres:
-        form.genre_ids.append_entry(genre)
-    print("Genres", genres)
-    print("Ids", form.genre_ids.data)
-    print("Entries", form.genre_ids.entries)
-    print("Entries Data", [e.data for e in form.genre_ids.entries])
-    print(form.errors)
+    form.applyGenres(movie.genres)
     return render_template('movie/edit.html',
                            form=form,
                            )
@@ -92,26 +75,6 @@ def random_movie():
     if movie is None:
         return redirect(url_for('index'))
     return redirect(url_for('view_movie', slug=movie.slug))
-
-
-@app.route('/slug/movie', methods=['POST', ])
-def get_slug():
-    title = request.form.get('title')
-    slug = slugify(title)
-    resp = {
-        "title": title,
-        "slug": slug,
-    }
-    if Movie.query.filter_by(slug=slug).first() is None:
-        return jsonify(resp)
-    version = 2
-    while True:
-        new_slug = slug + str(version)
-        if Movie.query.filter_by(slug=new_slug).first() is None:
-            break
-        version += 1
-    resp["slug"] = new_slug
-    return jsonify(resp)
 
 
 @app.route('/export/w2w.yml')

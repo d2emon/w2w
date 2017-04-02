@@ -37,6 +37,27 @@ class Movie(db.Model):
     def __repr__(self):
         return "<Movie {}>".format(self.title)
 
+    @staticmethod
+    def make_slug(title):
+        '''
+        Making slug
+        '''
+        slug = slugify(title)
+        if Movie.query.filter_by(slug=slug).first() is None:
+            return slug
+        version = 2
+        while True:
+            new_slug = slug + str(version)
+            if Movie.query.filter_by(slug=new_slug).first() is None:
+                break
+            version += 1
+        return new_slug
+
+    def normalize(self, user_id):
+        if not self.user_id:
+            self.user_id = user_id
+        self.timestamp = datetime.utcnow()
+
     def has_genre(self, genre):
         return self.genres.filter(movie_genres.c.genre_id == genre.id).count() > 0
 
@@ -50,22 +71,18 @@ class Movie(db.Model):
             self.genres.remove(genre)
         return self
 
+    def update_genres(self, genres):
+        for genre in self.genres:
+            if genre not in genres:
+                self.del_genre(genre)
+        for genre in genres:
+            if genre:
+                self.add_genre(genre)
+        return self
+
     @property
     def genre_names(self):
         return ', '.join([genre.title.lower() for genre in self.genres]).capitalize()
-
-    @staticmethod
-    def ordered(order_by=''):
-        q = Movie.query
-        if order_by == 'alpha':
-            q = q.order_by(Movie.title)
-        else:
-            q = q.order_by(Movie.timestamp.desc())
-        return q
-
-    @staticmethod
-    def by_random():
-        return Movie.query.order_by(func.random())
 
     def avatar(self, width=128, height=None):
         if self.image:
@@ -88,18 +105,6 @@ class Movie(db.Model):
         else:
             size = height
         return gravatar(self.slug, size)
-
-    @staticmethod
-    def make_unique_slug(slug):
-        if Movie.query.filter_by(slug=slug).first() is None:
-            return slug
-        version = 2
-        while True:
-            new_slug = slug + str(version)
-            if Movie.query.filter_by(slug=new_slug).first() is None:
-                break
-            version += 1
-        return new_slug
 
     def as_dict(self):
         d = {c.name: getattr(self, c.name) for c in self.__table__.columns}
@@ -144,6 +149,28 @@ class Movie(db.Model):
     def wikipedia(self):
         return "https://ru.wikipedia.org/wiki/{}".format(self.title)
 
+    # Query shortcuts
+    @staticmethod
+    def ordered(order_by=''):
+        q = Movie.query
+        if order_by == 'alpha':
+            q = q.order_by(Movie.title)
+        else:
+            q = q.order_by(Movie.timestamp.desc())
+        return q
+
+    @staticmethod
+    def by_slug(slug):
+        return Movie.query.filter_by(slug=slug).first_or_404()
+
+    @staticmethod
+    def by_genre(genre, order_by=''):
+        return Movie.ordered(order_by).filter(Movie.genres.contains(genre))
+
+    @staticmethod
+    def by_random():
+        return Movie.query.order_by(func.random())
+
 
 class Person(db.Model):
     __searchable__ = ['firstname', 'lastname', 'fullname', 'description', ]
@@ -181,6 +208,9 @@ class Genre(db.Model):
 
     @staticmethod
     def make_slug(title):
+        '''
+        Making slug
+        '''
         slug = slugify(title)
         if Genre.query.filter_by(slug=slug).first() is None:
             return slug
@@ -217,6 +247,11 @@ class Genre(db.Model):
             })
             genres.append(g)
         return genres
+
+    # Query shortcuts
+    @staticmethod
+    def by_slug(slug):
+        return Genre.query.filter_by(slug=slug).first_or_404()
 
 
 whooshalchemy.whoosh_index(app, Movie)

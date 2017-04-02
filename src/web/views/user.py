@@ -9,16 +9,13 @@ from web.models.user import User
 @app.route('/login', methods=['GET', 'POST', ])
 @oid.loginhandler
 def login():
-    # https://openid-provider.appspot.com/d2emonium
     if g.user is not None and g.user.is_authenticated:
         return redirect(url_for('index'))
 
     form = LoginForm()
     if form.validate_on_submit():
         session['remember_me'] = form.remember_me.data
-        # return oidc.user_getfield('email')
         return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
-        # flash('Login requested for OpenID="' + form.openid.data + '", remember_me=' + str(form.remember_me.data))
     return render_template('user/login.html',
                            title='Sign In',
                            form=form,
@@ -50,17 +47,13 @@ def user(nickname, page=1):
 @app.route('/edit', methods=['POST', 'GET', ])
 @login_required
 def edit():
-    form = EditForm(g.user.nickname)
+    form = EditForm(g.user.nickname, obj=g.user)
     if form.validate_on_submit():
-        g.user.nickname = form.nickname.data
-        g.user.about_me = form.about_me.data
+        form.populate_obj(g.user)
         db.session.add(g.user)
         db.session.commit()
         flash(gettext("Your changes have been saved."))
-        return redirect(url_for('edit'))
-    else:
-        form.nickname.data = g.user.nickname
-        form.about_me.data = g.user.about_me
+        return redirect(url_for('user', nickname=g.user.nickname))
     return render_template('user/edit.html',
                            form=form,
                            )

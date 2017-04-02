@@ -8,10 +8,7 @@ from web.models.post import Post
 @app.route('/del/<int:id>')
 @login_required
 def delete(id):
-    post = Post.query.get(id)
-    if post is None:
-        flash(gettext('Post not found'))
-        return redirect(url_for('index'))
+    post = Post.by_id(id)
     if post.author.id != g.user.id:
         flash(gettext('You cannot delete this post.'))
         return redirect(url_for('index'))
@@ -22,7 +19,6 @@ def delete(id):
 
 
 @app.route('/search', methods=["POST", ])
-@login_required
 def search():
     if not g.search_form.validate_on_submit():
         return redirect(url_for('index'))
@@ -30,9 +26,8 @@ def search():
 
 
 @app.route('/search_results/<query>')
-@login_required
 def search_results(query):
-    results = Post.query.whoosh_search(query, app.config.get('MAX_SEARCH_RESULTS', 100)).all()
+    results = Post.search(query)
     return render_template('search_results.html',
                            query=query,
                            posts=results,

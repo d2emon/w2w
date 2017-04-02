@@ -19,11 +19,13 @@ def genre_slug():
 
 @app.route('/genre/<slug>', methods=['POST', 'GET', ])
 def view_genre(slug):
-    genre = Genre.query.filter_by(slug=slug).first()
-    if genre is None:
-        flash(gettext('%(title)s not found.', title=slug))
-        return redirect(url_for('index'))
-    movies = Movie.ordered(session.get('sort_by')).filter(Movie.genres.contains(genre)).paginate(1, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    try:
+        page = int(request.args.get('movies', 1))
+    except ValueError:
+        page = 1
+
+    genre = Genre.by_slug(slug)
+    movies = Movie.by_genre(genre).paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
     return render_template('genre/view.html',
                            genre=genre,
                            movies=movies,
@@ -33,9 +35,9 @@ def view_genre(slug):
 @app.route('/genre/add', methods=['POST', 'GET', ])
 @login_required
 def add_genre():
+    genre = Genre()
     form = GenreForm()
     if form.validate_on_submit():
-        genre = Genre()
         form.populate_obj(genre)
         db.session.add(genre)
         db.session.commit()
@@ -49,10 +51,7 @@ def add_genre():
 @app.route('/genre/<slug>/edit', methods=['POST', 'GET', ])
 @login_required
 def edit_genre(slug):
-    genre = Genre.query.filter_by(slug=slug).first()
-    if not genre:
-        flash(gettext("This genre doesn't exist."))
-        return redirect(url_for('add_genre'))
+    genre = Genre.by_slug(slug)
     form = GenreForm(obj=genre)
     if form.validate_on_submit():
         form.populate_obj(genre)

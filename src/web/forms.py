@@ -65,6 +65,14 @@ class MovieForm(FlaskForm):
     image = HiddenField()
     description = TextAreaField(gettext('Description'))
 
+    def applyGenres(self, genres):
+        if genres.count():
+            print(genres)
+            while len(self.genre_ids) > 0:
+                self.genre_ids.pop_entry()
+        for genre in genres:
+            self.genre_ids.append_entry(genre)
+
 
 class GenreForm(FlaskForm):
     title = TextField(gettext('Title'), validators=[Required(), ])

@@ -88,3 +88,8 @@ class User(db.Model):
 
     def followed_posts(self):
         return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id).order_by(Post.timestamp.desc())
+
+    # Query shortcuts
+    @staticmethod
+    def by_username(username):
+        return User.query.filter_by(nickname=username).first()

@@ -4,7 +4,7 @@
 function slugify()
 {
   f = $("#title").val();
-  $.post('{{ url_for("get_slug") }}', {
+  $.post('{{ url_for("movie_slug") }}', {
     title: f
   }).done(function(slugified) {
     $("#slug").val(slugified['slug']);
