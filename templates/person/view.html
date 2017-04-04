@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="well well-large">
+        <div class="pull-right">
+          <img src="{{ person.avatar(256) }}" class="img-polaroid">
+        </div>
+        <h1>
+          {{ person.get_name() }}
+          <a href="{{ url_for('edit_person', slug = person.slug) }}"><span class="glyphicon glyphicon-edit"></span></a> 
+          <a href="{{ url_for('delete', id = person.id) }}"><span class="glyphicon glyphicon-trash"></span></a>
+        </h1>
+	    {# % include 'movie/list.html' % #}
+        <div>
+          {{ person.description }}
+        </div>
+    </div>
+    
+{% endblock %}
