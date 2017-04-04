@@ -83,3 +83,15 @@ class GenreForm(FlaskForm):
         Regexp("[a-zA-Z0-9_\-]*"),
     ])
     description = TextAreaField(gettext('Description'))
+
+
+class PersonForm(FlaskForm):
+    firstname = TextField(gettext('Name'), validators=[Required(), ])
+    lastname = TextField(gettext('Lastname'))
+    fullname = TextField(gettext('Fullname'))
+    slug = TextField(gettext('URL'), validators=[
+        Required(),
+        Length(min=1, max=64),
+        Regexp("[a-zA-Z0-9_\-]*"),
+    ])
+    description = TextAreaField(gettext('Description'))

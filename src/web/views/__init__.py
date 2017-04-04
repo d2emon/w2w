@@ -204,3 +204,4 @@ from web.views.follow import *
 from web.views.post import *
 from web.views.movies import *
 from web.views.genres import *
+from web.views.person import *

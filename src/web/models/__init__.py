@@ -151,7 +151,7 @@ class Movie(db.Model):
                 "user_id": user_id,
                 "timestamp": d.get('timestamp', datetime.utcnow()),
                 "genres": d.get('genres', []),
-                
+
             })
             movies.append(m)
         return movies
@@ -211,8 +211,35 @@ class Person(db.Model):
         else:
             return "{} {}".format(self.firstname, self.lastname)
 
+    @staticmethod
+    def make_slug(firstname, lastname, fullname):
+        '''
+        Making slug
+        '''
+        p = Person(
+            firstname=firstname,
+            lastname=lastname,
+            fullname=fullname,
+        )
+
+        slug = slugify(p.get_name())
+        if Person.query.filter_by(slug=slug).first() is None:
+            return slug
+        version = 2
+        while True:
+            new_slug = slug + str(version)
+            if Person.query.filter_by(slug=new_slug).first() is None:
+                break
+            version += 1
+        return new_slug
+
     def avatar(self, size=128):
         return gravatar(self.get_name(), size)
+
+    # Query shortcuts
+    @staticmethod
+    def by_slug(slug):
+        return Person.query.filter_by(slug=slug).first_or_404()
 
 
 class Genre(db.Model):
