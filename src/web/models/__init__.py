@@ -163,6 +163,7 @@ class Movie(db.Model):
     def as_dict(self):
         d = {c.name: getattr(self, c.name) for c in self.__table__.columns}
         d['genres'] = [g.title for g in self.genres]
+        d['directors'] = [p.slug for p in self.directors]
         return d
 
     def from_dict(self, data):
@@ -177,6 +178,13 @@ class Movie(db.Model):
                 genre = Genre(title=g)
                 db.session.add(genre)
             self.add_genre(genre)
+        directors = data.get('directors', [])
+        for p in directors:
+            director = Person.query.filter_by(slug=p).first()
+            if director is None:
+                director = Person(slug=p)
+                db.session.add(director)
+            self.add_director(director)
 
     @staticmethod
     def from_yml(data, user_id=None):
@@ -198,6 +206,7 @@ class Movie(db.Model):
                 "user_id": user_id,
                 "timestamp": d.get('timestamp', datetime.utcnow()),
                 "genres": d.get('genres', []),
+                "directors": d.get('directors', []),
 
             })
             movies.append(m)
@@ -259,7 +268,7 @@ class Person(db.Model):
             return "{} {}".format(self.firstname, self.lastname)
 
     @staticmethod
-    def make_slug(firstname, lastname, fullname):
+    def make_slug(firstname, lastname='', fullname=''):
         '''
         Making slug
         '''

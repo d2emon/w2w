@@ -26,7 +26,15 @@
           <p>{{ movie.genre_names }}</p>
           {% endif %}
           <ul>
-            <li>{{_('Directed by')}} {directors}</li>
+            {% if movie.directors.count() > 0 %}
+            <li>{{_('Directed by')}} 
+              <ul>
+              {% for director in movie.directors %}
+              <li>{{ director }}</li>
+              {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
             <li>{{_('Produced by')}} {producers}</li>
             <li>{{_('Written by')}} {writers} </li>
             <li>{{_('Screenplay by')}} {screenplay}</li>

@@ -87,6 +87,10 @@ def import_yml(filename, user_id=None):
     with open(filename, encoding="utf-8") as f:
         data = yaml.load(f)
 
+    persons = Person.from_yml(data.get("persons", []))
+    for m in persons:
+        db.session.add(m)
+
     genres = Genre.from_yml(data.get("genres", []))
     for m in genres:
         db.session.add(m)
