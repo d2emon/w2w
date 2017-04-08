@@ -137,10 +137,32 @@ $(function() {
               {{_('Genre:')}}
               <ul>
                 {% for genre in form.genre_ids %}
-                  <li data-toggle="fieldset-entry" class="controls">{{ genre }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="genre-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button></li>
+                <li data-toggle="fieldset-entry" class="controls">
+                {{ genre }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="genre-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button>
+                {% for error in genre.errors %}
+                <br><span class="help-inline">[{{ error }}]</span>
+              {% endfor %}
+                </li>
                 {% endfor %}
               </ul>
               <button type="button" class="btn btn-default" data-toggle="fieldset-add-row" data-target="#genre-fieldset">{{_('Add')}}</button>
+              {% for error in form.genre_ids.errors %}
+              <span class="help-inline">[{{ error }}]</span><br>
+              {% endfor %}
+            </div>
+            <div data-toggle="fieldset" id="director-fieldset" class="control-group">
+              {{_('Director:')}}
+              <ul>
+                {% for director in form.director_ids %}
+                <li data-toggle="fieldset-entry" class="controls">
+                {{ director }} <button type="button" class="btn btn-danger" data-toggle="fieldset-remove-row" id="director-{{loop.index0}}-remove"><span class="glyphicon glyphicon-remove"></span></button>
+                {% for error in director.errors %}
+                <br><span class="help-inline">[{{ error }}]</span>
+                {% endfor %}
+                </li>
+                {% endfor %}
+              </ul>
+              <button type="button" class="btn btn-default" data-toggle="fieldset-add-row" data-target="#director-fieldset">{{_('Add')}}</button>
             </div>
             {% if form.image.data %}<div class="dz-preview"><div class="dz-image"><img src="{{ url_for('static', filename='upload/' + form.image.data) | resize('120x120', fill=1) }}" ></div></div>{% endif %}
             <div id="movie-dropzone" class="dropzone">

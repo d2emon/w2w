@@ -59,10 +59,13 @@ def edit_movie(slug):
         db.session.add(movie)
 
         movie.update_genres([genre.data for genre in form.genre_ids])
+        movie.update_directors([director.data for director in form.director_ids])
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
     form.applyGenres(movie.genres)
+    form.applyDirectors(movie.directors)
+    print(form.errors)
     return render_template('movie/edit.html',
                            form=form,
                            )

@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
 from flask_babel import gettext
 from wtforms import TextField, BooleanField, TextAreaField, HiddenField, FieldList
+# from wtforms.fields import SelectField
 from wtforms.validators import Required, Length, Regexp
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
-from web.models import Genre
+from web.models import Genre, Person
 from web.models.user import User
 from guess_language import guessLanguage
 
@@ -63,16 +64,25 @@ class MovieForm(FlaskForm):
     ])
     wiki_url = TextField(gettext('Wiki'))
     genre_ids = FieldList(QuerySelectField(gettext('Genre'), get_label='title', query_factory=lambda: Genre.alphabet(), allow_blank=True), min_entries=1)
+    director_ids = FieldList(QuerySelectField(gettext('Director'), get_label=lambda p: p.get_name(), query_factory=lambda: Person.query.all(), allow_blank=True), min_entries=1)
+    # director_ids = FieldList(SelectField(gettext('Director'), choices=[('0', ''), ] + [(str(p.id), p.get_name()) for p in Person.query.all()]), min_entries=1)
     image = HiddenField()
     description = TextAreaField(gettext('Description'))
 
     def applyGenres(self, genres):
         if genres.count():
-            print(genres)
             while len(self.genre_ids) > 0:
                 self.genre_ids.pop_entry()
         for genre in genres:
             self.genre_ids.append_entry(genre)
+
+    def applyDirectors(self, directors):
+        print("APPLY DIRECTORS", directors.all())
+        if directors.count():
+            while len(self.director_ids) > 0:
+                self.director_ids.pop_entry()
+        for director in directors:
+            self.director_ids.append_entry(director)
 
 
 class GenreForm(FlaskForm):

@@ -14,6 +14,13 @@ movie_genres = db.Table(
 )
 
 
+movie_directors = db.Table(
+    'movie_directors',
+    db.Column('movie_id', db.Integer, db.ForeignKey('movie.id')),
+    db.Column('person_id', db.Integer, db.ForeignKey('person.id')),
+)
+
+
 class Movie(db.Model):
     __searchable__ = ['description', ]
 
@@ -29,6 +36,14 @@ class Movie(db.Model):
     genres = db.relationship(
         'Genre',
         secondary=movie_genres,
+        # primaryjoin=(movie_genres.c.movie_id == id),
+        # secondaryjoin=(movie_genres.c.genre_id == id),
+        backref=db.backref('movies', lazy='dynamic'),
+        lazy='dynamic',
+    )
+    directors = db.relationship(
+        'Person',
+        secondary=movie_directors,
         # primaryjoin=(movie_genres.c.movie_id == id),
         # secondaryjoin=(movie_genres.c.genre_id == id),
         backref=db.backref('movies', lazy='dynamic'),
@@ -78,6 +93,27 @@ class Movie(db.Model):
             self.genres.remove(genre)
         return self
 
+    def has_director(self, director):
+        if director is None:
+            return False
+        return self.directors.filter(movie_directors.c.person_id == director.id).count() > 0
+
+    def add_director(self, director):
+        print('ADD DIRECTOR', director)
+
+        if director is None:
+            return self
+        if not self.has_director(director):
+            self.directors.append(director)
+        return self
+
+    def del_director(self, director):
+        if director is None:
+            return self
+        if self.has_director(director):
+            self.directors.remove(director)
+        return self
+
     def update_genres(self, genres):
         for genre in self.genres:
             if genre not in genres:
@@ -85,6 +121,17 @@ class Movie(db.Model):
         for genre in genres:
             if genre:
                 self.add_genre(genre)
+        return self
+
+    def update_directors(self, directors):
+        print("DIRECTORS", directors)
+        for director in self.directors:
+            if director not in directors:
+                self.del_director(director)
+        for director in directors:
+            if director:
+                self.add_director(director)
+        print("DIRECTORS", self.directors.all())
         return self
 
     @property
