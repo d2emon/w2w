@@ -69,6 +69,7 @@
               <ul class="dropdown-menu">
                 <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
                 <li><a href="{{ url_for('add_genre') }}">{{ _('Add Genre') }}</a></li>
+                <li><a href="{{ url_for('add_person') }}">{{ _('Add Person') }}</a></li>
                 <li><a href="{{ url_for('add_movie') }}">{{ _('Add Movie') }}</a></li>
                 <li><a href="{{ url_for('export_movies') }}">{{ _('Export Movies') }}</a></li>
                 <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
