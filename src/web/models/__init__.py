@@ -46,7 +46,7 @@ class Movie(db.Model):
         secondary=movie_directors,
         # primaryjoin=(movie_genres.c.movie_id == id),
         # secondaryjoin=(movie_genres.c.genre_id == id),
-        backref=db.backref('movies', lazy='dynamic'),
+        backref=db.backref('directed', lazy='dynamic'),
         lazy='dynamic',
     )
 
@@ -244,6 +244,13 @@ class Movie(db.Model):
         return q.filter(Movie.genres.contains(genre))
 
     @staticmethod
+    def by_director(director, order_by=''):
+        q = Movie.ordered(order_by)
+        if director is None:
+            return q.filter(~Movie.directors.any())
+        return q.filter(Movie.directors.contains(director))
+
+    @staticmethod
     def by_random():
         return Movie.query.order_by(func.random())
 
@@ -323,6 +330,10 @@ class Person(db.Model):
     @staticmethod
     def by_slug(slug):
         return Person.query.filter_by(slug=slug).first_or_404()
+
+    @staticmethod
+    def alphabet():
+        return Person.query.order_by(Person.lastname).all()
 
 
 class Genre(db.Model):

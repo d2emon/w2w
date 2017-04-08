@@ -1,8 +1,8 @@
-from flask import request, render_template, redirect, url_for, flash, jsonify
+from flask import request, render_template, redirect, url_for, flash, jsonify, session
 from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
-from web.models import Person
+from web.models import Movie, Person
 from web.forms import PersonForm
 
 
@@ -27,10 +27,13 @@ def view_person(slug=None):
         person = None
     else:
         person = Person.by_slug(slug)
-    # movies = Movie.by_genre(genre, order_by=session.get('sort_by')).paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    page = 1
+    # movies = Movie.by_director(person, order_by=session.get('sort_by')).paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    movies = person.directed.paginate(page, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
+    print("Directed", person.directed)
     return render_template('person/view.html',
                            person=person,
-                           # movies=movies,
+                           movies=movies,
                            )
 
 

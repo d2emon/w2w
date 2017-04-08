@@ -64,8 +64,7 @@ class MovieForm(FlaskForm):
     ])
     wiki_url = TextField(gettext('Wiki'))
     genre_ids = FieldList(QuerySelectField(gettext('Genre'), get_label='title', query_factory=lambda: Genre.alphabet(), allow_blank=True), min_entries=1)
-    director_ids = FieldList(QuerySelectField(gettext('Director'), get_label=lambda p: p.get_name(), query_factory=lambda: Person.query.all(), allow_blank=True), min_entries=1)
-    # director_ids = FieldList(SelectField(gettext('Director'), choices=[('0', ''), ] + [(str(p.id), p.get_name()) for p in Person.query.all()]), min_entries=1)
+    director_ids = FieldList(QuerySelectField(gettext('Director'), get_label=lambda p: p.get_name(), query_factory=lambda: Person.alphabet(), allow_blank=True), min_entries=1)
     image = HiddenField()
     description = TextAreaField(gettext('Description'))
 

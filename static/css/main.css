@@ -257,3 +257,7 @@ input, textarea, select {
 	height: 32px;
     border-radius: 4px;	
 }
+
+.person-full {
+    min-height: 300px;
+}

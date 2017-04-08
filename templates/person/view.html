@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="well well-large">
+    <div class="person-full well well-large">
         <div class="pull-right">
           <img src="{{ person.avatar(256) }}" class="img-polaroid">
         </div>
@@ -14,5 +14,6 @@
           {{ person.description }}
         </div>
     </div>
+    {% include 'movie/list.html' %}
     
 {% endblock %}

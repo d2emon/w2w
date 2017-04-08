@@ -37,6 +37,7 @@ def add_movie():
         db.session.add(movie)
 
         movie.update_genres([genre.data for genre in form.genre_ids])
+        movie.update_directors([director.data for director in form.director_ids])
         db.session.commit()
         flash(gettext("Your changes have been saved."))
         return redirect(url_for('view_movie', slug=movie.slug))
