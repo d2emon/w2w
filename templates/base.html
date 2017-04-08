@@ -80,7 +80,7 @@
             {% endif %}
             <li><a href="{{ url_for('random_movie') }}">{{ _('Random') }}</a></li>
             {% if session['wld'] %}
-            <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">{{session['wld']}}</span></a></li>
+            <li><a href="{{ url_for('index', wld="") }}"><span class="label label-success">W{{session['wld']}}</span></a></li>
             {% endif %}
             {% if session['nsfw'] %}
              <li><a href="{{ url_for('index', nsfw="") }}"><span class="label label-danger">NSFW</span></a></li>
