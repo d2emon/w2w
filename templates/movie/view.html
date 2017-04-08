@@ -30,7 +30,7 @@
             <li>{{_('Directed by')}} 
               <ul>
               {% for director in movie.directors %}
-              <li>{{ director }}</li>
+                <li><a href="{{ url_for('view_person', slug=director.slug) }}">{{ director.get_name() }}</a></li>
               {% endfor %}
               </ul>
             </li>

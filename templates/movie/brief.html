@@ -1,7 +1,7 @@
 <div class="col-md-6">
   <div class=" movie-block well">
     <div class="movie-brief">
-      <div class="pull-left movie-avatar"><img src="{{ movie.avatar(64, 80) }}"></div>
+      <div class="pull-left movie-avatar"><a href="{{ url_for('view_movie', slug=movie.slug) }}"><img src="{{ movie.avatar(64, 80) }}"></a></div>
       <h4>
         <a href="{{ url_for('view_movie', slug=movie.slug) }}">{{ movie.title }}</a> 
 	    {% if not movie.user_id or movie.user_id == g.user.id %}

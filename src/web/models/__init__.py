@@ -308,16 +308,16 @@ class Person(db.Model):
 
             p.from_dict({
                 "firstname": d.get('firstname'),
-                "lastname": d.get('firstname'),
-                "fullname": d.get('firstname'),
+                "lastname": d.get('lastname'),
+                "fullname": d.get('fullname'),
                 "slug": slug,
                 "description": d.get('description'),
             })
             persons.append(p)
         return persons
 
-    def avatar(self, size=128):
-        return gravatar(self.get_name(), size)
+    def avatar(self, width=128, height=None):
+        return gravatar(self.get_name(), width)
 
     # Query shortcuts
     @staticmethod

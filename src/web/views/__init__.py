@@ -48,6 +48,12 @@ def index():
     movies = Movie.ordered(session.get('sort_by')).paginate(moviepage, app.config.get('BRIEF_MOVIES_PER_PAGE', 6), False)
 
     try:
+        personpage = int(request.args.get('persons', 1))
+    except ValueError:
+        personpage = 1
+    persons = Person.query.paginate(personpage, app.config.get('BRIEF_PERSONS_PER_PAGE', 6), False)
+
+    try:
         postpage = int(request.args.get('page', 1))
     except ValueError:
         postpage = 1
@@ -60,6 +66,7 @@ def index():
     return render_template("index.html",
                            title="Home",
                            movies=movies,
+                           persons=persons,
                            posts=posts,
                            form=form,
                            moviefeed=moviefeed,
