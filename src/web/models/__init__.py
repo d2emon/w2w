@@ -280,6 +280,33 @@ class Person(db.Model):
             version += 1
         return new_slug
 
+    def as_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
+    def from_dict(self, data):
+        for k, v in data.items():
+            if k in self.__table__.columns:
+                setattr(self, k, v)
+
+    @staticmethod
+    def from_yml(data):
+        persons = []
+        for d in data:
+            p = Person()
+
+            slug = d.get('slug')
+            slug = Person.make_slug(slug)
+
+            p.from_dict({
+                "firstname": d.get('firstname'),
+                "lastname": d.get('firstname'),
+                "fullname": d.get('firstname'),
+                "slug": slug,
+                "description": d.get('description'),
+            })
+            persons.append(p)
+        return persons
+
     def avatar(self, size=128):
         return gravatar(self.get_name(), size)
 

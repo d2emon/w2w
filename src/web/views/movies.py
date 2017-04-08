@@ -4,7 +4,7 @@ from flask_babel import gettext
 import yaml
 from web import app, db
 from web.forms import MovieForm
-from web.models import Movie, Genre
+from web.models import Movie, Genre, Person
 
 
 @app.route('/slug/movie', methods=['POST', ])
@@ -83,9 +83,11 @@ def random_movie():
 def export_movies():
     movies = Movie.query.all()
     genres = Genre.query.all()
+    persons = Person.query.all()
     values = {
-        'movies': [m.as_dict() for m in movies],
+        'persons': [p.as_dict() for p in persons],
         'genres': [g.as_dict() for g in genres],
+        'movies': [m.as_dict() for m in movies],
     }
     response = make_response(yaml.dump(values, default_flow_style=False, encoding='utf-8', allow_unicode=True))
     response.headers['Content-Type'] = 'text/yaml'
