@@ -333,7 +333,7 @@ class Person(db.Model):
 
     @staticmethod
     def alphabet():
-        return Person.query.order_by(Person.lastname).all()
+        return Person.query.order_by(Person.lastname)
 
 
 class Genre(db.Model):
