@@ -14,6 +14,7 @@ import logging
 
 from config import basedir, from_yaml, config_files
 from web.momentjs import momentjs
+from web.helpers.urler import urler
 
 
 def mailHandler(config):
@@ -76,6 +77,7 @@ lm.login_message = lazy_gettext("Please log in to access this page.")
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 
 app.jinja_env.globals['momentjs'] = momentjs
+app.jinja_env.globals['urler'] = urler
 
 # print("STATIC_FOLDER", app.static_folder)
 # print("TEMPLATE_FOLDER", app.template_folder)

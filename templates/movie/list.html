@@ -3,14 +3,14 @@
       <div class="text-center">
         <ul class="pagination">
         {% if movies.has_prev %}
-        <li><a href="{{ url_for('index', movies=movies.prev_num) }}">&lt;&lt;</a></li>
+          <li><a href="{{ urler(slugs={'slug': slug}).render(movies=movies.prev_num) }}">&lt;&lt;</a></li>
         {% else %}
         <li class="disabled"><a href="#">&lt;&lt;</a></li>
         {% endif %}
 {% for page in movies.iter_pages() %}
     {% if page %}
       {% if page != movies.page %}
-        <li><a href="{{ url_for('index', movies=page) }}">{{ page }}</a></li>
+        <li><a href="{{ urler(slugs={'slug': slug}).render(movies=page) }}">{{ page }}</a></li>
       {% else %}
         <li><span><strong>{{ page }}</strong></span></li>
       {% endif %}
@@ -19,7 +19,7 @@
     {% endif %}
 {% endfor %}
         {% if movies.has_next %}
-        <li class=""><a href="{{ url_for('index', movies=movies.next_num) }}">&gt;&gt;</a></li>
+        <li><a href="{{ urler(slugs={'slug': slug}).render(movies=movies.next_num) }}">&gt;&gt;</a></li>
         {% else %}
         <li class="disabled"><a href="#">&gt;&gt;</a></li>
         {% endif %}
@@ -33,14 +33,14 @@
       <div class="text-center">
         <ul class="pagination">
         {% if movies.has_prev %}
-        <li><a href="{{ url_for('index', movies=movies.prev_num) }}">&lt;&lt;</a></li>
+          <li><a href="{{ urler(slugs={'slug': slug}).render(movies=movies.prev_num) }}">&lt;&lt;</a></li>
         {% else %}
         <li class="disabled"><a href="#">&lt;&lt;</a></li>
         {% endif %}
 {% for page in movies.iter_pages() %}
     {% if page %}
       {% if page != movies.page %}
-        <li><a href="{{ url_for('index', movies=page) }}">{{ page }}</a></li>
+        <li><a href="{{ urler(slugs={'slug': slug}).render(movies=page) }}">{{ page }}</a></li>
       {% else %}
         <li><span><strong>{{ page }}</strong></span></li>
       {% endif %}
@@ -49,7 +49,7 @@
     {% endif %}
 {% endfor %}
         {% if movies.has_next %}
-        <li class=""><a href="{{ url_for('index', movies=movies.next_num) }}">&gt;&gt;</a></li>
+        <li><a href="{{ urler(slugs={'slug': slug}).render(movies=movies.next_num) }}">&gt;&gt;</a></li>
         {% else %}
         <li class="disabled"><a href="#">&gt;&gt;</a></li>
         {% endif %}

@@ -41,6 +41,7 @@ def user(nickname, page=1):
     return render_template('user/user.html',
                            user=user,
                            posts=posts,
+                           slug=nickname,
                            )
 
 

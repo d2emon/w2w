@@ -23,6 +23,7 @@ def view_movie(slug):
     movie = Movie.by_slug(slug=slug)
     return render_template('movie/view.html',
                            movie=movie,
+                           slug=slug,
                            )
 
 
@@ -69,6 +70,7 @@ def edit_movie(slug):
     print(form.errors)
     return render_template('movie/edit.html',
                            form=form,
+                           slug=slug,
                            )
 
 
@@ -162,4 +164,5 @@ def parse_movie(slug):
                            movie=p['movie'],
                            page=p['page'],
                            props=p['properties'],
+                           slug=slug,
                            )

@@ -1,8 +1,8 @@
-from flask import request, render_template, redirect, url_for, flash, jsonify, session
+from flask import request, render_template, redirect, url_for, flash, jsonify
 from flask_login import login_required
 from flask_babel import gettext
 from web import app, db
-from web.models import Movie, Person
+from web.models import Person
 from web.forms import PersonForm
 
 
@@ -34,6 +34,7 @@ def view_person(slug=None):
     return render_template('person/view.html',
                            person=person,
                            movies=movies,
+                           slug=slug,
                            )
 
 
@@ -66,4 +67,5 @@ def edit_person(slug):
         return redirect(url_for('view_person', slug=person.slug))
     return render_template('person/edit.html',
                            form=form,
+                           slug=slug,
                            )

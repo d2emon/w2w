@@ -33,6 +33,7 @@ def view_genre(slug=None):
     return render_template('genre/view.html',
                            genre=genre,
                            movies=movies,
+                           slug=slug,
                            )
 
 
@@ -65,4 +66,5 @@ def edit_genre(slug):
         return redirect(url_for('view_genre', slug=genre.slug))
     return render_template('genre/edit.html',
                            form=form,
+                           slug=slug,
                            )
