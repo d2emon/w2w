@@ -286,31 +286,33 @@ movies:
     к правительству, охватывают теорию заговора и сосредоточены на попытках раскрыть
     информацию о существовании внеземных цивилизаций. Около 50 эпизодов сериала были
     написаны Фрэнком Спотницом.'
-  directors: []
+  directors:
+  - rob-boumen
   genres:
   - Фантастика
   - Драма
   id: 1
   image: 250px-The_X-Files_logo.svg.png
-  original_title: null
+  original_title: ''
   slug: sekretnye-materialy
-  timestamp: 2017-04-02 07:33:40.576237
+  timestamp: 2017-04-08 20:43:18.145595
   title: Секретные материалы
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: американский фантастический триллер с небольшими комедийными и драматическими
     элементами режиссёра М. Найта Шьямалана 2002 года. Премьера фильма состоялась
     29 июля 2002 года. Кассовые сборы фильма в США составили $228 млн, в остальных
     странах — $180 млн.
-  directors: []
+  directors:
+  - m-nait-shiamalan
   genres:
   - Триллер
   - Фантастика
   id: 2
   image: Signs_dvd_cover.jpg
-  original_title: null
+  original_title: ''
   slug: znaki
-  timestamp: 2017-04-02 16:23:49.539104
+  timestamp: 2017-04-08 20:12:53.158003
   title: Знаки
   user_id: 1
   wiki_url: Знаки (фильм)
@@ -318,33 +320,35 @@ movies:
     \ по 1998 годы, всего было создано 4 сезона.\r\n\r\nВ сериале снимались Джесс\
     \ Бёрдсел (Ник Беккет), Джей Гриффитс (Роз Хендерсон), Крэйг Маклахлан (Эд Рассел\
     \ в 1-3 сезонах), Стивен Хоутон (Эд Рассел в 4 сезоне)"
-  directors: []
+  directors:
+  - braian-farnkhem
   genres:
   - Фантастика
   id: 3
   image: untitled9.jpg
-  original_title: null
+  original_title: Bugs
   slug: elektronnye-zhuchki
-  timestamp: 2017-04-02 07:48:26.674809
+  timestamp: 2017-04-08 21:12:29.877833
   title: Электронные жучки
   user_id: 1
-  wiki_url: null
+  wiki_url: Электронные жучки (телесериал)
 - description: "«Треугольник» (англ. Triangle) — третий полнометражный кинофильм Кристофера\
     \ Смита, мистический триллер производства Великобритании и Австралии. Главная\
     \ героиня фильма (её роль исполняет Мелисса Джордж) оказывается вместе с друзьями\
     \ на загадочном лайнере и вскоре понимает, что она попала во временную петлю,\
     \ из которой ей нужно выбраться, чтобы вернуться к сыну.\r\n\r\nМировая премьера\
     \ фильма состоялась 27 августа 2009 года."
-  directors: []
+  directors:
+  - kristofer-smit
   genres:
   - Мистика
   - Триллер
   - Драма
   id: 4
   image: Triangle-m2009.jpg
-  original_title: null
+  original_title: ''
   slug: treugolnik
-  timestamp: 2017-04-02 16:40:21.566939
+  timestamp: 2017-04-08 20:51:38.157384
   title: Треугольник
   user_id: 1
   wiki_url: Треугольник (фильм, 2009)
@@ -354,70 +358,76 @@ movies:
     \ Кожевникова, Эльвира Ибрагимова. Съёмки проходили в Москве, в Казани, Крыму\
     \ и Владивостоке. Премьера фильма состоялась 1 мая 2013 года.\r\n\r\nСлоган фильма\
     \ — «Нет времени объяснять»."
-  directors: []
+  directors:
+  - dmitrii-korobkin
   genres:
   - Комедия
   - Приключения
   id: 5
   image: untitled6.jpg
-  original_title: null
+  original_title: ''
   slug: sokrovishcha-o-k
-  timestamp: 2017-04-02 07:34:07.091424
+  timestamp: 2017-04-08 20:44:04.621664
   title: Сокровища О. К.
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' американский фильм ужасов 1979 года режиссёра Дона Коскарелли. Приз
     Международного кинофестиваля фантастических фильмов в Авориазе.'
-  directors: []
+  directors:
+  - don-koskarelli
   genres:
   - Ужасы
   - Фантастика
   id: 6
   image: Phantasm.jpg
-  original_title: null
+  original_title: ''
   slug: fantazm
-  timestamp: 2017-04-02 16:40:41.623802
+  timestamp: 2017-04-08 20:56:24.318688
   title: Фантазм
   user_id: 1
   wiki_url: Фантазм (фильм)
 - description: американский телевизионный мультсериал 2005 года производства Cartoon
     Network/Adult swim.
-  directors: []
+  directors:
+  - maikl-kokhler
+  - mett-maiellaro
   genres:
   - Трагикомедия
   - Триллер
   - Треш
   id: 7
   image: 12_oz._Mouse_title.jpg
-  original_title: null
+  original_title: ''
   slug: pollitrovaia-mysh
-  timestamp: 2017-04-02 07:29:55.042399
+  timestamp: 2017-04-08 20:35:45.670402
   title: Поллитровая мышь
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' французская комедия положений с Пьером Ришаром в главной роли.'
-  directors: []
+  directors:
+  - eduar-molinaro
   genres:
   - Комедия
   id: 8
   image: Gauche_en_sortant_de_l_ascenseur.jpg
-  original_title: null
+  original_title: ''
   slug: nalevo-ot-lifta
-  timestamp: 2017-04-02 07:23:30.353552
+  timestamp: 2017-04-08 20:28:19.577704
   title: Налево от лифта
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: американский пародийный фильм ужасов 1990 года режиссёра Фрэнка Маршалла.
     Исполнительный продюсер — Стивен Спилберг. В России распространялся в авторском
     одноголосом закадровом переводе Вартана Дохалова.
-  directors: []
+  directors:
+  - frenk-marshall
   genres:
   - Ужасы
   id: 9
   image: ArachnophobiaPoster.jpg
-  original_title: null
+  original_title: ''
   slug: arakhnofobiia
-  timestamp: 2017-04-02 15:28:26.524691
+  timestamp: 2017-04-08 19:07:21.006837
   title: Арахнофобия
   user_id: 1
   wiki_url: Арахнофобия (фильм)
@@ -425,7 +435,8 @@ movies:
     \ Егора Баранова, снятый в 2012 году.\r\n\r\nВ российский прокат картина вышла\
     \ 22 ноября 2012 года и не предназначена к просмотру для лиц младше 16 лет.\r\n\
     \r\nСлоган фильма — «Здесь граблю только я!»"
-  directors: []
+  directors:
+  - egor-baranov
   genres:
   - Чернуха
   - Комедия
@@ -433,22 +444,23 @@ movies:
   - Вестерн
   id: 10
   image: -2.jpg
-  original_title: null
+  original_title: ''
   slug: solovei-razboinik
-  timestamp: 2017-04-02 16:35:38.405464
+  timestamp: 2017-04-08 20:44:41.763768
   title: Соловей-разбойник
   user_id: 1
   wiki_url: Соловей-разбойник (фильм)
 - description: российский киноальманах. В его рамках состоялся режиссёрский дебют
     Андрея Звягинцева (серии «Бусидо», «Obscure», «Выбор»).
-  directors: []
+  directors:
+  - andrei-zviagintsev
   genres:
   - Триллер
   id: 11
   image: untitled11.jpg
-  original_title: null
+  original_title: ''
   slug: chernaia-komnata
-  timestamp: 2017-04-02 16:44:30.209966
+  timestamp: 2017-04-08 21:00:41.172381
   title: Черная комната
   user_id: 1
   wiki_url: Чёрная комната (киноальманах)
@@ -458,28 +470,30 @@ movies:
     \ (1989) и «Каникулы в Вегасе» (1997).\r\n\r\nВ 2015 году произошёл перезапуск\
     \ Каникулы (фильм, 2015), с повзрослевшим главным героем Расти Гризволдом, решившим\
     \ устроить своей семье столь же незабываемые каникулы, что были у него в детстве."
-  directors: []
+  directors:
+  - garold-ramis
   genres:
   - Комедия
   id: 12
   image: National_Lampoons_Vacation_1983.jpg
-  original_title: null
+  original_title: ''
   slug: kanikuly
-  timestamp: 2017-04-02 16:25:34.111472
+  timestamp: 2017-04-08 20:17:16.648484
   title: Каникулы
   user_id: 1
   wiki_url: Каникулы (фильм, 1983)
 - description: ' американский фильм ужасов, снятый в 1988 году режиссёром Энтони Хикоксом.
     Фильм был отмечен наградами фестивалей фантастических фильмов в Брюсселе и Авориазе,
     а также был номинирован на кинопремию «Сатурн».'
-  directors: []
+  directors:
+  - entoni-khikoks
   genres:
   - Ужасы
   id: 13
   image: untitled5.jpg
-  original_title: null
+  original_title: ''
   slug: muzei-voskovykh-figur
-  timestamp: 2017-04-02 16:28:54.643814
+  timestamp: 2017-04-08 20:27:16.388552
   title: Музей восковых фигур
   user_id: 1
   wiki_url: Музей восковых фигур (фильм)
@@ -487,37 +501,40 @@ movies:
     Луи Андерсона и его рассказах о своём детстве, когда он рос в Висконсине с несколькими
     братьями и сестрами. Премьера состоялась 18 декабря 1994 года по каналу Fox (Fox
     Kids).
-  directors: []
+  directors:
+  - lui-anderson
   genres:
   - Комедия
   id: 14
   image: untitled3.jpg
-  original_title: null
+  original_title: ''
   slug: zhizn-s-lui
-  timestamp: 2017-04-02 07:14:11.324949
+  timestamp: 2017-04-08 20:05:30.257390
   title: Жизнь с Луи
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: 'История этого мультфильма началась в 1969 году. Режиссёром Геннадием
     Сокольским была снята «нулевая» серия для мультжурнала «Веселая карусель», главная
     идея которой легла в основу знаменитого мультсериала «Ну, погоди!». Основа мультфильма
     в том, что волк гоняется за зайцем в надежде его съесть, но по различным причинам
     это ему не удаётся. В итоге заяц всегда оказывается победителем, а волк в конце
     каждой серии говорит: «Ну, Заяц, погоди!».'
-  directors: []
+  directors:
+  - viacheslav-kotenochkin
   genres:
   - Семейное
   id: 15
   image: 1988_CPA_5918.jpg
-  original_title: null
+  original_title: ''
   slug: nu-pogodi
-  timestamp: 2017-04-02 07:31:14.792729
+  timestamp: 2017-04-08 20:29:41.697141
   title: Ну, погоди!
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' научно-фантастический фильм 1968 года, снятый совместными усилиями
     французских и итальянских кинематографистов.'
-  directors: []
+  directors:
+  - rozhe-vadim
   genres:
   - Фантастика
   - Приключения
@@ -527,23 +544,24 @@ movies:
   - Комедия
   id: 16
   image: Barbarella.jpg
-  original_title: null
+  original_title: ''
   slug: barbarella
-  timestamp: 2017-04-02 07:08:50.922364
+  timestamp: 2017-04-08 19:18:07.014485
   title: Барбарелла
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: научно-фантастический художественный фильм Франклина Шеффнера по одноимённому
     роману Пьера Буля. Главную роль в картине исполнил Чарлтон Хестон. Фильм занял
     350 место в списке 500 лучших фильмов по версии журнала Empire.[1]
-  directors: []
+  directors:
+  - franklin-sheffner
   genres:
   - Фантастика
   id: 17
   image: Planet_of_the_Apes_1.jpg
-  original_title: null
+  original_title: ''
   slug: planeta-obezian
-  timestamp: 2017-04-02 16:30:37.693670
+  timestamp: 2017-04-08 20:32:52.130031
   title: Планета обезьян
   user_id: 1
   wiki_url: Планета обезьян (фильм, 1968)
@@ -551,30 +569,32 @@ movies:
     Сондерса (англ.)русск. и Джона Палмера (англ.)русск. (под коллективным псевдонимом
     Фрэнсис Бидинг) «Дом доктора Эдвардса» (англ.)русск. (1927). Фильм вышел на экраны
     в 1945 году. Сцена сна в фильме поставлена художником Сальвадором Дали.
-  directors: []
+  directors:
+  - alfred-khichkok
   genres:
   - Детектив
   - Триллер
   id: 18
   image: Spellbound_poster.jpg
-  original_title: null
+  original_title: ''
   slug: zavorozhionnyi
-  timestamp: 2017-04-02 07:14:47.887761
+  timestamp: 2017-04-08 20:07:34.140989
   title: Заворожённый
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: 'научно-фантастический фильм, снятый режиссёром Доном Сигелом в 1956
     году по роману Джека Финнея. Это первая кинокартина, снятая по данному произведению:
     в дальнейшем было три других экранизации. В 1994 году фильм был внесён в Национальный
     реестр фильмов при Библиотеке конгресса США.'
-  directors: []
+  directors:
+  - don-sigel
   genres:
   - Фантастика
   id: 19
   image: Invasion_of_the_body_snatchers.jpg
-  original_title: null
+  original_title: ''
   slug: vtorzhenie-pokhititelei-tel
-  timestamp: 2017-04-02 16:17:05.492287
+  timestamp: 2017-04-08 19:58:25.787573
   title: Вторжение похитителей тел
   user_id: 1
   wiki_url: Вторжение похитителей тел (фильм, 1956)
@@ -582,30 +602,32 @@ movies:
     \ — детский художественный фильм, снятый на киностудии им. М. Горького (Ялтинский\
     \ филиал) в 1978 году режиссёром Инной Туманян.\r\n\r\nЛента является перенесением\
     \ в реалии конца 1970-х годов мотивов «мушкетёрских» романов."
-  directors: []
+  directors:
+  - inessa-tumanian
   genres:
   - Мелодрама
   - Комедия
   id: 20
   image: 1978_kogda_ya_stanu_velikanom.jpg
-  original_title: null
+  original_title: ''
   slug: kogda-ia-stanu-velikanom
-  timestamp: 2017-04-02 07:21:51.048795
+  timestamp: 2017-04-08 20:18:51.339571
   title: Когда я стану великаном
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: художественный фильм в жанре фэнтези режиссёра Тарсема Сингха (в титрах
     — Тарсем), вышедший в свет 9 сентября 2006 года.
-  directors: []
+  directors:
+  - tarsem-singkh
   genres:
   - Приключения
   - Драма
   - Фентези
   id: 21
   image: The_Fall_Poster.jpg
-  original_title: null
+  original_title: ''
   slug: zapredele
-  timestamp: 2017-04-02 16:21:00.970524
+  timestamp: 2017-04-08 20:08:58.963746
   title: Запределье
   user_id: 1
   wiki_url: Запределье (фильм)
@@ -613,30 +635,32 @@ movies:
     Премьера в США состоялась 31 мая 2013 года, в России — 12 июня 2013 года[3]. При
     бюджете в 75 млн. $ сборы во всём мире составили 343 572 420 $[1]. 9 июня 2016
     года вышел сиквел фильма[4].
-  directors: []
+  directors:
+  - lui-letere
   genres:
   - Детектив
   - Триллер
   id: 22
   image: Now_You_See_Me.jpg
-  original_title: null
+  original_title: ''
   slug: illiuziia-obmana
-  timestamp: 2017-04-02 07:18:41.320513
+  timestamp: 2017-04-08 20:15:45.938985
   title: Иллюзия обмана
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: американский фантастический телесериал, снятый Тарсемом Сингхом и основанный
     на книгах о стране Оз писателя Ф.Л. Баума. Двухчасовая премьера сериала состоялась
     6 января 2017 года на телеканале NBC[1].
-  directors: []
+  directors:
+  - tarsem-singkh
   genres:
   - Фентези
   - Драма
   id: 23
   image: untitled4.jpg
-  original_title: null
+  original_title: ''
   slug: izumrudnyi-gorod
-  timestamp: 2017-04-02 16:24:35.691278
+  timestamp: 2017-04-08 20:14:10.186322
   title: Изумрудный город
   user_id: 1
   wiki_url: Изумрудный город (телесериал)
@@ -644,15 +668,16 @@ movies:
     собой экранизацию романа «Дивергент», написанного Вероникой Рот. Выход фильма
     в США состоялся 21 марта 2014 года, в России — 10 апреля 2014. Слоган фильма:
     «Ты опасен, если ты другой».'
-  directors: []
+  directors:
+  - nil-biorger
   genres:
   - Фантастика
   - Антиутопия
   id: 24
   image: Divergent_poster.jpg
-  original_title: null
+  original_title: ''
   slug: divergent
-  timestamp: 2017-04-02 16:17:51.478947
+  timestamp: 2017-04-08 20:02:23.230594
   title: Дивергент
   user_id: 1
   wiki_url: Дивергент (фильм)
@@ -662,7 +687,8 @@ movies:
     телешоу отсылает к популярной в Британии в 19-веке разновидности дешевой художественной
     литературы, эксплуатировавшей криминальную и мистическую тематику. В сериале фигурируют
     различные персонажи фольклорных ужасов: вампиры, оборотни, ведьмы, живые мертвецы.'
-  directors: []
+  directors:
+  - khuan-antonio-baiona
   genres:
   - Драма
   - Ужасы
@@ -671,60 +697,65 @@ movies:
   - Триллер
   id: 25
   image: Penny_Dreadful.svg.png
-  original_title: null
+  original_title: ''
   slug: strashnye-skazki
-  timestamp: 2017-04-02 16:38:34.520692
+  timestamp: 2017-04-08 20:48:44.142911
   title: Страшные сказки
   user_id: 1
   wiki_url: Страшные сказки (телесериал)
 - description: российский комедийный телесериал о Великой Отечественной войне, снятый
     по мотивам одноимённой повести Олега Буркина. Показ 1 серии состоялся на канале
     Россия-1 в 2011 году незадолго до празднования Дня победы 9 мая.
-  directors: []
+  directors:
+  - sergei-krutin
   genres:
   - Военное
   - Комедия
   - Драма
   id: 26
   image: -__2011.jpg
-  original_title: null
+  original_title: ''
   slug: zaiats-zharennyi-po-berlinski
-  timestamp: 2017-04-02 07:16:54.912173
+  timestamp: 2017-04-08 20:10:01.336711
   title: Заяц, жаренный по-берлински
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' российский полнометражный художественный приключенческий фильм 2010
     года, рассказывающий о Ростовском княжении Ярослава Мудрого и об основании им
     города Ярославля. Создан в рамках подготовки к 1000-летию Ярославля.'
-  directors: []
+  directors:
+  - dmitrii-korobkin
   genres:
   - Приключения
   - Байопик
   id: 27
   image: untitled8.jpg
-  original_title: null
+  original_title: ''
   slug: iaroslav-tysiachu-let-nazad
-  timestamp: 2017-04-02 07:51:10.837492
+  timestamp: 2017-04-08 21:13:30.512593
   title: Ярослав. Тысячу лет назад
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: "российская комедия, премьера которой состоялась 1 января 2016 года.\r\
     \n\r\nИдея фильма принадлежит «Квартету И», участники которого принимали участие\
     \ в написании сценария фильма и сыграли в нём роли."
-  directors: []
+  directors:
+  - dmitrii-diachenko
+  - maksim-sveshnikov
   genres:
   - Комедия
   id: 28
   image: Strana_chudes.jpg
-  original_title: null
+  original_title: ''
   slug: strana-chudes
-  timestamp: 2017-04-02 16:37:29.306244
+  timestamp: 2017-04-08 20:47:32.320091
   title: Страна чудес
   user_id: 1
   wiki_url: Страна чудес (фильм, 2016)
 - description: ' российский фильм режиссёра Александра Войтинского, вышедший на экраны
     26 марта 2015 года'
-  directors: []
+  directors:
+  - aleksandr-voitinskii
   genres:
   - Комедия
   - Фантастика
@@ -732,22 +763,23 @@ movies:
   - Семейное
   id: 29
   image: 2015.jpg
-  original_title: null
+  original_title: ''
   slug: prizrak
-  timestamp: 2017-04-02 16:32:20.334291
+  timestamp: 2017-04-08 20:38:01.513127
   title: Призрак
   user_id: 1
   wiki_url: Призрак (фильм, 2015)
 - description: чёрно-белый кинофильм 1945 года, экранизация одноимённого романа Жюля
     Верна. Для любой зрительской аудитории.
-  directors: []
+  directors:
+  - vasilii-zhuravliov
   genres:
   - Приключения
   id: 30
   image: 1945.JPG
-  original_title: null
+  original_title: ''
   slug: piatnadtsatiletnii-kapitan
-  timestamp: 2017-04-02 16:33:40.694575
+  timestamp: 2017-04-08 20:41:27.882933
   title: Пятнадцатилетний капитан
   user_id: 1
   wiki_url: Пятнадцатилетний капитан (фильм, 1945)
@@ -881,19 +913,20 @@ movies:
     \ Foundation, Inc.\r\nСвяжитесь с нами\r\nПолитика конфиденциальностиОписание\
     \ ВикипедииОтказ от ответственностиРазработчикиСоглашение о cookieМобильная версияWikimedia\
     \ Foundation Powered by MediaWiki\r\n"
-  directors: []
+  directors:
+  - nikolai-lebedev
   genres:
   - Триллер
   - Драма
   - Детектив
   id: 31
   image: -.jpg
-  original_title: null
+  original_title: ''
   slug: zmeinyi-istochnik
-  timestamp: 2017-04-02 07:17:17.328070
+  timestamp: 2017-04-08 20:11:09.690878
   title: Змеиный источник
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: "научно-фантастический комедийный телевизионный сериал, созданный Робом\
     \ Грантом (англ.)русск. и Дугом Нейлором (англ.)русск.[2][3][4][5][6].\r\n\r\n\
     Сериал насчитывает 8 сезонов, показанных в период между 15 февраля 1988 года и\
@@ -901,15 +934,16 @@ movies:
     \ на Землю», который был показан с 10 по 12 апреля 2009 года,[2][6] и новый сезон,\
     \ вышедший в 2012 году. В сентябре 2016 вышел 11 сезон, а к осени 2017 планируется\
     \ снять 12 сезон. [7][8]"
-  directors: []
+  directors:
+  - ed-bai
   genres:
   - Фантастика
   - Комедия
   id: 32
   image: Enanorojo.png
-  original_title: null
+  original_title: ''
   slug: krasnyi-karlik
-  timestamp: 2017-04-02 16:26:25.302613
+  timestamp: 2017-04-08 20:20:14.322590
   title: Красный карлик
   user_id: 1
   wiki_url: Красный карлик (телесериал)
@@ -934,7 +968,8 @@ movies:
     фильма состоялась 29 декабря 2016 года[5], а мировая премьера прошла 6 января
     2017 года. В прокат вышло 2 версии кинофильма: 18+ (длится 133 минуты) и 12+ (128
     минут).'
-  directors: []
+  directors:
+  - andrei-kravchuk
   genres:
   - История
   - Драма
@@ -942,43 +977,46 @@ movies:
   - Приключения
   id: 34
   image: untitled2.jpg
-  original_title: null
+  original_title: ''
   slug: viking
-  timestamp: 2017-04-02 16:13:24.030859
+  timestamp: 2017-04-08 19:56:16.149395
   title: Викинг
   user_id: 1
   wiki_url: Викинг (фильм, 2016)
 - description: канадско-ирландский исторический сериал, созданный Майклом Хёрстом
     специально для телеканала History[2], премьера которого состоялась 3 марта 2013
     года[3].
-  directors: []
+  directors:
+  - maikl-khiorst
   genres:
   - История
   - Драма
   id: 35
   image: Vikings-logo.png
-  original_title: null
+  original_title: ''
   slug: vikingi
-  timestamp: 2017-04-02 16:15:06.613163
+  timestamp: 2017-04-08 19:57:16.879993
   title: Викинги
   user_id: 1
   wiki_url: Викинги (телесериал)
 - description: Howard Lovecraft and the Frozen Kingdom is a 2016 animated film based
     on the graphic novel of the same name. The inspiration comes from the writings
     of American horror author H. P. Lovecraft.
-  directors: []
+  directors:
+  - sean-patrick-o-reilly
   genres: []
   id: 36
   image: Howard_Lovecraft_grande.jpg
-  original_title: null
+  original_title: ''
   slug: howard-lovecraft-and-the-frozen-kingdom
-  timestamp: 2017-04-02 07:03:52.349416
+  timestamp: 2017-04-08 18:48:09.715000
   title: Howard Lovecraft and the Frozen Kingdom
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' аниме режиссёра Сигэру Уэда с элементами эрогуро,[1] вышедшее в 2008
     году. В России с июня 2011 года транслировался по телеканалу «2x2».[2]'
-  directors: []
+  directors:
+  - sigeru
   genres:
   - Мистика
   - Эротика
@@ -986,32 +1024,36 @@ movies:
   - Боевик
   id: 37
   image: 230px-Mnemosyne_no_Musume-tachi.jpg
-  original_title: null
+  original_title: ''
   slug: docheri-mnemoziny
-  timestamp: 2017-04-02 07:13:38.647024
+  timestamp: 2017-04-08 20:04:24.625099
   title: Дочери Мнемозины
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: ' кинофильм режиссёра Вэла Геста, вышедший на экраны в 1955 году. Фильм
     основан на одноимённом телесериале (The Quatermass Experiment), показанном на
     канале BBC Television в 1953 году. Лента является одним из первых классических
     фильмов ужасов, снятых британской студией Hammer.'
-  directors: []
+  directors:
+  - vel-gest
   genres:
   - Фантастика
   - Ужасы
   - Триллер
   id: 38
   image: untitled10.jpg
-  original_title: null
+  original_title: ''
   slug: eksperiment-kuotermassa
-  timestamp: 2017-04-02 07:43:01.691066
+  timestamp: 2017-04-08 21:09:05.155444
   title: Эксперимент Куотермасса
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: детективный телевизионный сериал, созданный Николасом Фалаччи и Шерил
     Хьютон. Исполнительными продюсерами выступили братья Тони и Ридли Скотт.
-  directors: []
+  directors:
+  - dennis-smit
+  - aleks-zakrzhevskii
+  - dzhon-bering
   genres:
   - Триллер
   - Драма
@@ -1019,78 +1061,82 @@ movies:
   - Детектив
   id: 39
   image: 250px-Numb3rs_logo.svg.png
-  original_title: null
+  original_title: ''
   slug: 4isla
-  timestamp: 2017-04-01 19:17:50.906193
+  timestamp: 2017-04-08 18:44:20.349045
   title: 4исла
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: американский фильм 1951 года, ставший вехой в истории кинофантастики.
     Снят Робертом Уайзом по мотивам новеллы Гарри Бейтса «Прощание с повелителем».
     В 1995 году внесён в Национальный реестр фильмов. В 2008 году переснят под тем
     же названием.
-  directors: []
+  directors:
+  - robert-uaiz
   genres:
   - Фантастика
   - Триллер
   id: 40
   image: 200px-Day_the_Earth_Stood_Still_1951.jpg
-  original_title: null
+  original_title: ''
   slug: den-kogda-ostanovilas-zemlia
-  timestamp: 2017-04-02 07:06:06.658326
+  timestamp: 2017-04-08 20:01:27.152887
   title: День, когда остановилась Земля
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: фильм ужасов, выпущен в 1953 году кинокомпанией Warner Brothers. Ремейк
     фильма 1933 года «Тайна музея восковых фигур». Премьера фильма состоялась 10 апреля
     1953 года. В главной роли снялся известный актёр фильмов ужасов Винсент Прайс.
     Действие фильма происходит в начале XX века в Нью-Йорке. В декабре 2014 года был
     внесён в Национальный реестр фильмов США, обладая культурным, историческим или
     эстетическим значением.
-  directors: []
+  directors:
+  - andre-de-tot
   genres:
   - Ужасы
   id: 41
   image: Houseofwax1.jpg
-  original_title: null
+  original_title: ''
   slug: dom-voskovykh-figur
-  timestamp: 2017-04-02 16:18:29.045782
+  timestamp: 2017-04-08 20:03:28.483058
   title: Дом восковых фигур
   user_id: 1
   wiki_url: Дом восковых фигур (фильм, 1953)
 - description: ' американский фантастический фильм 2005 года. Сюжет основан на одноимённом
     мультсериале Питера Чон Гонсика, который демонстрировался на канале MTV в 1995
     году.'
-  directors: []
+  directors:
+  - karin-kusama
   genres:
   - Фантастика
   - Боевик
   - Постапокал
   id: 42
   image: Aeon_Flux_poster.jpg
-  original_title: null
+  original_title: ''
   slug: eon-flaks
-  timestamp: 2017-04-02 07:49:52.320955
+  timestamp: 2017-04-08 21:07:48.811682
   title: Эон Флакс
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: "австралийский дистопический боевик 1979 года режиссёра Джорджа Миллера\
     \ с Мелом Гибсоном в главной роли. Ряд источников называет фильм одним из лучших\
     \ произведений в жанре дизельпанк[1].\r\n\r\nПродолжения — фильм «Безумный Макс:\
     \ Дорога ярости» (2015) (по хронологии событий) и фильм «Безумный Макс 2: Воин\
     \ дороги» (1981) (по дате выхода)."
-  directors: []
+  directors:
+  - dzhordzh-miller
   genres:
   - Антиутопия
   - Боевик
   id: 43
   image: Mad_max_poster.jpg
-  original_title: null
+  original_title: ''
   slug: bezumnyi-maks
-  timestamp: 2017-04-02 07:09:17.034679
+  timestamp: 2017-04-08 19:53:47.492948
   title: Безумный Макс
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: " научно-фантастический фильм режиссёра Ридли Скотта. Изначально задумывался\
     \ как приквел фильма «Чужой» 1979 года, но позже трансформировался в самостоятельный\
     \ фильм, не являющийся прямым приквелом «Чужого», хотя события фильма разворачиваются\
@@ -1110,16 +1156,17 @@ movies:
     \ Премьера фильма во Франции, Бельгии, Швейцарии и[9][10] России состоялась 30\
     \ мая 2012 года. В Великобритании премьера прошла 1 июня, в США — 8 июня, в Германии\
     \ — 9 августа."
-  directors: []
+  directors:
+  - ridli-skott
   genres:
   - Ужасы
   - Фантастика
   - Боевик
   id: 44
   image: Prometheus_poster.jpg
-  original_title: null
+  original_title: ''
   slug: prometei
-  timestamp: 2017-04-02 16:32:56.455778
+  timestamp: 2017-04-08 20:39:44.667460
   title: Прометей
   user_id: 1
   wiki_url: Прометей (фильм, 2012)
@@ -1159,7 +1206,8 @@ movies:
     \ 20 апреля 2006 года.\r\n\r\nМаски из фильма стали популярным символом протестного\
     \ движения в западных странах[4]. В этом качестве они используются группой активистов\
     \ «Анонимус» и некоторыми участниками движения «Захвати Уолл-стрит»[5]."
-  directors: []
+  directors:
+  - dzheims-maktig
   genres:
   - Боевик
   - Фантастика
@@ -1167,15 +1215,16 @@ movies:
   - Антиутопия
   id: 46
   image: V_For_Vendetta_2006_Poster_01.jpg
-  original_title: null
+  original_title: ''
   slug: v-znachit-vendetta
-  timestamp: 2017-04-02 10:12:55.629259
+  timestamp: 2017-04-08 19:05:14.479480
   title: V — значит вендетта
   user_id: 1
   wiki_url: V_—_значит_вендетта_(фильм)
 - description: ' кинофильм 1994 года. Экранизация одноимённого романа Роберта Харриса
     1992 года.'
-  directors: []
+  directors:
+  - kristofer-menol
   genres:
   - Драма
   - Фентези
@@ -1184,9 +1233,9 @@ movies:
   - Альт. история
   id: 47
   image: Fatherland.jpg
-  original_title: null
+  original_title: ''
   slug: faterliand
-  timestamp: 2017-04-02 16:42:20.713722
+  timestamp: 2017-04-08 20:58:03.096679
   title: Фатерлянд
   user_id: 1
   wiki_url: Фатерлянд (фильм)
@@ -1205,19 +1254,20 @@ movies:
     \ транслировался с 8 апреля 1990 года по 10 июня 1991 года[7]. Премьера собрала\
     \ у телеэкранов 8,15 миллионов зрителей[1][8].\r\n\r\nВ 2007 году журнал «Time»\
     \ включил сериал в число Лучших ТВ-шоу всех времён."
-  directors: []
+  directors:
+  - devid-linch
   genres:
   - Мистика
   - Триллер
   - Драма
   id: 48
   image: 250px-Twinpeaks2.jpg
-  original_title: null
+  original_title: ''
   slug: tvin-piks
-  timestamp: 2017-04-02 08:01:51.359682
+  timestamp: 2017-04-08 20:50:25.494264
   title: Твин Пикс
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: "полнометражный аниме-фильм режиссёра Хаяо Миядзаки, снятый на студии\
     \ «Гибли» в 2001 году[1]. Премьера фильма в Японии состоялась 20 июля 2001 года,\
     \ а в России 31 декабря 2002 года[⇨].\r\n\r\nСюжет фильма повествует о 10-летней\
@@ -1238,7 +1288,8 @@ movies:
     \ лучших мультфильмов всех времён и народов по версии IMDb.\r\n\r\nАниме «Унесённые\
     \ призраками» было выпущено в форматах VHS и DVD в Японии 19 июля 2002 года[⇨].\
     \ В России фильм был издан на лицензионных DVD-дисках компанией «Централ партнершип»[2]."
-  directors: []
+  directors:
+  - khaiao-miiadzaki
   genres:
   - Фентези
   - Приключения
@@ -1246,38 +1297,40 @@ movies:
   - Сказка
   id: 49
   image: 230px-Spirited_away.jpg
-  original_title: null
+  original_title: ''
   slug: unesionnye-prizrakami
-  timestamp: 2017-04-02 08:08:28.466340
+  timestamp: 2017-04-08 20:53:01.379834
   title: Унесённые призраками
   user_id: 1
-  wiki_url: null
+  wiki_url: ''
 - description: "«Без паники, майор Кардош!» — венгерский полнометражный цветной художественный\
     \ фильм, поставленный на Киностудии «Будапешт» в 1982 году режиссёром Шандором\
     \ Сёньи.\r\n\r\nПремьера фильма в ВНР состоялась 19 августа 1982 года."
-  directors: []
+  directors:
+  - shandor-sioni
   genres:
   - Комедия
   - Детектив
   id: 50
   image: Csak_semmi_panik_poster.jpg
-  original_title: null
+  original_title: ''
   slug: bez-paniki-maior-kardosh
-  timestamp: 2017-04-02 17:13:15.332441
+  timestamp: 2017-04-08 19:52:41.368793
   title: Без паники, майор Кардош!
   user_id: 1
   wiki_url: ''
 - description: «Колле́ктор» — российский драматический фильм режиссёра и сценариста
     Алексея Красовского, премьера которого состоялась 2 июля 2016 года на кинофестивале
     «Кинотавр»[1]. Главную и единственную роль в картине исполнил Константин Хабенский.
-  directors: []
+  directors:
+  - aleksei-krasovskii
   genres:
   - Драма
   id: 51
   image: Collector_poster.jpg
-  original_title: null
+  original_title: ''
   slug: kollektor
-  timestamp: 2017-04-02 17:14:49.175918
+  timestamp: 2017-04-08 20:19:35.479139
   title: Коллектор
   user_id: 1
   wiki_url: Коллектор (фильм)
@@ -1285,27 +1338,29 @@ movies:
     по сценарию Милоша Мацоурека. Продолжениями являются фильм «Румбурак» (чеш. Rumburak,
     1985) и сериал «Арабела возвращается, или Румбурак — король Страны Сказок» (чеш.
     Arabela se vrací: Rumburak králem Říše pohádek, 1993).'
-  directors: []
+  directors:
+  - vatslav-vorlichek
   genres:
   - Сказка
   id: 52
   image: 220px-Arabela_1979.jpg
-  original_title: null
+  original_title: ''
   slug: arabella
-  timestamp: 2017-04-02 17:16:37.045364
+  timestamp: 2017-04-08 19:24:04.586348
   title: Арабелла
   user_id: 1
   wiki_url: Арабелла (телесериал)
 - description: «Ве́тер „Наде́жды“» — советский фильм режиссёра С. Говорухина, снятый
     на киностудии им. М. Горького в 1978 году.
-  directors: []
+  directors:
+  - stanislav-govorukhin
   genres:
   - Приключения
   id: 53
   image: 1977.jpg
-  original_title: null
+  original_title: ''
   slug: veter-nadezhdy
-  timestamp: 2017-04-02 17:31:22.659597
+  timestamp: 2017-04-08 19:54:57.082956
   title: Ветер «Надежды»
   user_id: 1
   wiki_url: ''
@@ -1314,32 +1369,34 @@ movies:
     фильме исполнила актриса Эмили Браунинг. Фильм повествует о юной студентке, зарабатывающей
     на жизнь в частном закрытом клубе. Мировая премьера фильма состоялась 11 мая 2011
     года на Каннском фестивале, премьера в России прошла 25 августа 2011 года.
-  directors: []
+  directors:
+  - dzhuliia-li
   genres:
   - Драма
   id: 54
   image: Sleeping_beauyt_film_poster_2011.jpg
-  original_title: null
+  original_title: ''
   slug: spiashchaia-krasavitsa
-  timestamp: 2017-04-02 17:33:36.966943
+  timestamp: 2017-04-08 20:54:35.026294
   title: Спящая красавица
   user_id: 1
-  wiki_url: ''
+  wiki_url: Спящая красавица (фильм, 2011)
 - description: «Галава́нт» (англ. Galavant) — американский телевизионный сериал, созданный
     Дэном Фогельманом, премьера которого состоялась на канале ABC 4 января 2015 года.
     Сериал заявлен как комедийный мюзикл, в то же время снятый в качестве получасового
     ситкома, музыку к которому пишет Алан Менкен[1]. Сериал стартовал 4 января 2015
     года в качестве замены для ушедшего на перерыв «Однажды в сказке»[2]. 12 мая 2016
     года ABC закрыл сериал после двух сезонов[3].
-  directors: []
+  directors:
+  - den-fogelman
   genres:
   - Комедия
   - Музыкальный
   id: 55
   image: Galavant_ABC_intertitle.png
-  original_title: null
+  original_title: ''
   slug: galavant
-  timestamp: 2017-04-02 17:36:21.931917
+  timestamp: 2017-04-08 20:00:39.696909
   title: Галавант
   user_id: 1
   wiki_url: ''
@@ -1352,15 +1409,17 @@ movies:
     \ Шмитц и Клара Пэджет.\r\n\r\n12 октября 2014 года сериал был продлён на третий\
     \ сезон[2], а 31 июля 2015 года — на четвёртый[3]. Обо всех продлениях сериала\
     \ на следующие сезоны было объявлено задолго до премьеры текущего сезона."
-  directors: []
+  directors:
+  - dzhonatan-e-steinberg
+  - robert-livain
   genres:
   - Драма
   - Триллер
   id: 56
   image: BlackSails.jpg
-  original_title: null
+  original_title: ''
   slug: chiornye-parusa
-  timestamp: 2017-04-02 17:38:19.015706
+  timestamp: 2017-04-08 21:03:42.964489
   title: Чёрные паруса
   user_id: 1
   wiki_url: ''
@@ -1370,7 +1429,8 @@ movies:
     года. Сериал являлся адаптацией анимационной короткометражки МакХэйла, «Книга
     неизвестности», которая была создана Cartoon Network Studios, как часть инициативы
     развития анимации короткого метра. В России премьера состоялась в апреле 2015.
-  directors: []
+  directors:
+  - patrik-makkheil
   genres:
   - Приключения
   - Фентези
@@ -1378,9 +1438,9 @@ movies:
   - Драма
   id: 57
   image: Over_the_Garden_Wall.jpg
-  original_title: null
+  original_title: ''
   slug: po-tu-storonu-izgorodi
-  timestamp: 2017-04-02 17:47:30.998629
+  timestamp: 2017-04-08 20:33:43.243258
   title: По ту сторону изгороди
   user_id: 1
   wiki_url: ''
@@ -1404,7 +1464,8 @@ movies:
     \ кинофестивале в Авориазе. «Лестница Иакова» оставила значительный след в массовой\
     \ культуре, повлияв на множество художественных произведений, в особенности на\
     \ серию Silent Hill. Компанией LD Entertainment планируется выпуск ремейка картины."
-  directors: []
+  directors:
+  - edrian-lain
   genres:
   - Драма
   - Триллер
@@ -1412,24 +1473,26 @@ movies:
   - Ужасы
   id: 58
   image: Jacobsladderposter.jpg
-  original_title: null
+  original_title: ''
   slug: lestnitsa-iakova
-  timestamp: 2017-04-02 17:46:03.390172
+  timestamp: 2017-04-08 20:21:37.557074
   title: Лестница Иакова
   user_id: 1
   wiki_url: Лестница Иакова (фильм)
 - description: «Одиссея» (англ. The Odyssey) — канадский детский фантастический телесериал
     о мальчике Джее Зиглере, с которым происходит несчастный случай, и он впадает
     в кому.
-  directors: []
+  directors:
+  - rene-bonner
+  - reks-bromfild
   genres:
   - Семейное
   - Приключения
   id: 59
   image: 200px-The_Odyssey_DVD.jpg
-  original_title: null
+  original_title: ''
   slug: odisseia
-  timestamp: 2017-04-02 17:48:58.718132
+  timestamp: 2017-04-08 20:30:51.487098
   title: Одиссея
   user_id: 1
   wiki_url: Одиссея (телесериал, 1992)
@@ -1439,16 +1502,17 @@ movies:
     \ сцены совокупления птиц, показаны трупы животных и копрофагия, из-за чего она\
     \ была признана непристойной многими источниками, в частности Австралийской аттестационной\
     \ комиссией[2]."
-  directors: []
+  directors:
+  - terri-zeno
   genres:
   - Ужасы
   - Треш
   - Мелодрама
   id: 60
   image: Vase_de_noces.jpg
-  original_title: null
+  original_title: ''
   slug: svadebnaia-vaza
-  timestamp: 2017-04-02 21:35:31.950097
+  timestamp: 2017-04-08 20:42:02.846184
   title: Свадебная ваза
   user_id: 1
   wiki_url: ''
@@ -1473,7 +1537,7 @@ movies:
   - Фантастика
   id: 61
   image: Black-mirror-show-logo.jpg
-  original_title: Black Mirror
+  original_title: null
   slug: chiornoe-zerkalo
   timestamp: 2017-04-08 16:59:10.589167
   title: Чёрное зеркало
@@ -1489,7 +1553,7 @@ movies:
   - Фантастика
   id: 62
   image: 1973.jpg
-  original_title: ''
+  original_title: null
   slug: krakh-inzhenera-garina
   timestamp: 2017-04-08 17:06:31.610937
   title: Крах инженера Гарина
@@ -1506,7 +1570,7 @@ movies:
   - Приключения
   id: 63
   image: Zemlya_Sannikova_movie_poster.jpg
-  original_title: ''
+  original_title: null
   slug: zemlia-sannikova
   timestamp: 2017-04-08 17:05:35.588993
   title: Земля Санникова
@@ -1524,7 +1588,7 @@ movies:
   - Боевик
   id: 64
   image: untitled13.jpg
-  original_title: Ghost in the Shell
+  original_title: null
   slug: prizrak-v-dospekhakh
   timestamp: 2017-04-08 17:37:33.095778
   title: Призрак в доспехах
@@ -1581,3 +1645,534 @@ persons:
   id: 5
   lastname: Сандерс
   slug: rupert-sanders
+- description: ''
+  firstname: Деннис
+  fullname: ''
+  id: 6
+  lastname: Смит
+  slug: dennis-smit
+- description: ''
+  firstname: Алекс
+  fullname: ''
+  id: 7
+  lastname: Закржевский
+  slug: aleks-zakrzhevskii
+- description: ''
+  firstname: Джон
+  fullname: ''
+  id: 8
+  lastname: Беринг
+  slug: dzhon-bering
+- description: ''
+  firstname: Sean Patrick
+  fullname: ''
+  id: 9
+  lastname: O'Reilly
+  slug: sean-patrick-o-reilly
+- description: Джеймс Мактиг (англ. James McTeigue; род. 29 декабря, 1967, Сидней,
+    Австралия) — австралийский кинорежиссёр. Работал помощником режиссёра во многих
+    знаменитых фильмах, таких, как «Побег невозможен» (1994), трилогия «Матрица» (1999—2003).
+    Режиссёрским дебютом является фильм «V — значит вендетта» (2006).
+  firstname: Джеймс
+  fullname: ''
+  id: 10
+  lastname: Мактиг
+  slug: dzheims-maktig
+- description: Фрэнк Уи́лтон Ма́ршалл (англ. Frank Wilton Marshall; 13 сентября 1946
+    года, Глендейл, Калифорния, США) — американский кинопродюсер и кинорежиссёр, который
+    часто работает в сотрудничестве со своей женой Кэтлин Кеннеди. Вместе с Кэтлин
+    и Стивеном Спилбергом стал одним из основателей кинокомпании Amblin Entertainment.
+    В 1991 году вместе с Кэтлин Кеннеди основал кинокомпанию The Kennedy/Marshall
+    Company (англ.)русск., у которой есть контракт с киностудией DreamWorks. С мая
+    2012 года вместе с Кеннеди стал руководителем компании Lucasfilm. Маршалл главным
+    образом сотрудничает со Стивеном Спилбергом, Питером Богдановичем и М. Найтом
+    Шьямаланом.
+  firstname: Фрэнк
+  fullname: ''
+  id: 11
+  lastname: Маршалл
+  slug: frenk-marshall
+- description: Роже Вадим (фр. Roger Vadim; 1928—2000) — французский кинорежиссёр,
+    сценарист, актёр и продюсер.
+  firstname: Роже
+  fullname: ''
+  id: 12
+  lastname: Вадим
+  slug: rozhe-vadim
+- description: Ва́цлав Во́рличек (чеш. Václav Vorlíček; род. 3 июня 1930, Прага) —
+    чешский кинорежиссёр и сценарист, называемый в Чехии королём комедии.
+  firstname: Вацлав
+  fullname: ''
+  id: 13
+  lastname: Ворличек
+  slug: vatslav-vorlichek
+- description: ''
+  firstname: Шандор
+  fullname: ''
+  id: 14
+  lastname: Сёньи
+  slug: shandor-sioni
+- description: "Джордж Миллер (англ. George Miller, род. 3 марта 1945, Брисбен, Австралия)\
+    \ — австралийский кинорежиссёр, сценарист, продюсер и бывший врач. Известен своей\
+    \ тетралогией «Безумный Макс», а также участием в широком спектре других проектов,\
+    \ в числе которых оскароносные фильмы «Бэйб: Четвероногий малыш» и «Делай ноги».\
+    \ Является одним из основателей компаний Kennedy Miller Mitchell (до 2009-го —\
+    \ Kennedy Miller Productions) и Dr. D Studios.\r\n\r\nСтарший брат продюсера Билла\
+    \ Миллера."
+  firstname: Джордж
+  fullname: ''
+  id: 15
+  lastname: Миллер
+  slug: dzhordzh-miller
+- description: "Станисла́в Серге́евич Говору́хин (род. 29 марта 1936, Березники, Свердловская\
+    \ область, РСФСР, СССР) — советский и российский кинорежиссёр, актёр, сценарист,\
+    \ продюсер, публицист, живописец, политик, общественный деятель. Заслуженный деятель\
+    \ искусств Украинской ССР (1986). Народный артист Российской Федерации (2006)[3].\r\
+    \n\r\nЧлен российской политической партии «Единая Россия» с 2005 года[4][5]. Депутат\
+    \ Государственной думы Федерального собрания Российской Федерации VI созыва (с\
+    \ 21 декабря 2011 года)[6] от партии «Единая Россия»[7], председатель Комитета\
+    \ Государственной думы по культуре[8].\r\n\r\n19 февраля 2000 года Станислав Говорухин\
+    \ был зарегистрирован кандидатом в президенты Российской Федерации и на президентских\
+    \ выборах, состоявшихся 26 марта 2000 года, набрал 0,44 % голосов избирателей[9].\r\
+    \n\r\n8 декабря 2011 года избран главой предвыборного штаба Владимира Путина на\
+    \ президентских выборах 2012 года[10][11][12].\r\n\r\n12 июня 2013 года избран\
+    \ сопредседателем Центрального штаба Общероссийского народного фронта (ОНФ) на\
+    \ пятилетний срок[13][14].\r\n\r\n"
+  firstname: Станислав
+  fullname: ''
+  id: 16
+  lastname: Говорухин
+  slug: stanislav-govorukhin
+- description: "Андре́й Ю́рьевич Кравчу́к (род. 13 апреля 1962, Ленинград) — российский\
+    \ кинорежиссёр, сценарист.\r\n\r\nЧлен Гильдии кинорежиссёров, академик Российской\
+    \ академии кинематографических искусств «Ника»[1]."
+  firstname: Андрей
+  fullname: ''
+  id: 17
+  lastname: Кравчук
+  slug: andrei-kravchuk
+- description: Майкл Хёрст (англ. Michael Hirst, род. 21 сентября 1952[1], Брадфорд,
+    Уэст-Йоркшир) — британский сценарист и продюсер. Наиболее известен по фильмам
+    «Елизавета» и «Золотой век», а также по культовым телесериалам «Тюдоры» и «Викинги»,
+    получив за два последних премию «Эмми»,
+  firstname: Майкл
+  fullname: ''
+  id: 18
+  lastname: Хёрст
+  slug: maikl-khiorst
+- description: Дон Сигел (англ. Don Siegel; 26 октября 1912 — 20 апреля 1991) — американский
+    кинорежиссёр и продюсер.
+  firstname: Дон
+  fullname: ''
+  id: 19
+  lastname: Сигел
+  slug: don-sigel
+- description: ''
+  firstname: Дэн
+  fullname: ''
+  id: 20
+  lastname: Фогельман
+  slug: den-fogelman
+- description: Роберт Эрл Уайз (англ. Robert Earl Wise, 10 сентября 1914 — 14 сентября
+    2005) — американский кинорежиссёр и продюсер, четырёхкратный обладатель премии
+    «Оскар».
+  firstname: Роберт
+  fullname: ''
+  id: 21
+  lastname: Уайз
+  slug: robert-uaiz
+- description: Нил Норман Бёргер (англ. Neil Norman Burger) — американский кинорежиссёр,
+    сценарист и продюсер. Получил известность, сняв такие картины, как «Интервью с
+    убийцей», «Иллюзионист» и «Области тьмы».
+  firstname: Нил
+  fullname: ''
+  id: 22
+  lastname: Бёргер
+  slug: nil-biorger
+- description: "Андре Де Тот (англ. André De Toth, настоящие имя и фамилия Эндре Антал\
+    \ Михай Шашвари Фаркашфальви Тотфалуши Тот, венг. Sâsvári Farkasfalvi Tóthfalusi\
+    \ Tóth Endre Antal Mihály; 1912—2002) — австро-венгерский и американский кинорежиссёр,\
+    \ известный своими неприукрашенными фильмами категории В, поставленными в 1940-50-х\
+    \ годах[1].\r\n\r\n«Де Тот завоевал признание как искусный режиссёр, фильмы которого,\
+    \ особенно, его вестерны и фильмы нуар, со временем были высоко оценены за свой\
+    \ мрачный, психологический подход»[2]. «Он стал известен благодаря своим жёстким,\
+    \ острым и бескомпромиссным картинам, будь то вестерны или городские криминальные\
+    \ драмы, и не проявлял никакого сожаления при показе насилия в настолько реалистической\
+    \ манере, насколько это было возможно, что было необычным и отчасти спорным подходом\
+    \ в то время»[3].\r\n\r\nДе Тот был режиссёром таких запоминающихся жанровых картин,\
+    \ как фильмы нуар «Западня» (1948) и «Волна преступности» (1954), вестерн «Индейский\
+    \ воин» (1955), военный триллер «Грязная игра» (1968), и, вероятно, «лучшего из\
+    \ когда-либо сделанных трёхмерных фильмов „Дом восковых фигур“ (1953)»[4]. «Более\
+    \ всего Де Тот известен своими трёхмерными фильмами 1950-х годов — „Дом восковых\
+    \ фигур“ (1953) и „Незнакомец с револьвером“ (1953). Тот факт, что Де Тот в молодости\
+    \ потерял один глаз, не уменьшил его восхищения перед стереоскопической киносъёмкой,\
+    \ которое он испытывал на протяжении всей жизни, а также уровень его знаний в\
+    \ этой области»[1][3].\r\n\r\nТак пишет Turner Classic Movies, Де Тот — «подлинно\
+    \ живописный персонаж, одноглазый режиссёр, который был уклончив в интервью, особенно,\
+    \ в отношении ранних лет своей жизни и карьеры, а также своего брака с экранной\
+    \ сиреной Вероникой Лейк»[2]."
+  firstname: Андре
+  fullname: ''
+  id: 23
+  lastname: де Тот
+  slug: andre-de-tot
+- description: ''
+  firstname: Сигэру
+  fullname: ''
+  id: 24
+  lastname: Уэда
+  slug: sigeru
+- description: Луи А́ндерсон (англ. Louie Anderson; род. 24 марта 1953, Миннесота,
+    США) — американский актёр и комик, более всего известный по мультфильму «Жизнь
+    с Луи».
+  firstname: Луи
+  fullname: ''
+  id: 25
+  lastname: Андерсон
+  slug: lui-anderson
+- description: "Сэр А́льфред Джозеф Хичкок (англ. Sir Alfred Joseph Hitchcock; 13\
+    \ августа 1899 — 29 апреля 1980) — британский и американский кинорежиссёр, продюсер,\
+    \ сценарист. До 1939 года работал в Великобритании, затем — в США.\r\n\r\nХичкок\
+    \ — кинорежиссёр, творчество которого прежде всего связано с жанром «триллер»\
+    \ (от англ. thrill — «трепет») и с понятием «саспенс» (от англ. suspense — «напряжение»).\
+    \ Хичкок умел мастерски создавать в своих фильмах атмосферу тревожной неопределённости\
+    \ и напряжённого ожидания.\r\n\r\nВ последний год жизни он получил почётную награду\
+    \ Американского института кино, а королева Елизавета II возвела его в рыцари.\r\
+    \n\r\n"
+  firstname: Альфред
+  fullname: ''
+  id: 26
+  lastname: Хичкок
+  slug: alfred-khichkok
+- description: "Тарсем Дхандвар Сингх (англ. Tarsem Dhandwar Singh), более известный\
+    \ как Та́рсем[1] (англ. Tarsem), род. 26 мая 1961, Джаландхар, Пенджаб, Индия)\
+    \ — американский кинорежиссёр индийского происхождения, известность которому принесли\
+    \ музыкальные видеоклипы и рекламные ролики. Коммерческий директор компании «Radical\
+    \ Media».\r\n\r\nС 2000 года выступает также как кинорежиссёр; его фильмы «Клетка»\
+    \ (2000) и «Запределье» (2006) отличаются изысканным видеорядом и балансированием\
+    \ на грани сна и реальности."
+  firstname: Тарсем
+  fullname: ''
+  id: 27
+  lastname: Сингх
+  slug: tarsem-singkh
+- description: ''
+  firstname: Сергей
+  fullname: ''
+  id: 28
+  lastname: Крутин
+  slug: sergei-krutin
+- description: Никола́й И́горевич Ле́бедев (род. 16 ноября 1966, Кишинёв, СССР) —
+    российский кинорежиссёр и сценарист.
+  firstname: Николай
+  fullname: ''
+  id: 29
+  lastname: Лебедев
+  slug: nikolai-lebedev
+- description: М. Найт Шьямалан (англ. M. Night Shyamalan; род. 6 августа 1970) —
+    американский кинорежиссёр и сценарист индийского происхождения, известный своими
+    мистическими триллерами.
+  firstname: М. Найт
+  fullname: ''
+  id: 30
+  lastname: Шьямалан
+  slug: m-nait-shiamalan
+- description: "Луи́ Летерье́ (фр. Louis Leterrier; род. 17 июня 1973 года, Париж,\
+    \ Франция) — французский кинорежиссёр, наиболее известный блокбастером «Битва\
+    \ титанов» (2010).\r\n\r\nЛетерье — друг Люка Бессона. Работал вместе с ним над\
+    \ такими фильмами, как «Перевозчик» и «Перевозчик 2» с Джейсоном Стейтемом в главной\
+    \ роли.\r\n\r\nВ Голливуде он снял триллер «Денни цепной пёс» с Джетом Ли и Морганом\
+    \ Фрименом в главных ролях, а также экранизацию комикса «Невероятный Халк» (2008)."
+  firstname: Луи
+  fullname: ''
+  id: 31
+  lastname: Летерье
+  slug: lui-letere
+- description: Гарольд Аллен Рамис (англ. Harold Allen Ramis; 21 ноября 1944, Чикаго,
+    Иллинойс — 24 февраля 2014, там же) — американский актёр, кинорежиссёр и сценарист.
+  firstname: Гарольд
+  fullname: ''
+  id: 32
+  lastname: Рамис
+  slug: garold-ramis
+- description: Ине́сса Суре́новна Туманя́н (1929 — 2005) — армянский советский кинорежиссёр,
+    сценарист, заслуженный деятель искусств России.
+  firstname: Инесса
+  fullname: ''
+  id: 33
+  lastname: Туманян
+  slug: inessa-tumanian
+- description: Алексей Красовский (род. 1971) — российский кинематографист, сценарист
+    и режиссёр.
+  firstname: Алексей
+  fullname: ''
+  id: 34
+  lastname: Красовский
+  slug: aleksei-krasovskii
+- description: ''
+  firstname: Эд
+  fullname: ''
+  id: 35
+  lastname: Бай
+  slug: ed-bai
+- description: Э́дриан Лайн (англ. Adrian Lyne; род. 4 марта 1941, Питерборо, Англия)
+    — американский кинорежиссёр и продюсер английского происхождения.
+  firstname: Эдриан
+  fullname: ''
+  id: 36
+  lastname: Лайн
+  slug: edrian-lain
+- description: ''
+  firstname: Энтони
+  fullname: ''
+  id: 37
+  lastname: Хикокс
+  slug: entoni-khikoks
+- description: Эдуа́р Молинаро́ (фр. Édouard Molinaro; 13 мая 1928, Бордо — 7 декабря
+    2013, Париж) — французский кинорежиссёр и сценарист, известный в жанре кинокомедий.
+    Член жюри Каннского кинофестиваля 1961 года. Обладатель премии «Золотой глобус»
+    1980 года в номинации «Лучший фильм на иностранном языке» за фильм «Клетка для
+    чудиков», номинант на «Оскар» за режиссёрскую работу и написание сценария к этой
+    же картине. При создании своих фильмов часто использовал адаптацию театральных
+    пьес.
+  firstname: Эдуар
+  fullname: ''
+  id: 38
+  lastname: Молинаро
+  slug: eduar-molinaro
+- description: Вячесла́в Миха́йлович Котёночкин (20 июня 1927, Москва — 20 ноября
+    2000, Москва) — советский режиссёр-мультипликатор, художник и художник-мультипликатор.
+    Постановщик мультфильмов «Котёнок с улицы Лизюкова», «Попался, который кусался!»,
+    «Баня», «Лягушка-путешественница», «Странная птица», «Ну, погоди!», «Старая пластинка».
+    Народный артист РСФСР (1987). Лауреат Государственной премии СССР (1988).
+  firstname: Вячеслав
+  fullname: ''
+  id: 39
+  lastname: Котеночкин
+  slug: viacheslav-kotenochkin
+- description: ''
+  firstname: Рене
+  fullname: ''
+  id: 40
+  lastname: Боннер
+  slug: rene-bonner
+- description: ''
+  firstname: Рекс
+  fullname: ''
+  id: 41
+  lastname: Бромфилд
+  slug: reks-bromfild
+- description: Франклин Джеймс Шеффнер (англ.  Franklin James Schaffner ; 30 мая 1920
+    — 2 июля 1989) — американский кинорежиссёр, обладатель премии «Оскар» за фильм
+    «Паттон» (1970 год), постановщик фильмов «Планета обезьян», «Мотылёк», «Николай
+    и Александра» и др. Известен также внедрением в конце 1940-х — начале 1950-х годов
+    новых методов съёмки телевизионных программ с использованием подвижных камер,
+    что значительно изменило восприятие зрителем новостийных программ и репортажей
+    по сравнению со статичным визуальным рядом. С 1987 по 1989 год — президент Гильдии
+    режиссёров Америки.
+  firstname: Франклин
+  fullname: ''
+  id: 42
+  lastname: Шеффнер
+  slug: franklin-sheffner
+- description: ''
+  firstname: Патрик
+  fullname: ''
+  id: 43
+  lastname: МакХейл
+  slug: patrik-makkheil
+- description: "Мэттью Дуглас Майелларо (англ. Matthew Douglas Maiellaro) — американский\
+    \ мультипликатор, сценарист и писатель-драматург, воплотивший множество фантасмагорических\
+    \ образов и типажей как в театрах, так и на экранах телевизора.\r\n\r\nСценарии\
+    \ Мэтта Майелларо на мультфильмы «12 oz. Mouse», «ATHF», «Space Ghost» до сих\
+    \ пор обыгрывают в театре в современном жанре «Live action»."
+  firstname: Мэтт
+  fullname: ''
+  id: 44
+  lastname: Майелларо
+  slug: mett-maiellaro
+- description: ''
+  firstname: Майкл
+  fullname: ''
+  id: 45
+  lastname: Кохлер
+  slug: maikl-kokhler
+- description: Алекса́ндр Серге́евич Войти́нский (11 марта 1961, Москва) — российский
+    кинорежиссёр, продюсер, композитор, основатель рок-группы «Звери» и дуэта «Тату».
+  firstname: Александр
+  fullname: ''
+  id: 46
+  lastname: Войтинский
+  slug: aleksandr-voitinskii
+- description: Сэр Ри́дли Скотт (англ. Ridley Scott; род. 30 ноября 1937, Саут-Шилдс)
+    — британский кинорежиссёр и продюсер. Создатель многих прославленных исторических
+    и фантастических фильмов, таких как «Чужой», «Гладиатор», «Царство небесное»,
+    «Бегущий по лезвию», «Гангстер», «Совокупность лжи», «Чёрный ястреб», «Марсианин».
+    Старший брат режиссёра и продюсера Тони Скотта. Обладатель премии Каннского кинофестиваля
+    за лучший дебют, обладатель и пятикратный номинант на премию BAFTA, трёхкратный
+    номинант на премии «Оскар» и «Золотой глобус».
+  firstname: Ридли
+  fullname: ''
+  id: 47
+  lastname: Скотт
+  slug: ridli-skott
+- description: "Василий Николаевич Журавлёв (1904—1987) — советский кинорежиссёр,\
+    \ один из родоначальников советского кино для юношества.\r\n\r\nЗаслуженный деятель\
+    \ искусств РСФСР (1976), народный артист Кабардино-Балкарской АССР. Член КПСС\
+    \ с 1939 года[1].\r\n\r\nОтец публициста и писателя Н. В. Журавлёва."
+  firstname: Василий
+  fullname: ''
+  id: 48
+  lastname: Журавлёв
+  slug: vasilii-zhuravliov
+- description: ''
+  firstname: Тьерри
+  fullname: ''
+  id: 49
+  lastname: Зено
+  slug: terri-zeno
+- description: "Роб Стэнтон Боумен (родился 15 мая 1960 года) — американский кино-\
+    \ и телережиссёр, сценарист и продюсер, четырёхкратный номинант на премию Эмми.\r\
+    \n\r\nСын режиссёра Чака Боумена, Роб вырос в кинематографической среде и пошёл\
+    \ по стопам отца. Преимущественно Роб Боумен стал известен благодаря своей работе\
+    \ над телесериалами, самыми известными из которых являются «Звёздный путь: Следующее\
+    \ поколение», и «Секретные материалы». Также он является исполнительным продюсером\
+    \ и директором телесериала «Замок» и выступил режиссёром художественных фильмов\
+    \ «Секретные материалы: Борьба за будущее», «Власть огня» и «Электра»."
+  firstname: Роб
+  fullname: ''
+  id: 50
+  lastname: Боумен
+  slug: rob-boumen
+- description: Дмитрий Викторович Коробкин (род. 1971) — российский кинорежиссёр и
+    кинооператор.
+  firstname: Дмитрий
+  fullname: ''
+  id: 51
+  lastname: Коробкин
+  slug: dmitrii-korobkin
+- description: ''
+  firstname: Егор
+  fullname: ''
+  id: 52
+  lastname: Баранов
+  slug: egor-baranov
+- description: ''
+  firstname: Джулия
+  fullname: ''
+  id: 53
+  lastname: Ли
+  slug: dzhuliia-li
+- description: Дми́трий Влади́мирович Дьяче́нко (16 сентября 1972) — российский режиссёр
+    кино и телевидения, сценарист, продюсер и монтажёр. Известен по фильмам «День
+    радио» и «О чём говорят мужчины». Лауреат премии «ТЭФИ» (2010).
+  firstname: Дмитрий
+  fullname: ''
+  id: 54
+  lastname: Дьяченко
+  slug: dmitrii-diachenko
+- description: ''
+  firstname: Максим
+  fullname: ''
+  id: 55
+  lastname: Свешников
+  slug: maksim-sveshnikov
+- description: Хуа́н Анто́нио Байо́на (исп. Juan Antonio Bayona; род. 9 мая 1975,
+    Барселона) — испанский режиссёр, сценарист и продюсер. Двукратный лауреат премии
+    «Гойя» за лучшую режиссуру (2013, 2017).
+  firstname: Хуан Антонио
+  fullname: ''
+  id: 56
+  lastname: Байона
+  slug: khuan-antonio-baiona
+- description: Дэ́вид Кит Линч (англ. David Keith Lynch; род. 20 января 1946) — американский
+    кинорежиссёр, музыкант, сценарист, художник, фотограф. Является представителем
+    американского независимого кинематографа. Лауреат премии «Золотая пальмовая ветвь»
+    (1990) и приза за режиссуру (2001) Каннского кинофестиваля, а также «Золотого
+    льва» за вклад в мировой кинематограф (2006). Офицер ордена Почётного легиона
+    (2007)[2].
+  firstname: Дэвид
+  fullname: ''
+  id: 57
+  lastname: Линч
+  slug: devid-linch
+- description: Кри́стофер Смит (род. 16 августа 1970 года, Бристоль) — британский
+    кинорежиссёр и сценарист, получивший известность как автор триллеров и фильмов
+    ужасов.
+  firstname: Кристофер
+  fullname: ''
+  id: 58
+  lastname: Смит
+  slug: kristofer-smit
+- description: "Хая́о Миядза́ки (яп. 宮崎 駿 Миядзаки Хаяо?, род. 5 января 1941, Токио)\
+    \ — японский режиссёр-аниматор, писатель. Вместе с Исао Такахатой основал анимационную\
+    \ студию — «Студию Гибли». Обладатель внеконкурсного почётного «Оскара» 2014 года\
+    \ со следующей формулировкой заслуг — «за оказание глубокого влияния на мировую\
+    \ анимацию, вдохновляя целое поколение художников работать в этой области и освещая\
+    \ её безграничный потенциал»[1].\r\n\r\nПравильное написание его фамилии иероглифами\
+    \ 宮﨑, но из-за технических ограничений часто иероглиф 﨑 заменяется аналогичным\
+    \ 崎[2].\r\n\r\nНекоторые свои произведения Миядзаки выпускал под псевдонимами\
+    \ Сабуро Акицу (яп. 秋津 三朗 Акицу Сабуро:) или Тэрэкому (яп. 照樹務[3])."
+  firstname: Хаяо
+  fullname: ''
+  id: 59
+  lastname: Миядзаки
+  slug: khaiao-miiadzaki
+- description: Дон Коскарелли (англ. Don Coscarelli, Jr. род. 17 февраля 1954 Триполи,
+    Ливия) — американский режиссёр, продюсер и сценарист, известный, в основном, своими
+    работами из серии Фантазм, Повелитель зверей и Бабба Хо-Теп.
+  firstname: Дон
+  fullname: ''
+  id: 60
+  lastname: Коскарелли
+  slug: don-koskarelli
+- description: ''
+  firstname: Кристофер
+  fullname: ''
+  id: 61
+  lastname: Менол
+  slug: kristofer-menol
+- description: Андре́й Петро́вич Звя́гинцев (род. 6 февраля 1964, Новосибирск) — российский
+    кинорежиссёр и сценарист. Лауреат Венецианского и Каннского кинофестивалей. Лауреат
+    премии «Золотой глобус» и номинант на премию «Оскар» в категории «Лучший фильм
+    на иностранном языке» за фильм «Левиафан» (2014).
+  firstname: Андрей
+  fullname: ''
+  id: 62
+  lastname: Звягинцев
+  slug: andrei-zviagintsev
+- description: ''
+  firstname: 'Джонатан Е. '
+  fullname: ''
+  id: 63
+  lastname: Стейнберг
+  slug: dzhonatan-e-steinberg
+- description: ''
+  firstname: Роберт
+  fullname: ''
+  id: 64
+  lastname: Ливайн
+  slug: robert-livain
+- description: ''
+  firstname: Карин
+  fullname: ''
+  id: 65
+  lastname: Кусама
+  slug: karin-kusama
+- description: Вэл Гест (англ. Val Guest), настоящее имя Вэ́лмонд Гро́ссманн (англ.
+    Valmond Grossmann; 11 декабря 1911 — 10 мая 2006) — британский кинорежиссёр, сценарист
+    и кинопродюсер, в начале своей карьеры четыре раза выступил как актёр.
+  firstname: Вэл
+  fullname: ''
+  id: 66
+  lastname: Гест
+  slug: vel-gest
+- description: "«Электронные жучки» (англ. Bugs) — британский сериал, выходивший на\
+    \ канале BBC. Сериал снимался с 1995 по 1998 годы, всего было создано 4 сезона.\r\
+    \n\r\nВ сериале снимались Джесс Бёрдсел (Ник Беккет), Джей Гриффитс (Роз Хендерсон),\
+    \ Крэйг Маклахлан (Эд Рассел в 1-3 сезонах), Стивен Хоутон (Эд Рассел в 4 сезоне)"
+  firstname: Брайан
+  fullname: ''
+  id: 67
+  lastname: Фарнхем
+  slug: braian-farnkhem
