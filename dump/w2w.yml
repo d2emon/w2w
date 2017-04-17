@@ -275,6 +275,30 @@ genres:
   id: 29
   slug: kiberpank
   title: Киберпанк
+- description: "Робинзонада — поджанр приключенческой литературы, который вслед за\
+    \ романом Д. Дефо «Робинзон Крузо» (1719) живоописует перипетии выживания одного\
+    \ или нескольких людей на необитаемом острове. Примеры — «Коралловый остров» Р.\
+    \ Баллантайна, «Таинственный остров» Ж. Верна, «Остров доктора Моро» Г. Уэллса,\
+    \ «Повелитель мух» У. Голдинга, «Остров накануне» У. Эко.\r\n\r\nО популярности\
+    \ романа Дефо в эпоху Просвещения свидетельствует тот факт, что только на немецком\
+    \ языке по состоянию на 1760 год библиограф Кох насчитал не менее сорока робинзонад[1].\
+    \ Сам термин впервые был использован Шнабелем в предисловии к философской утопии\
+    \ «Остров Фельзенбург» (1731).\r\n\r\nТема выживания человека на необитаемом острове\
+    \ была известна мировой литературе задолго до публикации романа Дефо. Арабский\
+    \ автор Ибн Туфайль ещё в XII веке описал жизнь человека, с рождения обитающего\
+    \ на диком острове. Похожие ситуации обрисованы в «Правдивой истории» Лукиана\
+    \ и у Шекспира в «Буре»[1].\r\n\r\nВ более широком смысле под робинзонадой понимаются\
+    \ все произведения (не только литературные, но и фильмы, как, например, «Остаться\
+    \ в живых»), рисующие жизнь и приключения «обособленных личностей вне общества»\
+    \ (А. Аникст)[1]. При таком подходе под определение робинзонады подпадают рассказы\
+    \ о «детях джунглей» — Маугли и Тарзане[1] а также, например, романы «Семеро братьев»\
+    \ Алексиса Киви и «Пан» Кнута Гамсуна. Среди научно-фантастических произведений\
+    \ существует поджанр «космической робинзонады».\r\n\r\nСуществовали и реальные\
+    \ робинзоны. Например, у знаменитого Робинзона Крузо был реальный прототип Александр\
+    \ Селькирк, которому пришлось пожить одному на необитаемом острове."
+  id: 30
+  slug: robinzonada
+  title: Робинзонада
 movies:
 - description: ' американский научно-фантастический телесериал, созданный Крисом Картером.
     Показ стартовал 10 сентября 1993 года и завершился через 9 лет, 19 мая 2002 года.
@@ -293,7 +317,7 @@ movies:
   - Драма
   id: 1
   image: 250px-The_X-Files_logo.svg.png
-  original_title: ''
+  original_title: null
   slug: sekretnye-materialy
   timestamp: 2017-04-08 20:43:18.145595
   title: Секретные материалы
@@ -310,7 +334,7 @@ movies:
   - Фантастика
   id: 2
   image: Signs_dvd_cover.jpg
-  original_title: ''
+  original_title: null
   slug: znaki
   timestamp: 2017-04-08 20:12:53.158003
   title: Знаки
@@ -326,7 +350,7 @@ movies:
   - Фантастика
   id: 3
   image: untitled9.jpg
-  original_title: Bugs
+  original_title: null
   slug: elektronnye-zhuchki
   timestamp: 2017-04-08 21:12:29.877833
   title: Электронные жучки
@@ -346,7 +370,7 @@ movies:
   - Драма
   id: 4
   image: Triangle-m2009.jpg
-  original_title: ''
+  original_title: null
   slug: treugolnik
   timestamp: 2017-04-08 20:51:38.157384
   title: Треугольник
@@ -365,7 +389,7 @@ movies:
   - Приключения
   id: 5
   image: untitled6.jpg
-  original_title: ''
+  original_title: null
   slug: sokrovishcha-o-k
   timestamp: 2017-04-08 20:44:04.621664
   title: Сокровища О. К.
@@ -380,7 +404,7 @@ movies:
   - Фантастика
   id: 6
   image: Phantasm.jpg
-  original_title: ''
+  original_title: null
   slug: fantazm
   timestamp: 2017-04-08 20:56:24.318688
   title: Фантазм
@@ -397,7 +421,7 @@ movies:
   - Треш
   id: 7
   image: 12_oz._Mouse_title.jpg
-  original_title: ''
+  original_title: null
   slug: pollitrovaia-mysh
   timestamp: 2017-04-08 20:35:45.670402
   title: Поллитровая мышь
@@ -410,7 +434,7 @@ movies:
   - Комедия
   id: 8
   image: Gauche_en_sortant_de_l_ascenseur.jpg
-  original_title: ''
+  original_title: null
   slug: nalevo-ot-lifta
   timestamp: 2017-04-08 20:28:19.577704
   title: Налево от лифта
@@ -425,7 +449,7 @@ movies:
   - Ужасы
   id: 9
   image: ArachnophobiaPoster.jpg
-  original_title: ''
+  original_title: null
   slug: arakhnofobiia
   timestamp: 2017-04-08 19:07:21.006837
   title: Арахнофобия
@@ -444,7 +468,7 @@ movies:
   - Вестерн
   id: 10
   image: -2.jpg
-  original_title: ''
+  original_title: null
   slug: solovei-razboinik
   timestamp: 2017-04-08 20:44:41.763768
   title: Соловей-разбойник
@@ -458,7 +482,7 @@ movies:
   - Триллер
   id: 11
   image: untitled11.jpg
-  original_title: ''
+  original_title: null
   slug: chernaia-komnata
   timestamp: 2017-04-08 21:00:41.172381
   title: Черная комната
@@ -476,7 +500,7 @@ movies:
   - Комедия
   id: 12
   image: National_Lampoons_Vacation_1983.jpg
-  original_title: ''
+  original_title: null
   slug: kanikuly
   timestamp: 2017-04-08 20:17:16.648484
   title: Каникулы
@@ -491,7 +515,7 @@ movies:
   - Ужасы
   id: 13
   image: untitled5.jpg
-  original_title: ''
+  original_title: null
   slug: muzei-voskovykh-figur
   timestamp: 2017-04-08 20:27:16.388552
   title: Музей восковых фигур
@@ -507,7 +531,7 @@ movies:
   - Комедия
   id: 14
   image: untitled3.jpg
-  original_title: ''
+  original_title: null
   slug: zhizn-s-lui
   timestamp: 2017-04-08 20:05:30.257390
   title: Жизнь с Луи
@@ -525,7 +549,7 @@ movies:
   - Семейное
   id: 15
   image: 1988_CPA_5918.jpg
-  original_title: ''
+  original_title: null
   slug: nu-pogodi
   timestamp: 2017-04-08 20:29:41.697141
   title: Ну, погоди!
@@ -544,7 +568,7 @@ movies:
   - Комедия
   id: 16
   image: Barbarella.jpg
-  original_title: ''
+  original_title: null
   slug: barbarella
   timestamp: 2017-04-08 19:18:07.014485
   title: Барбарелла
@@ -559,7 +583,7 @@ movies:
   - Фантастика
   id: 17
   image: Planet_of_the_Apes_1.jpg
-  original_title: ''
+  original_title: null
   slug: planeta-obezian
   timestamp: 2017-04-08 20:32:52.130031
   title: Планета обезьян
@@ -576,7 +600,7 @@ movies:
   - Триллер
   id: 18
   image: Spellbound_poster.jpg
-  original_title: ''
+  original_title: null
   slug: zavorozhionnyi
   timestamp: 2017-04-08 20:07:34.140989
   title: Заворожённый
@@ -592,7 +616,7 @@ movies:
   - Фантастика
   id: 19
   image: Invasion_of_the_body_snatchers.jpg
-  original_title: ''
+  original_title: null
   slug: vtorzhenie-pokhititelei-tel
   timestamp: 2017-04-08 19:58:25.787573
   title: Вторжение похитителей тел
@@ -609,7 +633,7 @@ movies:
   - Комедия
   id: 20
   image: 1978_kogda_ya_stanu_velikanom.jpg
-  original_title: ''
+  original_title: null
   slug: kogda-ia-stanu-velikanom
   timestamp: 2017-04-08 20:18:51.339571
   title: Когда я стану великаном
@@ -625,7 +649,7 @@ movies:
   - Фентези
   id: 21
   image: The_Fall_Poster.jpg
-  original_title: ''
+  original_title: null
   slug: zapredele
   timestamp: 2017-04-08 20:08:58.963746
   title: Запределье
@@ -642,7 +666,7 @@ movies:
   - Триллер
   id: 22
   image: Now_You_See_Me.jpg
-  original_title: ''
+  original_title: null
   slug: illiuziia-obmana
   timestamp: 2017-04-08 20:15:45.938985
   title: Иллюзия обмана
@@ -658,7 +682,7 @@ movies:
   - Драма
   id: 23
   image: untitled4.jpg
-  original_title: ''
+  original_title: null
   slug: izumrudnyi-gorod
   timestamp: 2017-04-08 20:14:10.186322
   title: Изумрудный город
@@ -675,7 +699,7 @@ movies:
   - Антиутопия
   id: 24
   image: Divergent_poster.jpg
-  original_title: ''
+  original_title: null
   slug: divergent
   timestamp: 2017-04-08 20:02:23.230594
   title: Дивергент
@@ -697,7 +721,7 @@ movies:
   - Триллер
   id: 25
   image: Penny_Dreadful.svg.png
-  original_title: ''
+  original_title: null
   slug: strashnye-skazki
   timestamp: 2017-04-08 20:48:44.142911
   title: Страшные сказки
@@ -714,7 +738,7 @@ movies:
   - Драма
   id: 26
   image: -__2011.jpg
-  original_title: ''
+  original_title: null
   slug: zaiats-zharennyi-po-berlinski
   timestamp: 2017-04-08 20:10:01.336711
   title: Заяц, жаренный по-берлински
@@ -730,7 +754,7 @@ movies:
   - Байопик
   id: 27
   image: untitled8.jpg
-  original_title: ''
+  original_title: null
   slug: iaroslav-tysiachu-let-nazad
   timestamp: 2017-04-08 21:13:30.512593
   title: Ярослав. Тысячу лет назад
@@ -746,7 +770,7 @@ movies:
   - Комедия
   id: 28
   image: Strana_chudes.jpg
-  original_title: ''
+  original_title: null
   slug: strana-chudes
   timestamp: 2017-04-08 20:47:32.320091
   title: Страна чудес
@@ -763,7 +787,7 @@ movies:
   - Семейное
   id: 29
   image: 2015.jpg
-  original_title: ''
+  original_title: null
   slug: prizrak
   timestamp: 2017-04-08 20:38:01.513127
   title: Призрак
@@ -777,7 +801,7 @@ movies:
   - Приключения
   id: 30
   image: 1945.JPG
-  original_title: ''
+  original_title: null
   slug: piatnadtsatiletnii-kapitan
   timestamp: 2017-04-08 20:41:27.882933
   title: Пятнадцатилетний капитан
@@ -921,7 +945,7 @@ movies:
   - Детектив
   id: 31
   image: -.jpg
-  original_title: ''
+  original_title: null
   slug: zmeinyi-istochnik
   timestamp: 2017-04-08 20:11:09.690878
   title: Змеиный источник
@@ -941,7 +965,7 @@ movies:
   - Комедия
   id: 32
   image: Enanorojo.png
-  original_title: ''
+  original_title: null
   slug: krasnyi-karlik
   timestamp: 2017-04-08 20:20:14.322590
   title: Красный карлик
@@ -977,7 +1001,7 @@ movies:
   - Приключения
   id: 34
   image: untitled2.jpg
-  original_title: ''
+  original_title: null
   slug: viking
   timestamp: 2017-04-08 19:56:16.149395
   title: Викинг
@@ -993,7 +1017,7 @@ movies:
   - Драма
   id: 35
   image: Vikings-logo.png
-  original_title: ''
+  original_title: null
   slug: vikingi
   timestamp: 2017-04-08 19:57:16.879993
   title: Викинги
@@ -1007,7 +1031,7 @@ movies:
   genres: []
   id: 36
   image: Howard_Lovecraft_grande.jpg
-  original_title: ''
+  original_title: null
   slug: howard-lovecraft-and-the-frozen-kingdom
   timestamp: 2017-04-08 18:48:09.715000
   title: Howard Lovecraft and the Frozen Kingdom
@@ -1024,7 +1048,7 @@ movies:
   - Боевик
   id: 37
   image: 230px-Mnemosyne_no_Musume-tachi.jpg
-  original_title: ''
+  original_title: null
   slug: docheri-mnemoziny
   timestamp: 2017-04-08 20:04:24.625099
   title: Дочери Мнемозины
@@ -1042,7 +1066,7 @@ movies:
   - Триллер
   id: 38
   image: untitled10.jpg
-  original_title: ''
+  original_title: null
   slug: eksperiment-kuotermassa
   timestamp: 2017-04-08 21:09:05.155444
   title: Эксперимент Куотермасса
@@ -1061,7 +1085,7 @@ movies:
   - Детектив
   id: 39
   image: 250px-Numb3rs_logo.svg.png
-  original_title: ''
+  original_title: null
   slug: 4isla
   timestamp: 2017-04-08 18:44:20.349045
   title: 4исла
@@ -1078,7 +1102,7 @@ movies:
   - Триллер
   id: 40
   image: 200px-Day_the_Earth_Stood_Still_1951.jpg
-  original_title: ''
+  original_title: null
   slug: den-kogda-ostanovilas-zemlia
   timestamp: 2017-04-08 20:01:27.152887
   title: День, когда остановилась Земля
@@ -1096,7 +1120,7 @@ movies:
   - Ужасы
   id: 41
   image: Houseofwax1.jpg
-  original_title: ''
+  original_title: null
   slug: dom-voskovykh-figur
   timestamp: 2017-04-08 20:03:28.483058
   title: Дом восковых фигур
@@ -1113,7 +1137,7 @@ movies:
   - Постапокал
   id: 42
   image: Aeon_Flux_poster.jpg
-  original_title: ''
+  original_title: null
   slug: eon-flaks
   timestamp: 2017-04-08 21:07:48.811682
   title: Эон Флакс
@@ -1131,7 +1155,7 @@ movies:
   - Боевик
   id: 43
   image: Mad_max_poster.jpg
-  original_title: ''
+  original_title: null
   slug: bezumnyi-maks
   timestamp: 2017-04-08 19:53:47.492948
   title: Безумный Макс
@@ -1164,7 +1188,7 @@ movies:
   - Боевик
   id: 44
   image: Prometheus_poster.jpg
-  original_title: ''
+  original_title: null
   slug: prometei
   timestamp: 2017-04-08 20:39:44.667460
   title: Прометей
@@ -1215,7 +1239,7 @@ movies:
   - Антиутопия
   id: 46
   image: V_For_Vendetta_2006_Poster_01.jpg
-  original_title: ''
+  original_title: null
   slug: v-znachit-vendetta
   timestamp: 2017-04-08 19:05:14.479480
   title: V — значит вендетта
@@ -1233,7 +1257,7 @@ movies:
   - Альт. история
   id: 47
   image: Fatherland.jpg
-  original_title: ''
+  original_title: null
   slug: faterliand
   timestamp: 2017-04-08 20:58:03.096679
   title: Фатерлянд
@@ -1262,7 +1286,7 @@ movies:
   - Драма
   id: 48
   image: 250px-Twinpeaks2.jpg
-  original_title: ''
+  original_title: null
   slug: tvin-piks
   timestamp: 2017-04-08 20:50:25.494264
   title: Твин Пикс
@@ -1297,7 +1321,7 @@ movies:
   - Сказка
   id: 49
   image: 230px-Spirited_away.jpg
-  original_title: ''
+  original_title: null
   slug: unesionnye-prizrakami
   timestamp: 2017-04-08 20:53:01.379834
   title: Унесённые призраками
@@ -1313,7 +1337,7 @@ movies:
   - Детектив
   id: 50
   image: Csak_semmi_panik_poster.jpg
-  original_title: ''
+  original_title: null
   slug: bez-paniki-maior-kardosh
   timestamp: 2017-04-08 19:52:41.368793
   title: Без паники, майор Кардош!
@@ -1328,7 +1352,7 @@ movies:
   - Драма
   id: 51
   image: Collector_poster.jpg
-  original_title: ''
+  original_title: null
   slug: kollektor
   timestamp: 2017-04-08 20:19:35.479139
   title: Коллектор
@@ -1344,7 +1368,7 @@ movies:
   - Сказка
   id: 52
   image: 220px-Arabela_1979.jpg
-  original_title: ''
+  original_title: null
   slug: arabella
   timestamp: 2017-04-08 19:24:04.586348
   title: Арабелла
@@ -1358,7 +1382,7 @@ movies:
   - Приключения
   id: 53
   image: 1977.jpg
-  original_title: ''
+  original_title: null
   slug: veter-nadezhdy
   timestamp: 2017-04-08 19:54:57.082956
   title: Ветер «Надежды»
@@ -1375,7 +1399,7 @@ movies:
   - Драма
   id: 54
   image: Sleeping_beauyt_film_poster_2011.jpg
-  original_title: ''
+  original_title: null
   slug: spiashchaia-krasavitsa
   timestamp: 2017-04-08 20:54:35.026294
   title: Спящая красавица
@@ -1394,7 +1418,7 @@ movies:
   - Музыкальный
   id: 55
   image: Galavant_ABC_intertitle.png
-  original_title: ''
+  original_title: null
   slug: galavant
   timestamp: 2017-04-08 20:00:39.696909
   title: Галавант
@@ -1417,7 +1441,7 @@ movies:
   - Триллер
   id: 56
   image: BlackSails.jpg
-  original_title: ''
+  original_title: null
   slug: chiornye-parusa
   timestamp: 2017-04-08 21:03:42.964489
   title: Чёрные паруса
@@ -1438,7 +1462,7 @@ movies:
   - Драма
   id: 57
   image: Over_the_Garden_Wall.jpg
-  original_title: ''
+  original_title: null
   slug: po-tu-storonu-izgorodi
   timestamp: 2017-04-08 20:33:43.243258
   title: По ту сторону изгороди
@@ -1473,7 +1497,7 @@ movies:
   - Ужасы
   id: 58
   image: Jacobsladderposter.jpg
-  original_title: ''
+  original_title: null
   slug: lestnitsa-iakova
   timestamp: 2017-04-08 20:21:37.557074
   title: Лестница Иакова
@@ -1490,7 +1514,7 @@ movies:
   - Приключения
   id: 59
   image: 200px-The_Odyssey_DVD.jpg
-  original_title: ''
+  original_title: null
   slug: odisseia
   timestamp: 2017-04-08 20:30:51.487098
   title: Одиссея
@@ -1510,7 +1534,7 @@ movies:
   - Мелодрама
   id: 60
   image: Vase_de_noces.jpg
-  original_title: ''
+  original_title: null
   slug: svadebnaia-vaza
   timestamp: 2017-04-08 20:42:02.846184
   title: Свадебная ваза
@@ -1611,7 +1635,7 @@ movies:
   - Комедия
   id: 65
   image: 472177.jpg
-  original_title: ''
+  original_title: null
   slug: ne-nado-pechalitsia
   timestamp: 2017-04-10 05:11:12.533744
   title: Не надо печалиться
@@ -1634,7 +1658,7 @@ movies:
   - Эротика
   id: 66
   image: Stripperella.jpg
-  original_title: Stripperella
+  original_title: null
   slug: stripperella
   timestamp: 2017-04-10 05:14:29.903288
   title: Стрипперелла
@@ -1649,7 +1673,7 @@ movies:
   - Комедия
   id: 67
   image: 212px-.jpg
-  original_title: ''
+  original_title: null
   slug: supermenedzher-ili-motyga-sudby
   timestamp: 2017-04-10 05:17:58.522057
   title: Суперменеджер, или мотыга судьбы
@@ -1672,7 +1696,7 @@ movies:
   - История
   id: 68
   image: 744258.jpg
-  original_title: ''
+  original_title: null
   slug: charodei-ravnovesiia-taina-sukharevoi-bashni
   timestamp: 2017-04-10 05:21:23.866318
   title: Чародей равновесия. Тайна Сухаревой башни
@@ -1693,12 +1717,233 @@ movies:
   - Детектив
   id: 69
   image: 225px-Psych.jpg
-  original_title: Psych
+  original_title: null
   slug: iasnovidets
   timestamp: 2017-04-10 15:09:12.878461
   title: Ясновидец
   user_id: 1
   wiki_url: Ясновидец (телесериал, 2006)
+- description: «Вы́жить по́сле» — российский телесериал, снятый «Арт Пикчерс Вижн»
+    по заказу телеканала СТС. Премьера сериала состоялась 18 ноября 2013 года на телеканале
+    СТС. Всего снято три сезона.
+  directors:
+  - dushan-gligorov
+  - aleksandr
+  - andrei-komarov
+  genres:
+  - Фантастика
+  - Триллер
+  id: 70
+  image: untitled14.jpg
+  original_title: ''
+  slug: vyzhit-posle
+  timestamp: 2017-04-17 21:21:50.383523
+  title: Выжить после
+  user_id: 1
+  wiki_url: ''
+- description: "«Гримм» (англ. Grimm) — американский фэнтези-телесериал, частично\
+    \ основанный на сказках братьев Гримм. Премьера сериала состоялась 28 октября\
+    \ 2011 года на телеканале NBC[1].\r\n\r\n5 апреля 2016 года сериал был продлён\
+    \ на шестой сезон, а 22 апреля стало известно, что сезон будет содержать 13 эпизодов[2].\
+    \ 29 августа 2016 года NBC объявил, что шестой сезон станет заключительным и стартует\
+    \ 6 января 2017 года[3]."
+  directors:
+  - mark
+  genres:
+  - Фентези
+  - Ужасы
+  - Детектив
+  - Драма
+  id: 71
+  image: Grimm-logo.png
+  original_title: Grimm
+  slug: grimm
+  timestamp: 2017-04-17 21:26:03.035974
+  title: Гримм
+  user_id: 1
+  wiki_url: Гримм (телесериал)
+- description: "«Одна́жды в ска́зке» (англ. Once Upon a Time) — американский телесериал\
+    \ канала ABC в жанре фэнтези. Премьера состоялась 23 октября 2011 года[1]. 3 ноября\
+    \ 2011 года, после успешного выхода первых двух эпизодов, ABC продлил сериал на\
+    \ полный сезон из 22 эпизодов[2]. 10 мая 2012 года ABC продлил сериал на второй\
+    \ сезон[3], премьера которого состоялась 30 сентября[4]. 10 мая 2013 года канал\
+    \ продлил сериал на третий сезон[5], который стартовал 29 сентября[6].\r\n\r\n\
+    Третий сезон разделен на две части, первые одиннадцать эпизодов были показаны\
+    \ до нового года, после чего сериал ушёл на перерыв вплоть до 9 марта 2014 года.\
+    \ «Однажды в сказке», наравне с четырьмя другими драмами канала («Нэшвилл», «Скандал»,\
+    \ «Месть» и «Анатомия страсти»), переходит таким образом в телесезоне 2013-14\
+    \ годов на новый формат вещания, из двух блоков, транслирующихся практически без\
+    \ перерывов[7]. В мае 2013 года ABC также заказал спин-офф сериала под названием\
+    \ «Однажды в стране чудес», который вышел осенью 2013 года[8].\r\n\r\n7 мая 2015\
+    \ года сериал был продлён на пятый сезон[9], который стартовал 27 сентября 2015\
+    \ года[10].\r\n\r\n3 марта 2016 года сериал был продлён на шестой сезон[11], который\
+    \ стартовал 25 сентября 2016 года."
+  directors:
+  - greg-biman
+  - mark-mailod
+  genres:
+  - Фентези
+  - Драма
+  id: 72
+  image: 250px-Once-upon-a-time.jpg
+  original_title: Once Upon a Time
+  slug: odnazhdy-v-skazke
+  timestamp: 2017-04-17 21:29:53.593161
+  title: Однажды в сказке
+  user_id: 1
+  wiki_url: ''
+- description: "«Оста́ться в живы́х» (англ. Lost — рус. Пропавшие / Потерянные) —\
+    \ американский драматический телесериал, лауреат премий «Эмми» и «Золотой глобус».\
+    \ В центре сюжета — история пассажиров рейса 815 компании Oceanic Airlines, летевших\
+    \ из Сиднея, Австралия в Лос-Анджелес, США, потерпевших катастрофу и оказавшихся\
+    \ на полном загадок и тайн тропическом острове где-то в Океании. Каждая серия\
+    \ содержит как основную сюжетную линию на острове, так и второстепенную, рассказывающую\
+    \ о ключевом персонаже серии в другой момент жизни (в первых трёх сезонах — из\
+    \ прошлого, в четвёртом — из прошлого и будущего). Серии пятого сезона также содержат\
+    \ две сюжетные линии, первая из которых развивается на острове непосредственно\
+    \ после событий четвёртого сезона, а вторая — спустя три года в США. Сериал был\
+    \ создан Дж. Дж. Абрамсом, Деймоном Линделофом и Джеффри Либером и снимался главным\
+    \ образом на острове Оаху, Гавайи[3]. Пилотная серия была показана на канале ABC\
+    \ 22 сентября 2004 года[4] и собрала у экранов почти 19 миллионов человек[5].\
+    \ С тех пор было показано шесть сезонов. Исполнительными продюсерами сериала являлись\
+    \ Абрамс, Линделоф, Карлтон Кьюз, Брайан Бёрк, Джек Бендер и другие. Композитором\
+    \ был Майкл Джаккино. Из-за большого актёрского ансамбля и стоимости съёмок на\
+    \ Гавайях сериал является одним из самых дорогих на телевидении. Успешный и среди\
+    \ критиков, и среди публики, «Остаться в живых» собирал среднюю аудиторию в 16\
+    \ миллионов человек во время показа первого сезона в США[6]. Он завоевал множество\
+    \ наград, включая «Эмми» за лучший драматический сериал в 2005 году[7], приз за\
+    \ лучший американский сериал Британской академии телевизионных наград в 2005,\
+    \ «Золотой глобус» как лучшая драма в 2006 и награду Гильдии актёров за выдающийся\
+    \ актёрский ансамбль в драматическом сериале.\r\n\r\nВ мае 2007 года было объявлено,\
+    \ что планируются съёмки ещё трёх сезонов, по 16 серий в каждом, однако впоследствии\
+    \ эти планы были немного скорректированы. Завершился показ сериала 23 мая[2] 2010\
+    \ года — всего была показана 121 серия[8].\r\n\r\nСериал «Остаться в живых» стал\
+    \ культурным феноменом, породившим целый ряд сопутствующих явлений: по сюжету\
+    \ сериала выпускаются литературные произведения, комиксы. Летом 2006 года прошла\
+    \ ролевая игра The Lost Experience. В преддверии выхода четвёртого сезона в интернете\
+    \ проведена игра «Find 815». 26 февраля 2008 года вышла видеоигра Lost: Via Domus."
+  directors:
+  - dzh-dzh-abrams
+  - dzhek-bender
+  - stiven-uiliams
+  - pol-edvards
+  genres:
+  - Робинзонада
+  - Драма
+  - Мистика
+  - Фантастика
+  id: 73
+  image: 250px-Lost_letters.jpg
+  original_title: Lost
+  slug: ostatsia-v-zhivykh
+  timestamp: 2017-04-17 21:39:19.708541
+  title: Остаться в живых
+  user_id: 1
+  wiki_url: Остаться в живых (телесериал)
+- description: "«Игра́ престо́лов» (англ. Game of Thrones) — американский драматический\
+    \ телесериал в жанре фэнтези, созданный по мотивам цикла романов «Песнь Льда и\
+    \ Огня» американского писателя Джорджа Мартина. Сериал снимается для кабельного\
+    \ телеканала HBO под руководством Дэвида Бениоффа и Д. Б. Уайсса. Съёмки телесериала\
+    \ ведутся в нескольких странах, включая Великобританию (Северная Ирландия), Мальту,\
+    \ Хорватию, Исландию и Марокко. Премьера первого сезона в США состоялась на канале\
+    \ HBO 17 апреля 2011 года; на начало 2017 года были полностью показаны шесть сезонов.\
+    \ 21 апреля 2016 года сериал был продлён на седьмой сезон[3], который выйдет 16\
+    \ июля 2017 года. 30 июля 2016 года было подтверждено, что канал HBO завершит\
+    \ сериал 8 сезоном[4], премьера которого состоится летом 2018 года[5].\r\n\r\n\
+    В России сериал дублируется студией «Кравец-Рекордз» по заказу кинокомпании «Amedia»[6]\
+    \ (все шесть сезонов дублировались и транслировались телеканалом РЕН ТВ[7]) и\
+    \ транслируется на телеканалах Amedia Premium, Amedia Hit и Fox, а также в онлайн-сервисе\
+    \ Amediateka.\r\n\r\nДействие «Игры престолов» происходит в вымышленном мире,\
+    \ напоминающем средневековую Европу, однако времена года в этом мире длятся по\
+    \ несколько наших лет. Действие сериала начинается в конце долгого лета. В сериале\
+    \ одновременно действует множество персонажей и развивается несколько связанных\
+    \ друг с другом сюжетных линий. Одна из них посвящена борьбе нескольких влиятельных\
+    \ семейств за трон королевства; другая — о попытках обнищавшего ордена, охраняющего\
+    \ древнюю Стену на севере страны, противостоять сверхъестественной угрозе извне;\
+    \ третья — о путешествии принцессы-изгнанницы по странам востока в попытках найти\
+    \ себе союзников для возвращения на родину и завоевания Железного Трона. В сериале\
+    \ существуют фантастические существа: драконы и нежить. Для сериала характерно\
+    \ отсутствие строго положительных персонажей, многие герои совершают неоднозначные\
+    \ поступки и могут погибнуть на экране неожиданно для зрителя[8]. В сериале затрагиваются\
+    \ вопросы политики, религии, гражданской войны, положения женщин в обществе, преступления\
+    \ и наказания. Специально для сериала было разработано несколько[9] искусственных\
+    \ языков, в частности дотракийский язык.\r\n\r\nТелесериал получил высокие отзывы\
+    \ от зрительской аудитории, став одним из самых крупнобюджетных проектов на современном\
+    \ американском телевидении и самым дорогостоящим в жанре фэнтези, несмотря на\
+    \ то, что многие критики отрицательно отнеслись к переизбытку в сериале ненормативной\
+    \ лексики, убийств в жестоко натуралистичном виде, многочисленным эротическим\
+    \ сценам и намёкам сексуального характера.\r\n\r\nВокруг «Игры престолов» возникло\
+    \ обширное фан-сообщество. Сериал был удостоен многих престижных наград, в том\
+    \ числе в общей сложности 26 прайм-таймовых премий «Эмми» в различных номинациях,\
+    \ трижды премии «Хьюго» за лучшую постановку, а также премии Пибоди. Награды получали\
+    \ и участвовавшие в телесериале актёры — так, Питер Динклейдж, исполнивший в сериале\
+    \ роль Тириона Ланнистера, был дважды удостоен премии «Эмми» за лучшую мужскую\
+    \ роль второго плана и премии «Золотой глобус» за лучшую мужскую роль второго\
+    \ плана."
+  directors:
+  - devid-benioff
+  - d-b-uaiss
+  genres:
+  - Фентези
+  - Драма
+  id: 74
+  image: Game_of_Thrones.jpg
+  original_title: Game of Thrones
+  slug: igra-prestolov
+  timestamp: 2017-04-17 21:44:43.143041
+  title: Игра престолов
+  user_id: 1
+  wiki_url: Игра престолов (телесериал)
+- description: "«Кора́бль» — российский постапокалиптический телесериал, созданный\
+    \ компанией Yellow, Black and White, телеканалом «Ю» (1 сезон) при участии кинокомпании\
+    \ «Мэйнстрим фильм» по заказу телеканала СТС. Является адаптацией испанского телесериала\
+    \ «Ковчег». Транслировался на канале СТС с 13 января 2014 года по 30 апреля 2015\
+    \ года.\r\n\r\nПремьера состоялась 13 января 2014 года на канале СТС[1].\r\n\r\
+    \n19 марта 2015 года сериал был удостоен профессионального приза Ассоциации продюсеров\
+    \ кино и телевидения в области телевизионного кино, как «Лучший телевизионный\
+    \ сериал (более 24 серий)»[2][3].\r\n\r\nПремьера второго сезона состоялась 23\
+    \ марта 2015 года на канале СТС.\r\n\r\nВ марте 2016 года телеканал СТС официально\
+    \ заявил о том, что не планирует заказывать съёмки заключительного третьего сезона[4]."
+  directors:
+  - oleg-asadulin
+  - mark-gorobets
+  genres:
+  - Постапокал
+  - Фантастика
+  - Приключения
+  - Драма
+  id: 75
+  image: untitled15.jpg
+  original_title: ''
+  slug: korabl
+  timestamp: 2017-04-17 21:49:33.393642
+  title: Корабль
+  user_id: 1
+  wiki_url: Корабль (телесериал)
+- description: "«Изгой-один. Звёздные войны: Истории» (англ. Rogue One: A Star Wars\
+    \ Story) — эпический приключенческий фильм в жанре космическая опера с элементами\
+    \ военной драмы. Фильм был произведён компанией Lucasfilm и снят режиссёром Гаретом\
+    \ Эдвардсом[2] по сценарию Криса Вайца, Тони Гилроя, Гари Уитты (англ.)русск.\
+    \ и Джона Нолла. Первый полнометражный спин-офф киносаги «Звёздные войны». Относительно\
+    \ внутренней хронологии саги основные события фильма происходят непосредственно\
+    \ перед событиями Эпизода IV, вышедшего в 1977 году.\r\n\r\nМировая премьера фильма\
+    \ состоялась 10 декабря 2016 года в кинотеатре Pantages в Лос-Анджелесе, через\
+    \ год после премьеры фильма «Звёздные войны: Пробуждение силы». В ряде европейских\
+    \ стран фильм вышел в широкий прокат 14 декабря, в США первый полный день проката\
+    \ — 16 декабря[3], в России — 15 декабря. Слоган: «Мятеж с надеждой в сердце»."
+  directors:
+  - garet-edvards
+  genres:
+  - Космоопера
+  - Фантастика
+  id: 76
+  image: Rogue_One._A_Star_Wars_Story_2016.jpg
+  original_title: 'Rogue One: A Star Wars Story'
+  slug: izgoi-odin-zviozdnye-voiny-istorii
+  timestamp: 2017-04-17 21:55:54.314429
+  title: 'Изгой-один. Звёздные войны: Истории'
+  user_id: 1
+  wiki_url: ''
 persons:
 - description: "Чарльтон «Чарли» Брукер (родился 3 марта 1971 года) — английский писатель-сатирик\
     \ и телеведущий. Работал на телевидении, радио, а также в печатных и интернет-СМИ.\r\
@@ -2313,3 +2558,122 @@ persons:
   id: 71
   lastname: Фрэнкс
   slug: stiv-frenks
+- description: ''
+  firstname: Душан
+  fullname: ''
+  id: 72
+  lastname: Глигоров
+  slug: dushan-gligorov
+- description: ''
+  firstname: Александр
+  fullname: ''
+  id: 73
+  lastname: Богуславский
+  slug: aleksandr
+- description: ''
+  firstname: Андрей
+  fullname: ''
+  id: 74
+  lastname: Комаров
+  slug: andrei-komarov
+- description: ''
+  firstname: Марк
+  fullname: ''
+  id: 75
+  lastname: Бакленд
+  slug: mark
+- description: ''
+  firstname: Грег
+  fullname: ''
+  id: 76
+  lastname: Биман
+  slug: greg-biman
+- description: ''
+  firstname: Марк
+  fullname: ''
+  id: 77
+  lastname: Майлод
+  slug: mark-mailod
+- description: "Дже́ффри Дже́йкоб (Дж. Дж.) А́брамс (англ. Jeffrey Jacob «J. J.» Abrams;\
+    \ род. 27 июня 1966, Нью-Йорк) — американский кинорежиссёр, продюсер, сценарист\
+    \ и композитор.\r\n\r\nПервый полнометражный фильм Абрамса «Миссия невыполнима\
+    \ 3» стал самым дорогим режиссёрским дебютом в истории. Самый масштабный проект\
+    \ Абрамса — «Звёздный путь» — вышел на киноэкраны в мае 2009 года. Основатель\
+    \ компании Bad Robot Productions. Дж. Дж. Абрамс является вторым, после Джеймса\
+    \ Кэмерона, режиссёром в истории кинематографа, чей фильм в прокате собрал больше\
+    \ двух миллиардов долларов."
+  firstname: Дж. Дж.
+  fullname: ''
+  id: 78
+  lastname: Абрамс
+  slug: dzh-dzh-abrams
+- description: Джек Бендер (англ. Jack Bender; род. 25 сентября 1949) — американский
+    режиссёр, актёр, продюсер и сценарист.
+  firstname: Джек
+  fullname: ''
+  id: 79
+  lastname: Бендер
+  slug: dzhek-bender
+- description: Стивен Уильямс (англ. Stephen Williams) — канадский режиссёр кино и
+    телевидения. Уильямс снял несколько современных телепрограмм, включая работу постоянного
+    режиссёра драматического сериала канала ABC «Остаться в живых»,[1] где он также
+    работал со-исполнительным продюсером. Вдобавок к «Остаться в живых», он также
+    был режиссёром сериалов «Расследование Джордан» и «Тёмный ангел».
+  firstname: Стивен
+  fullname: ''
+  id: 80
+  lastname: Уильямс
+  slug: stiven-uiliams
+- description: Пол А. Эдвардс (англ. Paul A. Edwards) — американский кинооператор
+    и режиссёр. Он работал кинооператором различных массовых фильмов, а также был
+    режиссёром нескольких эпизодов во многих сериалах, включая «Остаться в живых»,
+    «Грань», «Агенты Щ.И.Т.» и «Однажды в сказке».
+  firstname: Пол
+  fullname: ''
+  id: 81
+  lastname: Эдвардс
+  slug: pol-edvards
+- description: Дэвид Бениофф (англ. David Benioff, род. 1970, Нью-Йорк) — американский
+    писатель, сценарист и теле-продюсер. Он является со-создателем и шоураннером широко
+    известного сериала канала HBO «Игра престолов». Фамилия Бениофф — обратная транскрипция
+    с английского изначально русской фамилии Бинёв (девичья фамилия матери писателя).
+  firstname: Дэвид
+  fullname: ''
+  id: 82
+  lastname: Бениофф
+  slug: devid-benioff
+- description: Дэниел Бретт Уайсс (англ. D. B. Weiss; родился 23 апреля 1972) — американский
+    сценарист и писатель. Его дебютный роман «Lucky Wander Boy (англ.)» (2003) был
+    посвящён компьютерным играм. Как сценарист, Уайсс принимал участие в создании
+    киноэкранизаций различных произведений в жанрах научной фантастики и фэнтези.
+    Наиболее известен по своей совместной работе с Дэвидом Бениоффом над фэнтезийным
+    сериалом «Игра престолов», основанном на книгах Джорджа Р. Р. Мартина.
+  firstname: Д. Б.
+  fullname: ''
+  id: 83
+  lastname: Уайсс
+  slug: d-b-uaiss
+- description: Оле́г Рави́льевич Асаду́лин (род. 5 октября 1971, Челябинск) — российский
+    и немецкий кинорежиссёр, кинопродюсер, актёр. Приобрёл известность благодаря фильму
+    «Фобос. Клуб страха» и телесериалу «Закрытая школа».
+  firstname: Олег
+  fullname: ''
+  id: 84
+  lastname: Асадулин
+  slug: oleg-asadulin
+- description: ''
+  firstname: Марк
+  fullname: ''
+  id: 85
+  lastname: Горобец
+  slug: mark-gorobets
+- description: "Гарет Эдвардс (англ. Gareth Edwards; род. в 1975 году, Нанитон, Уорикшир,\
+    \ Англия, Великобритания) — британский кинорежиссёр, актёр, сценарист, продюсер,\
+    \ оператор, художник, монтажёр.\r\n\r\nИзвестен как режиссёр независимой фантастической\
+    \ ленты «Монстры», высокобюджетного фантастического фильма «Годзилла» и первого\
+    \ спин-оффа киносаги «Звёздные войны» «Изгой-один»."
+  firstname: Гарет
+  fullname: ''
+  id: 86
+  lastname: Эдвардс
+  slug: garet-edvards
