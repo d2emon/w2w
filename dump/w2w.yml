@@ -1735,7 +1735,7 @@ movies:
   - Триллер
   id: 70
   image: untitled14.jpg
-  original_title: ''
+  original_title: null
   slug: vyzhit-posle
   timestamp: 2017-04-17 21:21:50.383523
   title: Выжить после
@@ -1756,7 +1756,7 @@ movies:
   - Драма
   id: 71
   image: Grimm-logo.png
-  original_title: Grimm
+  original_title: null
   slug: grimm
   timestamp: 2017-04-17 21:26:03.035974
   title: Гримм
@@ -1786,7 +1786,7 @@ movies:
   - Драма
   id: 72
   image: 250px-Once-upon-a-time.jpg
-  original_title: Once Upon a Time
+  original_title: null
   slug: odnazhdy-v-skazke
   timestamp: 2017-04-17 21:29:53.593161
   title: Однажды в сказке
@@ -1834,7 +1834,7 @@ movies:
   - Фантастика
   id: 73
   image: 250px-Lost_letters.jpg
-  original_title: Lost
+  original_title: null
   slug: ostatsia-v-zhivykh
   timestamp: 2017-04-17 21:39:19.708541
   title: Остаться в живых
@@ -1888,7 +1888,7 @@ movies:
   - Драма
   id: 74
   image: Game_of_Thrones.jpg
-  original_title: Game of Thrones
+  original_title: null
   slug: igra-prestolov
   timestamp: 2017-04-17 21:44:43.143041
   title: Игра престолов
@@ -1914,7 +1914,7 @@ movies:
   - Драма
   id: 75
   image: untitled15.jpg
-  original_title: ''
+  original_title: null
   slug: korabl
   timestamp: 2017-04-17 21:49:33.393642
   title: Корабль
@@ -1938,7 +1938,7 @@ movies:
   - Фантастика
   id: 76
   image: Rogue_One._A_Star_Wars_Story_2016.jpg
-  original_title: 'Rogue One: A Star Wars Story'
+  original_title: null
   slug: izgoi-odin-zviozdnye-voiny-istorii
   timestamp: 2017-04-17 21:55:54.314429
   title: 'Изгой-один. Звёздные войны: Истории'
@@ -1964,7 +1964,7 @@ movies:
   - Вестерн
   id: 77
   image: Westworld_TV_series_title_card.jpg
-  original_title: Westworld
+  original_title: null
   slug: mir-dikogo-zapada
   timestamp: 2017-04-18 18:44:13.937582
   title: Мир Дикого Запада
@@ -1980,7 +1980,7 @@ movies:
   - Музыкальный
   id: 78
   image: DVD-__.jpeg.jpeg
-  original_title: ''
+  original_title: null
   slug: ne-pokidai
   timestamp: 2017-04-18 19:48:44.581970
   title: Не покидай…
@@ -2012,7 +2012,7 @@ movies:
   - Драма
   id: 79
   image: 250px-The_Walking_Dead_2010_logo.svg.png
-  original_title: The Walking Dead
+  original_title: null
   slug: khodiachie-mertvetsy
   timestamp: 2017-04-18 19:58:22.528027
   title: Ходячие мертвецы
@@ -2044,7 +2044,7 @@ movies:
   - Мистика
   id: 80
   image: Evil_Dead.jpg
-  original_title: The Evil Dead
+  original_title: null
   slug: zloveshchie-mertvetsy
   timestamp: 2017-04-18 20:02:23.997838
   title: Зловещие мертвецы
@@ -2059,7 +2059,7 @@ movies:
   - Чернуха
   id: 81
   image: Velikolepnyj.jpg
-  original_title: Le Magnifique
+  original_title: null
   slug: velikolepnyi
   timestamp: 2017-04-18 20:07:33.661550
   title: Великолепный
@@ -2080,7 +2080,7 @@ movies:
   - Триллер
   id: 82
   image: 220px-Le_Professionnel_1981.jpg
-  original_title: Le Professionnel
+  original_title: null
   slug: professional
   timestamp: 2017-04-18 20:15:26.109572
   title: Профессионал
@@ -2095,7 +2095,7 @@ movies:
   - Детектив
   id: 83
   image: MV5BODk1.jpg
-  original_title: Tendre poulet
+  original_title: null
   slug: nezhnyi-politseiskii
   timestamp: 2017-04-18 20:22:16.038019
   title: Нежный полицейский
@@ -2140,7 +2140,7 @@ movies:
   - Чернуха
   id: 84
   image: Breaking_Bad_logo.svg.png
-  original_title: Breaking Bad
+  original_title: null
   slug: vo-vse-tiazhkie
   timestamp: 2017-04-18 21:20:13.126897
   title: Во все тяжкие
@@ -2154,7 +2154,7 @@ movies:
   - Трагикомедия
   id: 85
   image: untitled16.jpg
-  original_title: Fantozzi
+  original_title: null
   slug: fantotstsi
   timestamp: 2017-04-18 21:28:43.620096
   title: Фантоцци
@@ -2171,10 +2171,10 @@ movies:
   genres:
   - Приключения
   id: 86
-  image: ''
+  image: 194px-_____19462.jpg
   original_title: ''
   slug: belyi-klyk
-  timestamp: 2017-04-18 21:43:33.374987
+  timestamp: 2017-04-20 05:43:10.309260
   title: Белый Клык
   user_id: 1
   wiki_url: Белый Клык (фильм, 1946)
@@ -2201,7 +2201,7 @@ movies:
   - Приключения
   id: 87
   image: 220px-Balto_poster2.jpg
-  original_title: Balto
+  original_title: null
   slug: balto
   timestamp: 2017-04-18 21:48:46.295885
   title: Балто
@@ -2219,7 +2219,7 @@ movies:
   - Драма
   id: 88
   image: Full_Metal_Jacket_1987.jpg
-  original_title: Full Metal Jacket
+  original_title: null
   slug: tselnometallicheskaia-obolochka
   timestamp: 2017-04-18 21:52:38.003138
   title: Цельнометаллическая оболочка
@@ -2239,7 +2239,7 @@ movies:
   - Киберпанк
   id: 89
   image: Equilibrium.jpg
-  original_title: Equilibrium
+  original_title: null
   slug: ekvilibrium
   timestamp: 2017-04-18 21:55:33.148155
   title: Эквилибриум
@@ -2256,7 +2256,7 @@ movies:
   - Киберпанк
   id: 90
   image: EXistenZ.jpg
-  original_title: eXistenZ
+  original_title: null
   slug: ekzistentsiia
   timestamp: 2017-04-18 21:59:20.875181
   title: Экзистенция
@@ -2271,12 +2271,76 @@ movies:
   - Фантастика
   id: 91
   image: Highlander_1_poster.jpg
-  original_title: Highlander
+  original_title: null
   slug: gorets
   timestamp: 2017-04-18 22:03:55.861909
   title: Горец
   user_id: 1
   wiki_url: Горец (фильм)
+- description: '«Трон» (англ. Tron) — американский научно-фантастический кинофильм
+    1982 года, снятый на студии Walt Disney режиссёром Стивеном Лисбергером. Главные
+    роли исполнили Джефф Бриджес, Дэвид Уорнер, Брюс Бокслейтнер и Синди Морган. В
+    2010 году вышло продолжение «Трон: Наследие».'
+  directors:
+  - stiven-lisberger
+  genres:
+  - Боевик
+  - Приключения
+  - Фантастика
+  id: 92
+  image: Tron_poster.jpg
+  original_title: Tron
+  slug: tron
+  timestamp: 2017-04-20 05:34:23.948302
+  title: Трон
+  user_id: 1
+  wiki_url: Трон (фильм)
+- description: "«Светлячок» (англ. Firefly) — культовый[2][3][4][5][6] американский\
+    \ научно-фантастический телесериал в жанре космического вестерна, премьера которого\
+    \ состоялась в США и Канаде 20 сентября 2002 года. Идея была воплощена в жизнь\
+    \ сценаристом и режиссёром Джоссом Уидоном — создателем телесериалов «Баффи —\
+    \ истребительница вампиров» и «Ангел».\r\n\r\nИзначально Светлячок был показан\
+    \ на телеканале FOX, но был отменён после показа одиннадцати из четырнадцати созданных\
+    \ серий. В 2003 году Светлячок выиграл награду Эмми за «Выдающиеся спецэффекты\
+    \ в сериале». Из-за большой поддержки фанатов сериала Уидон и Universal Pictures\
+    \ создали полнометражный кинофильм «Миссия «Серенити»» (2005), названный по имени\
+    \ корабля в сериале.\r\n\r\nДействие разворачивается в далеком будущем, в котором\
+    \ люди переселились в новую звёздную систему, и рассказывает о приключениях группы\
+    \ контрабандистов, экипажа Серенити — межпланетного корабля класса Светлячок.\
+    \ Уидон говорил, что это сериал о «девяти людях, которые смотрят в темноту космоса\
+    \ и видят девять разных вещей»[7]. По сюжету, в будущем две супердержавы (США\
+    \ и Китай) объединились в единое федеральное правительство под названием «Альянс».\
+    \ В результате западная и дальневосточная культуры были слиты вместе. Несмотря\
+    \ на течение времени, некоторые вещи не меняются: людей больше, технологии лучше,\
+    \ но политические, моральные и этические проблемы остаются прежними[8]."
+  directors:
+  - dzhoss-uidon
+  genres:
+  - Фантастика
+  - Космоопера
+  - Вестерн
+  id: 93
+  image: Firefly_TV_Series.jpg
+  original_title: Firefly
+  slug: svetliachok
+  timestamp: 2017-04-20 05:37:06.224441
+  title: Светлячок
+  user_id: 1
+  wiki_url: Светлячок (телесериал)
+- description: «Великолепный Гоша» — советский десятисерийный мультсериал (мультфильм
+    для взрослых), проект А. Курляндского. Выпущен творческим объединением «Экран».
+    В мультсериале не произносится ни одного слова.
+  directors:
+  - anatolii-solin
+  genres: []
+  id: 94
+  image: Velikolepnyy_Gosha.jpg
+  original_title: ''
+  slug: velikolepnyi-gosha
+  timestamp: 2017-04-20 05:40:46.413393
+  title: Великолепный Гоша
+  user_id: 1
+  wiki_url: ''
 persons:
 - description: "Чарльтон «Чарли» Брукер (родился 3 марта 1971 года) — английский писатель-сатирик\
     \ и телеведущий. Работал на телевидении, радио, а также в печатных и интернет-СМИ.\r\
@@ -3136,3 +3200,37 @@ persons:
   id: 101
   lastname: Малкэхи
   slug: rassel-malkekhi
+- description: ''
+  firstname: Стивен
+  fullname: ''
+  id: 102
+  lastname: Лисбергер
+  slug: stiven-lisberger
+- description: "Джозеф Хилл «Джосс» Уидон[1] (англ. Joseph Hill «Joss» Whedon; 23\
+    \ июня 1964, Нью-Йорк) — американский режиссёр, сценарист, актёр и продюсер, автор\
+    \ комиксов. Наибольшую известность получил в качестве создателя сериала «Баффи\
+    \ — истребительница вампиров»[2]. Среди других его известных работ — сериалы «Ангел»,\
+    \ «Светлячок», «Кукольный дом», «Агенты „Щ. И. Т.“», фильмы «Миссия „Серенити“»\
+    \ (2005), «Мстители» (2012) и «Мстители: Эра Альтрона» (2015).\r\n\r\nВ качестве\
+    \ автора комиксов Уидон известен благодаря сериям Fray, Astonishing X-Men, Buffy\
+    \ the Vampire Slayer, Serenity, Angel: After the Fall и Runaways.\r\n\r\nДжосс\
+    \ Уидон — обладатель множества наград в сфере кинематографа, телевидения и комиксов;\
+    \ среди них: премии «Хьюго»[3], «Небьюла»[4], «Эмми», «Сатурн», «Энни». В 1996\
+    \ году номинировался на кинопремию «Оскар» за сценарий к мультфильму «История\
+    \ игрушек»."
+  firstname: Джосс
+  fullname: ''
+  id: 103
+  lastname: Уидон
+  slug: dzhoss-uidon
+- description: Анато́лий Ива́нович Со́лин (21 апреля 1939, Москва — 23 июля 2014,
+    там же) — советский и российский режиссёр-мультипликатор, а также иллюстратор
+    детских книг. Председатель профкома работников культуры творческого объединения
+    «Союзтелефильм» Гостелерадио СССР (1989—1993), член Союза кинематографистов (1977),
+    член АСИФА (1978), лауреат премии «Золотой орёл» (2002), доцент кафедры режиссуры
+    анимационных фильмов ВГИКа.
+  firstname: Анатолий
+  fullname: ''
+  id: 104
+  lastname: Солин
+  slug: anatolii-solin
