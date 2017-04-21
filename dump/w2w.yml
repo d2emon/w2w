@@ -2354,7 +2354,7 @@ movies:
   - Приключения
   id: 95
   image: Passengers.jpg
-  original_title: Passengers
+  original_title: null
   slug: passazhiry
   timestamp: 2017-04-20 17:49:50.492514
   title: Пассажиры
@@ -2371,7 +2371,7 @@ movies:
   - Приключения
   id: 96
   image: untitled17.jpg
-  original_title: ''
+  original_title: null
   slug: v-plenu-vremeni
   timestamp: 2017-04-20 17:53:39.995144
   title: В плену времени
@@ -2390,7 +2390,7 @@ movies:
   - Приключения
   id: 97
   image: 3D.jpg
-  original_title: ''
+  original_title: null
   slug: vii
   timestamp: 2017-04-20 19:02:39.855352
   title: Вий
@@ -2406,7 +2406,7 @@ movies:
   - Детектив
   id: 98
   image: 581275.jpg
-  original_title: Marchlands
+  original_title: null
   slug: dom-na-okraine
   timestamp: 2017-04-20 21:14:32.290113
   title: Дом на окраине
@@ -2427,7 +2427,7 @@ movies:
   - Комедия
   id: 99
   image: 229725.jpg
-  original_title: All Creatures Great and Small
+  original_title: null
   slug: vse-sushchestva-bolshie-i-malye
   timestamp: 2017-04-20 21:20:06.166786
   title: 'Все существа, большие и малые '
@@ -2449,7 +2449,7 @@ movies:
   - Детектив
   id: 100
   image: 681830.jpg
-  original_title: The Secret of Crickley Hall
+  original_title: null
   slug: taina-krikli-kholla
   timestamp: 2017-04-20 21:24:39.452288
   title: Тайна Крикли-холла
@@ -2480,7 +2480,7 @@ movies:
   - Ужасы
   id: 101
   image: untitled18.jpg
-  original_title: El Orfanato
+  original_title: null
   slug: priiut
   timestamp: 2017-04-20 21:28:56.497107
   title: Приют
@@ -2503,7 +2503,7 @@ movies:
   - Ужасы
   id: 102
   image: 1005031.jpg
-  original_title: Channel Zero
+  original_title: null
   slug: nulevoi-kanal
   timestamp: 2017-04-20 21:32:26.667792
   title: Нулевой канал
@@ -2520,10 +2520,10 @@ movies:
   - Комедия
   id: 103
   image: 200px-Lars_von_Trier_The_Kingdom_DVD_cover.jpg
-  original_title: Riget
-  slug: korolnvstvo
-  timestamp: 2017-04-20 21:49:12.472690
-  title: Королнвство
+  original_title: ''
+  slug: korolevstvo
+  timestamp: 2017-04-21 16:06:19.340498
+  title: Королевство
   user_id: 1
   wiki_url: Королевство (телесериал)
 - description: Королевский госпиталь (англ. Kingdom Hospital, иногда англ. Stephen
@@ -2539,12 +2539,44 @@ movies:
   - Комедия
   id: 104
   image: 250px-Kingdom_Hospital.jpg
-  original_title: Kingdom Hospital
+  original_title: null
   slug: korolevskii-gospital
   timestamp: 2017-04-20 21:51:59.752186
   title: Королевский госпиталь
   user_id: 1
   wiki_url: Королевский госпиталь (телесериал)
+- description: "«Оши́бка резиде́нта» — советский двухсерийный художественный фильм,\
+    \ поставленный на Центральной киностудии детских и юношеских фильмов имени М.\
+    \ Горького в 1968 году режиссёром Вениамином Дорманом.\r\nПервый фильм тетралогии\
+    \ о профессиональном разведчике Михаиле Тульеве. Первая часть фильма называется\
+    \ «По старой легенде», вторая — «Возвращение Бекаса»."
+  directors:
+  - veniamin-dorman
+  genres:
+  - Детектив
+  - Драма
+  id: 105
+  image: untitled19.jpg
+  original_title: ''
+  slug: oshibka-rezidenta
+  timestamp: 2017-04-21 16:10:49.131929
+  title: Ошибка резидента
+  user_id: 1
+  wiki_url: ''
+- description: «Минута молчания» — советский художественный фильм 1971 года режиссёра
+    Игоря Шатрова по повести Анатолия Рыбакова «Неизвестный солдат».
+  directors:
+  - igor-shatrov
+  genres:
+  - Драма
+  id: 106
+  image: iphone360_461722.jpg
+  original_title: ''
+  slug: minuta-molchaniia
+  timestamp: 2017-04-21 16:15:55.376446
+  title: Минута молчания
+  user_id: 1
+  wiki_url: Минута молчания (фильм)
 persons:
 - description: "Чарльтон «Чарли» Брукер (родился 3 марта 1971 года) — английский писатель-сатирик\
     \ и телеведущий. Работал на телевидении, радио, а также в печатных и интернет-СМИ.\r\
@@ -3500,3 +3532,18 @@ persons:
   id: 113
   lastname: Бэксли
   slug: kreig-r-beksli
+- description: Вениами́н Давыдович До́рман (12 февраля 1927 — 22 января 1988) — советский
+    кинорежиссёр и киносценарист.[1].
+  firstname: Вениамин
+  fullname: ''
+  id: 114
+  lastname: Дорман
+  slug: veniamin-dorman
+- description: Игорь Владимирович Шатро́в (1918—1991) — советский, российский кинооператор,
+    кинорежиссёр, сценарист. Заслуженный деятель искусств РСФСР (1967). Член КПСС
+    с 1952 года.
+  firstname: Игорь
+  fullname: ''
+  id: 115
+  lastname: Шатров
+  slug: igor-shatrov
