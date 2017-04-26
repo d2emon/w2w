@@ -753,7 +753,7 @@ movies:
   - Приключения
   - Байопик
   id: 27
-  image: untitled8.jpg
+  image: untitled7.jpg
   original_title: null
   slug: iaroslav-tysiachu-let-nazad
   timestamp: 2017-04-08 21:13:30.512593
@@ -2171,7 +2171,7 @@ movies:
   genres:
   - Приключения
   id: 86
-  image: 194px-_____19462.jpg
+  image: 194px-_____1946.jpg
   original_title: null
   slug: belyi-klyk
   timestamp: 2017-04-20 05:43:10.309260
@@ -2200,7 +2200,7 @@ movies:
   - Семейное
   - Приключения
   id: 87
-  image: 220px-Balto_poster2.jpg
+  image: 220px-Balto_poster.jpg
   original_title: null
   slug: balto
   timestamp: 2017-04-18 21:48:46.295885
@@ -2520,7 +2520,7 @@ movies:
   - Комедия
   id: 103
   image: 200px-Lars_von_Trier_The_Kingdom_DVD_cover.jpg
-  original_title: ''
+  original_title: null
   slug: korolevstvo
   timestamp: 2017-04-21 16:06:19.340498
   title: Королевство
@@ -2556,10 +2556,10 @@ movies:
   - Детектив
   - Драма
   id: 105
-  image: untitled19.jpg
+  image: 211px-.jpg
   original_title: ''
   slug: oshibka-rezidenta
-  timestamp: 2017-04-21 16:10:49.131929
+  timestamp: 2017-04-26 19:10:15.475184
   title: Ошибка резидента
   user_id: 1
   wiki_url: ''
@@ -2573,10 +2573,112 @@ movies:
   image: iphone360_461722.jpg
   original_title: ''
   slug: minuta-molchaniia
-  timestamp: 2017-04-21 16:15:55.376446
+  timestamp: 2017-04-26 19:25:53.217664
   title: Минута молчания
   user_id: 1
   wiki_url: Минута молчания (фильм)
+- description: "«Хро́ники Шанна́ры» (англ. The Shannara Chronicles) — американский\
+    \ телесериал в жанре фэнтези, созданный Альфредом Гофом и Майлсом Милларом. Шоу\
+    \ является адаптацией оригинальной Трилогии Шаннары, написанной американским фантастом\
+    \ Терри Бруксом. Телесериал снят на студии в Окленде и на местности по всей Новой\
+    \ Зеландии[1].\r\n\r\nПремьера первого сезона из десяти эпизодов состоялась 5\
+    \ января 2016 года на телеканале MTV[2][3]. 20 апреля 2016 года сериал продлили\
+    \ на второй сезон.[4]"
+  directors:
+  - alfred-gof
+  - mails-millar
+  genres:
+  - Фентези
+  id: 107
+  image: 250px-.jpg
+  original_title: The Shannara Chronicles
+  slug: khroniki-shannary
+  timestamp: 2017-04-25 19:05:45.187413
+  title: Хроники Шаннары
+  user_id: 1
+  wiki_url: ''
+- description: «Бегство Логана» (англ. Logan's Run) — фантастический кинофильм в жанре
+    антиутопии, действие которого происходит в XXIII веке нашей эры. Премия «Оскар»
+    за спецэффекты. По книге Уильяма Нолана и Джорджа Клейтона Джонсона.
+  directors:
+  - maikl-anderson
+  genres:
+  - Боевик
+  - Антиутопия
+  - Постапокал
+  id: 108
+  image: 197px-Logans_run.jpg
+  original_title: Logan's Run
+  slug: begstvo-logana
+  timestamp: 2017-04-26 19:34:17.475807
+  title: Бегство Логана
+  user_id: 1
+  wiki_url: Бегство Логана (фильм, 1976)
+- description: «Черри 2000» (англ. Cherry 2000) — фантастический фильм 1987 года с
+    Мелани Гриффит и Дэвидом Эндрю в главных ролях.
+  directors:
+  - steve-de-jarnatt
+  genres:
+  - Боевик
+  - Приключения
+  - Фантастика
+  id: 109
+  image: 205px-Cherri2000.jpg
+  original_title: Cherry 2000
+  slug: cherri-2000
+  timestamp: 2017-04-26 19:45:33.873637
+  title: Черри-2000
+  user_id: 1
+  wiki_url: ''
+- description: «Секс-миссия, или Новые амазонки» (польск. Seksmisja) — фантастическая
+    кинокомедия польского режиссёра Юлиуша Махульского. В советском прокате несколько
+    урезанная версия выходила под названием «Новые амазонки», позднее демонстрировался
+    и полный вариант с авторским названием.
+  directors:
+  - iuliush-makhulskii
+  genres:
+  - Фантастика
+  - Комедия
+  id: 110
+  image: 211px-Seksmisja_movie_poster.jpg
+  original_title: Seksmisja
+  slug: seks-missiia-ili-novye-amazonki
+  timestamp: 2017-04-26 20:16:36.769641
+  title: Секс-миссия, или Новые амазонки
+  user_id: 1
+  wiki_url: Секс-миссия
+- description: «Ва-банк» (польск. Vabank, 1981) — криминальная комедия, режиссёр Юлиуш
+    Махульский.
+  directors:
+  - iuliush-makhulskii
+  genres:
+  - Комедия
+  - Криминал
+  id: 111
+  image: 208px-VabankPoster.jpg
+  original_title: Vabank
+  slug: va-bank
+  timestamp: 2017-04-26 20:18:15.113573
+  title: Ва-банк
+  user_id: 1
+  wiki_url: Ва-банк (фильм)
+- description: «Кингсайз» (польск. Kingsajz, Польша, 1987) — сказочная сатирическая
+    кинокомедия Юлиуша Махульского[1], в которой рассказывается о гномах, построивших
+    государство с тоталитарным режимом.
+  directors:
+  - iuliush-makhulskii
+  genres:
+  - Комедия
+  - Фантастика
+  - Антиутопия
+  id: 112
+  image: MV5BMTkzOTA1NTYxN15BMl5BanBnXkFtZTcwNTY1OTMzMQ._V1_UY268_CR20182268_AL.jpg
+  original_title: Kingsajz
+  slug: kingsaiz
+  timestamp: 2017-04-26 20:23:18.866445
+  title: Кингсайз
+  user_id: 1
+  wiki_url: ''
 persons:
 - description: "Чарльтон «Чарли» Брукер (родился 3 марта 1971 года) — английский писатель-сатирик\
     \ и телеведущий. Работал на телевидении, радио, а также в печатных и интернет-СМИ.\r\
@@ -3547,3 +3649,38 @@ persons:
   id: 115
   lastname: Шатров
   slug: igor-shatrov
+- description: ''
+  firstname: Альфред
+  fullname: ''
+  id: 116
+  lastname: Гоф
+  slug: alfred-gof
+- description: ''
+  firstname: Майлс
+  fullname: ''
+  id: 117
+  lastname: Миллар
+  slug: mails-millar
+- description: Майкл Джо́зеф А́ндерсон-старший (Michael Joseph Anderson, Sr.; род.
+    30 января 1920, Лондон, Великобритания) — английский кинорежиссёр, более всего
+    известен по его фильмам «Разрушители плотин», «Вокруг света за 80 дней», «Бегство
+    Логана», «Смерть среди айсбергов» и др.
+  firstname: Майкл
+  fullname: ''
+  id: 118
+  lastname: Андерсон
+  slug: maikl-anderson
+- description: ''
+  firstname: Steve De
+  fullname: ''
+  id: 119
+  lastname: Jarnatt
+  slug: steve-de-jarnatt
+- description: Ю́лиуш Маху́льский (польск. Juliusz Machulski; род. 10 марта 1955,
+    Ольштын) — известный польский комедийный кинорежиссёр, актёр, продюсер и сценарист.
+    Основатель и директор одной из крупнейших польских киностудий «ZEBRA».
+  firstname: Юлиуш
+  fullname: ''
+  id: 120
+  lastname: Махульский
+  slug: iuliush-makhulskii
