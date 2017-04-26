@@ -58,8 +58,8 @@ def edit_movie(slug):
         return redirect(url_for('index'))
     form = MovieForm(obj=movie)
     impath = os.path.join(basedir, "static", "upload", form.image.data)
-    # if not os.path.isfile(impath):
-    #     form.image.data = ''
+    if not os.path.isfile(impath):
+        form.image.data = ''
     if form.validate_on_submit():
         form.populate_obj(movie)
         movie.normalize(g.user.id)
