@@ -5,6 +5,8 @@ import yaml
 from web import app, db
 from web.forms import MovieForm
 from web.models import Movie, Genre, Person
+import os.path
+from config import basedir
 
 
 @app.route('/slug/movie', methods=['POST', ])
@@ -55,6 +57,9 @@ def edit_movie(slug):
         flash(gettext("Your can edit only your movies."))
         return redirect(url_for('index'))
     form = MovieForm(obj=movie)
+    impath = os.path.join(basedir, "static", "upload", form.image.data)
+    if not os.path.isfile(impath):
+        form.image.data = ''
     if form.validate_on_submit():
         form.populate_obj(movie)
         movie.normalize(g.user.id)
