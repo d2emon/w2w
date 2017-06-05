@@ -167,6 +167,7 @@ class Movie(db.Model):
         return d
 
     def from_dict(self, data):
+        print(data)
         for k, v in data.items():
             if k in self.__table__.columns:
                 setattr(self, k, v)
